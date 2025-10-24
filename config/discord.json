@@ -1,0 +1,10 @@
+{
+  "webhook_url": "YOUR_DISCORD_WEBHOOK_URL_HERE",
+  "instructions": [
+    "1. Go to Discord Server Settings",
+    "2. Integrations \u2192 Webhooks",
+    "3. Create Webhook",
+    "4. Copy webhook URL",
+    "5. Paste it here"
+  ]
+}
