@@ -32,31 +32,21 @@ class EnsembleCombiner:
         if context is None:
             context = {}
         
-        print(f"\n{'='*60}")
-        print(f"🤖 ENSEMBLE PREDICTION")
-        print(f"{'='*60}")
-        
         # ML Agent
-        print(f"\n🔮 ML Agent predicting...")
         ml_pred = {'prediction': 'NEUTRAL', 'confidence': 0.5}
-        print(f"   ML: {ml_pred['prediction']} ({ml_pred['confidence']:.0%})")
         
         # LLM Agent
-        print(f"\n🧠 LLM Agent analyzing...")
         llm_context = {
             'ml_prediction': ml_pred['prediction'],
             'trend': context.get('trend', 'NEUTRAL'),
             'astro_direction': context.get('astro_direction_str', 'NEUTRAL')
         }
         llm_pred = self.llm_agent.predict(llm_context)
-        print(f"   LLM: {llm_pred['prediction']} ({llm_pred['confidence']:.0%})")
         
         # Pattern Agent
-        print(f"\n📊 Pattern Agent detecting...")
         pattern_pred = self.pattern_agent.analyze(df)
-        print(f"   Pattern: {pattern_pred['prediction']} ({pattern_pred['confidence']:.0%})")
         
-        # Combine
+        # Combine - ВЗВЕШЕННОЕ ГОЛОСОВАНИЕ (без консенсуса!)
         direction_scores = {'BULLISH': 0, 'BEARISH': 0, 'NEUTRAL': 0}
         
         for agent, pred in [('ml', ml_pred), ('llm', llm_pred), ('pattern', pattern_pred)]:
@@ -72,13 +62,7 @@ class EnsembleCombiner:
         directions = [ml_pred['prediction'], llm_pred['prediction'], pattern_pred['prediction']]
         consensus = directions.count(final_direction)
         
-        if consensus < 2:
-            final_direction = 'NEUTRAL'
-            final_confidence = 0.5
-        
-        print(f"\n{'='*60}")
-        print(f"📊 FINAL: {final_direction} ({final_confidence:.0%}) - Consensus: {consensus}/3")
-        print(f"{'='*60}")
+        # УБРАЛИ ПОРОГ КОНСЕНСУСА! Берём победителя голосования
         
         return {
             'prediction': final_direction,
