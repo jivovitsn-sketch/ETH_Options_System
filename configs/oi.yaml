@@ -1,0 +1,9 @@
+walls:
+  min_concentration: 0.15
+  min_contracts: 100
+  stability_hours: 24
+
+collection:
+  interval_minutes: 60
+  save_interval_hours: 6
+  retention_days: 90

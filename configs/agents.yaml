@@ -1,0 +1,18 @@
+meta_agent:
+  voting_system: "weighted"
+  min_agreement: 0.60
+
+agents:
+  ml_predictor:
+    enabled: true
+    weight: 0.40
+    min_confidence: 0.60
+
+  llm_analyst:
+    enabled: true
+    weight: 0.30
+    mode: "heuristic"
+
+  pattern_recognizer:
+    enabled: true
+    weight: 0.30

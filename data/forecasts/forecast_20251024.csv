@@ -1,0 +1,366 @@
+date,moon_phase,event_count,retrogrades,aspects
+2025-10-24,NEW_MOON,10,Saturn,Sun-Jupiter Square; Moon-Mercury Conjunction; Moon-Jupiter Trine; Moon-Saturn Trine; Mercury-Mars Conjunction
+2025-10-25,WAXING,8,Saturn,Sun-Jupiter Square; Moon-Venus Sextile; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Mercury-Saturn Trine
+2025-10-26,WAXING,8,Saturn,Sun-Jupiter Square; Moon-Saturn Square; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Mercury-Saturn Trine
+2025-10-27,WAXING,8,Saturn,Sun-Jupiter Square; Moon-Venus Square; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Mercury-Saturn Trine
+2025-10-28,WAXING,10,Saturn,Sun-Jupiter Square; Moon-Venus Square; Moon-Mars Sextile; Moon-Jupiter Opposition; Mercury-Mars Conjunction
+2025-10-29,FIRST_QUARTER,8,Saturn,Sun-Moon Square; Sun-Jupiter Square; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Mercury-Saturn Trine
+2025-10-30,FIRST_QUARTER,10,Saturn,Sun-Jupiter Square; Moon-Venus Trine; Moon-Mars Square; Mercury-Mars Conjunction; Mercury-Jupiter Trine
+2025-10-31,WAXING_GIBBOUS,10,Saturn,Sun-Moon Trine; Moon-Mercury Square; Moon-Mars Square; Mercury-Mars Conjunction; Mercury-Jupiter Trine
+2025-11-01,WAXING_GIBBOUS,8,Saturn,Sun-Moon Trine; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Mercury-Saturn Trine; Venus-Jupiter Square
+2025-11-02,WAXING_GIBBOUS,11,"Moon,Saturn",Moon-Mercury Trine; Moon-Mars Trine; Moon-Jupiter Trine; Moon-Saturn Conjunction; Mercury-Mars Conjunction
+2025-11-03,FULL_MOON,8,Saturn,Moon-Mercury Trine; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Mercury-Saturn Trine; Venus-Jupiter Square
+2025-11-04,FULL_MOON,9,Saturn,Moon-Venus Opposition; Moon-Jupiter Square; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Mercury-Saturn Trine
+2025-11-05,FULL_MOON,9,Saturn,Sun-Moon Opposition; Moon-Jupiter Square; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Mercury-Saturn Trine
+2025-11-06,FULL_MOON,7,Saturn,Mercury-Mars Conjunction; Mercury-Jupiter Trine; Mercury-Saturn Trine; Venus-Jupiter Square; Mars-Jupiter Trine
+2025-11-07,FULL_MOON,9,Saturn,Moon-Mercury Opposition; Moon-Mars Opposition; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Mercury-Saturn Trine
+2025-11-08,WAXING_GIBBOUS,9,Saturn,Moon-Venus Trine; Moon-Saturn Square; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Mercury-Saturn Trine
+2025-11-09,WAXING_GIBBOUS,8,Saturn,Sun-Moon Trine; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Mercury-Saturn Trine; Venus-Jupiter Square
+2025-11-10,WAXING_GIBBOUS,11,"Mercury,Saturn",Moon-Venus Square; Moon-Mars Trine; Moon-Jupiter Conjunction; Moon-Saturn Trine; Mercury-Mars Conjunction
+2025-11-11,WAXING_GIBBOUS,11,"Mercury,Saturn",Sun-Moon Square; Moon-Mercury Trine; Moon-Venus Square; Moon-Mars Trine; Mercury-Mars Conjunction
+2025-11-12,FIRST_QUARTER,8,"Mercury,Jupiter,Saturn",Sun-Moon Square; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Mercury-Saturn Trine; Venus-Jupiter Square
+2025-11-13,WAXING,10,"Mercury,Jupiter,Saturn",Sun-Saturn Trine; Moon-Mercury Square; Moon-Venus Sextile; Moon-Mars Square; Mercury-Mars Conjunction
+2025-11-14,WAXING,8,"Mercury,Jupiter,Saturn",Sun-Moon Sextile; Sun-Jupiter Trine; Sun-Saturn Trine; Mercury-Mars Conjunction; Mercury-Jupiter Trine
+2025-11-15,WAXING,9,"Mercury,Jupiter,Saturn",Sun-Jupiter Trine; Sun-Saturn Trine; Moon-Mercury Sextile; Moon-Jupiter Sextile; Moon-Saturn Opposition
+2025-11-16,WAXING,7,"Mercury,Jupiter,Saturn",Sun-Jupiter Trine; Sun-Saturn Trine; Moon-Mars Sextile; Mercury-Mars Conjunction; Mercury-Jupiter Trine
+2025-11-17,NEW_MOON,8,"Mercury,Jupiter,Saturn",Sun-Mercury Conjunction; Sun-Jupiter Trine; Sun-Saturn Trine; Moon-Jupiter Square; Mercury-Mars Conjunction
+2025-11-18,NEW_MOON,7,"Mercury,Jupiter,Saturn",Sun-Mercury Conjunction; Sun-Jupiter Trine; Sun-Saturn Trine; Moon-Jupiter Square; Mercury-Jupiter Trine
+2025-11-19,NEW_MOON,7,"Mercury,Jupiter,Saturn",Sun-Mercury Conjunction; Sun-Jupiter Trine; Sun-Saturn Trine; Moon-Venus Conjunction; Mercury-Jupiter Trine
+2025-11-20,NEW_MOON,10,"Mercury,Jupiter,Saturn",Sun-Moon Conjunction; Sun-Mercury Conjunction; Sun-Jupiter Trine; Sun-Saturn Trine; Moon-Mercury Conjunction
+2025-11-21,NEW_MOON,7,"Mercury,Jupiter,Saturn",Sun-Mercury Conjunction; Sun-Jupiter Trine; Sun-Saturn Trine; Moon-Mars Conjunction; Mercury-Jupiter Trine
+2025-11-22,NEW_MOON,8,"Mercury,Jupiter,Saturn",Sun-Mercury Conjunction; Sun-Jupiter Trine; Sun-Saturn Trine; Moon-Saturn Square; Mercury-Venus Conjunction
+2025-11-23,NEW_MOON,7,"Mercury,Jupiter,Saturn",Sun-Mercury Conjunction; Sun-Jupiter Trine; Sun-Saturn Trine; Mercury-Venus Conjunction; Mercury-Jupiter Trine
+2025-11-24,WAXING,10,"Mercury,Jupiter,Saturn",Sun-Jupiter Trine; Sun-Saturn Trine; Moon-Mercury Sextile; Moon-Venus Sextile; Mercury-Venus Conjunction
+2025-11-25,WAXING,10,"Mercury,Jupiter,Saturn",Sun-Moon Sextile; Sun-Jupiter Trine; Sun-Saturn Trine; Moon-Jupiter Opposition; Mercury-Venus Conjunction
+2025-11-26,WAXING,11,"Mercury,Jupiter,Saturn",Sun-Jupiter Trine; Sun-Saturn Trine; Moon-Mercury Square; Moon-Venus Square; Moon-Mars Sextile
+2025-11-27,WAXING,11,"Mercury,Jupiter,Saturn",Sun-Moon Square; Sun-Jupiter Trine; Sun-Saturn Trine; Moon-Mercury Square; Moon-Venus Square
+2025-11-28,FIRST_QUARTER,10,"Mercury,Jupiter,Saturn",Sun-Moon Square; Sun-Jupiter Trine; Sun-Saturn Trine; Moon-Mars Square; Mercury-Venus Conjunction
+2025-11-29,WAXING_GIBBOUS,11,"Moon,Jupiter",Moon-Mercury Trine; Moon-Venus Trine; Moon-Mars Square; Moon-Jupiter Trine; Moon-Saturn Conjunction
+2025-11-30,WAXING_GIBBOUS,9,Jupiter,Sun-Moon Trine; Moon-Venus Trine; Moon-Jupiter Trine; Moon-Saturn Conjunction; Mercury-Jupiter Trine
+2025-12-01,WAXING_GIBBOUS,8,Jupiter,Sun-Moon Trine; Moon-Mars Trine; Mercury-Jupiter Trine; Mercury-Saturn Trine; Venus-Jupiter Trine
+2025-12-02,WAXING_GIBBOUS,7,Jupiter,Moon-Jupiter Square; Mercury-Jupiter Trine; Mercury-Saturn Trine; Venus-Jupiter Trine; Venus-Saturn Trine
+2025-12-03,FULL_MOON,7,Jupiter,Moon-Mercury Opposition; Mercury-Jupiter Trine; Mercury-Saturn Trine; Venus-Jupiter Trine; Venus-Saturn Trine
+2025-12-04,FULL_MOON,10,Jupiter,Moon-Mercury Opposition; Moon-Venus Opposition; Moon-Jupiter Sextile; Moon-Saturn Sextile; Mercury-Jupiter Trine
+2025-12-05,FULL_MOON,8,Jupiter,Sun-Moon Opposition; Moon-Mars Opposition; Mercury-Jupiter Trine; Mercury-Saturn Trine; Venus-Jupiter Trine
+2025-12-06,FULL_MOON,6,Jupiter,Sun-Venus Conjunction; Moon-Saturn Square; Mercury-Jupiter Trine; Mercury-Saturn Trine; Mars-Saturn Square
+2025-12-07,FULL_MOON,8,Jupiter,Sun-Venus Conjunction; Moon-Mercury Trine; Moon-Jupiter Conjunction; Moon-Saturn Trine; Mercury-Jupiter Trine
+2025-12-08,WAXING_GIBBOUS,7,Jupiter,Sun-Venus Conjunction; Moon-Venus Trine; Moon-Saturn Trine; Mercury-Jupiter Trine; Mercury-Saturn Trine
+2025-12-09,WAXING_GIBBOUS,8,Jupiter,Sun-Moon Trine; Sun-Venus Conjunction; Moon-Mercury Square; Moon-Mars Trine; Mercury-Jupiter Trine
+2025-12-10,WAXING_GIBBOUS,7,Jupiter,Sun-Venus Conjunction; Moon-Mercury Square; Moon-Mars Trine; Mercury-Jupiter Trine; Mercury-Saturn Trine
+2025-12-11,FIRST_QUARTER,7,Jupiter,Sun-Moon Square; Sun-Venus Conjunction; Moon-Venus Square; Mercury-Jupiter Trine; Mercury-Saturn Trine
+2025-12-12,FIRST_QUARTER,12,Jupiter,Sun-Moon Square; Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Square; Moon-Mercury Sextile
+2025-12-13,WAXING,8,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Square; Moon-Mars Square; Mercury-Jupiter Trine
+2025-12-14,WAXING,8,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Square; Moon-Venus Sextile; Mercury-Jupiter Trine
+2025-12-15,WAXING,9,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Square; Moon-Mars Sextile; Moon-Jupiter Square
+2025-12-16,WAXING,6,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Square; Mercury-Saturn Trine; Mars-Saturn Square
+2025-12-17,NEW_MOON,8,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Square; Moon-Jupiter Trine; Moon-Saturn Trine
+2025-12-18,NEW_MOON,7,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Square; Moon-Mercury Conjunction; Venus-Saturn Square
+2025-12-19,NEW_MOON,7,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Square; Moon-Venus Conjunction; Venus-Saturn Square
+2025-12-20,NEW_MOON,9,Jupiter,Sun-Moon Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Square; Moon-Mars Conjunction
+2025-12-21,NEW_MOON,5,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Square; Venus-Saturn Square; Jupiter-Saturn Trine
+2025-12-22,NEW_MOON,7,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Square; Moon-Jupiter Opposition; Moon-Saturn Sextile
+2025-12-23,NEW_MOON,6,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Square; Moon-Mercury Sextile; Venus-Saturn Square
+2025-12-24,WAXING,6,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Square; Venus-Mars Conjunction; Venus-Saturn Square
+2025-12-25,WAXING,8,Jupiter,Sun-Moon Sextile; Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Square; Moon-Mars Sextile
+2025-12-26,WAXING,8,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Mercury Square; Moon-Jupiter Trine; Mercury-Saturn Square
+2025-12-27,FIRST_QUARTER,10,"Moon,Jupiter",Sun-Moon Square; Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Venus Square; Moon-Jupiter Trine
+2025-12-28,FIRST_QUARTER,9,Jupiter,Sun-Moon Square; Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Venus Square; Moon-Mars Square
+2025-12-29,WAXING_GIBBOUS,7,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Mercury Trine; Moon-Jupiter Square; Mercury-Saturn Square
+2025-12-30,WAXING_GIBBOUS,8,Jupiter,Sun-Moon Trine; Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Venus Trine; Moon-Mars Trine
+2025-12-31,WAXING_GIBBOUS,6,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Jupiter Sextile; Mercury-Saturn Square; Venus-Mars Conjunction
+2026-01-01,FULL_MOON,5,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Mercury-Saturn Square; Venus-Mars Conjunction; Jupiter-Saturn Trine
+2026-01-02,FULL_MOON,8,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Mercury Opposition; Moon-Saturn Square; Mercury-Saturn Square
+2026-01-03,FULL_MOON,9,Jupiter,Sun-Moon Opposition; Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Venus Opposition; Moon-Mars Opposition
+2026-01-04,FULL_MOON,9,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Jupiter Opposition; Moon-Jupiter Conjunction; Moon-Saturn Trine
+2026-01-05,FULL_MOON,7,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Jupiter Opposition; Venus-Mars Conjunction; Venus-Jupiter Opposition
+2026-01-06,WAXING_GIBBOUS,7,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Jupiter Opposition; Venus-Mars Conjunction; Venus-Jupiter Opposition
+2026-01-07,WAXING_GIBBOUS,8,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Jupiter Opposition; Moon-Mercury Trine; Venus-Mars Conjunction
+2026-01-08,WAXING_GIBBOUS,12,Jupiter,Sun-Moon Trine; Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Jupiter Opposition; Moon-Venus Trine
+2026-01-09,WAXING_GIBBOUS,9,Jupiter,Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Jupiter Opposition; Moon-Saturn Opposition
+2026-01-10,FIRST_QUARTER,11,Jupiter,Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Jupiter Opposition; Moon-Mercury Square
+2026-01-11,FIRST_QUARTER,16,Jupiter,Sun-Moon Square; Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Jupiter Opposition
+2026-01-12,WAXING,12,Jupiter,Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Jupiter Opposition; Mercury-Venus Conjunction
+2026-01-13,WAXING,15,Jupiter,Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Jupiter Opposition; Sun-Saturn Sextile
+2026-01-14,WAXING,16,Jupiter,Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Jupiter Opposition; Sun-Saturn Sextile
+2026-01-15,WAXING,13,Jupiter,Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Jupiter Opposition; Sun-Saturn Sextile
+2026-01-16,NEW_MOON,15,Jupiter,Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Jupiter Opposition; Sun-Saturn Sextile
+2026-01-17,NEW_MOON,13,Jupiter,Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Sextile; Mercury-Venus Conjunction
+2026-01-18,NEW_MOON,17,Jupiter,Sun-Moon Conjunction; Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Sextile
+2026-01-19,NEW_MOON,11,Jupiter,Sun-Moon Conjunction; Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Sextile
+2026-01-20,NEW_MOON,9,Jupiter,Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Sun-Saturn Sextile; Mercury-Venus Conjunction
+2026-01-21,NEW_MOON,7,Jupiter,Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Mercury-Venus Conjunction; Mercury-Mars Conjunction
+2026-01-22,WAXING,8,Jupiter,Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Jupiter Trine; Mercury-Venus Conjunction
+2026-01-23,WAXING,9,"Moon,Jupiter",Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Jupiter Trine; Moon-Saturn Conjunction
+2026-01-24,WAXING,8,Jupiter,Sun-Moon Sextile; Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Mercury Sextile
+2026-01-25,WAXING,6,Jupiter,Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Jupiter Square; Mercury-Venus Conjunction
+2026-01-26,FIRST_QUARTER,7,Jupiter,Sun-Moon Square; Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Mars Square
+2026-01-27,WAXING_GIBBOUS,8,Jupiter,Sun-Moon Square; Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Mercury Square
+2026-01-28,WAXING_GIBBOUS,6,Jupiter,Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Mars Trine; Moon-Saturn Sextile
+2026-01-29,WAXING_GIBBOUS,7,Jupiter,Sun-Moon Trine; Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Mercury Trine
+2026-01-30,FULL_MOON,5,Jupiter,Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Saturn Square; Mercury-Venus Conjunction
+2026-01-31,FULL_MOON,5,Jupiter,Sun-Mercury Conjunction; Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Jupiter Conjunction; Mercury-Venus Conjunction
+2026-02-01,FULL_MOON,5,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Mars Opposition; Moon-Saturn Trine; Mercury-Venus Conjunction
+2026-02-02,FULL_MOON,6,Jupiter,Sun-Moon Opposition; Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Mercury Opposition; Moon-Venus Opposition
+2026-02-03,FULL_MOON,4,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Mercury Opposition; Mercury-Venus Conjunction
+2026-02-04,FULL_MOON,4,"Jupiter,Saturn",Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Jupiter Sextile; Mercury-Venus Conjunction
+2026-02-05,WAXING_GIBBOUS,4,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Saturn Opposition; Mercury-Venus Conjunction
+2026-02-06,WAXING_GIBBOUS,4,Jupiter,Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Mars Trine; Mercury-Venus Conjunction
+2026-02-07,WAXING_GIBBOUS,6,Jupiter,Sun-Moon Trine; Sun-Venus Conjunction; Sun-Mars Conjunction; Moon-Mars Trine; Moon-Jupiter Square
+2026-02-08,WAXING_GIBBOUS,4,Jupiter,Sun-Mars Conjunction; Moon-Mercury Trine; Moon-Venus Trine; Mercury-Venus Conjunction
+2026-02-09,FIRST_QUARTER,5,Jupiter,Sun-Mars Conjunction; Moon-Mercury Trine; Moon-Mars Square; Moon-Jupiter Trine; Mercury-Venus Conjunction
+2026-02-10,FIRST_QUARTER,5,Jupiter,Sun-Moon Square; Sun-Mars Conjunction; Moon-Venus Square; Moon-Saturn Trine; Mercury-Venus Conjunction
+2026-02-11,WAXING,4,Jupiter,Sun-Mars Conjunction; Moon-Mercury Square; Moon-Venus Square; Mercury-Venus Conjunction
+2026-02-12,WAXING,5,Jupiter,Sun-Moon Sextile; Sun-Mars Conjunction; Moon-Saturn Square; Mercury-Venus Conjunction; Mercury-Jupiter Trine
+2026-02-13,WAXING,5,Jupiter,Sun-Mars Conjunction; Moon-Venus Sextile; Moon-Saturn Square; Mercury-Venus Conjunction; Mercury-Jupiter Trine
+2026-02-14,WAXING,4,Jupiter,Sun-Mars Conjunction; Moon-Jupiter Opposition; Mercury-Venus Conjunction; Mercury-Jupiter Trine
+2026-02-15,NEW_MOON,3,Jupiter,Moon-Saturn Sextile; Mercury-Venus Conjunction; Mercury-Jupiter Trine
+2026-02-16,NEW_MOON,4,Jupiter,Moon-Mars Conjunction; Mercury-Venus Conjunction; Mercury-Jupiter Trine; Venus-Jupiter Trine
+2026-02-17,NEW_MOON,5,Jupiter,Sun-Moon Conjunction; Moon-Mars Conjunction; Mercury-Venus Conjunction; Mercury-Jupiter Trine; Venus-Jupiter Trine
+2026-02-18,NEW_MOON,6,Jupiter,Moon-Mercury Conjunction; Moon-Venus Conjunction; Moon-Jupiter Trine; Mercury-Venus Conjunction; Mercury-Jupiter Trine
+2026-02-19,NEW_MOON,6,"Moon,Jupiter",Moon-Mercury Conjunction; Moon-Jupiter Trine; Moon-Saturn Conjunction; Mercury-Venus Conjunction; Mercury-Jupiter Trine
+2026-02-20,NEW_MOON,4,Jupiter,Moon-Saturn Conjunction; Mercury-Venus Conjunction; Mercury-Jupiter Trine; Venus-Jupiter Trine
+2026-02-21,WAXING,4,Jupiter,Moon-Jupiter Square; Mercury-Venus Conjunction; Mercury-Jupiter Trine; Venus-Jupiter Trine
+2026-02-22,WAXING,3,Jupiter,Mercury-Venus Conjunction; Mercury-Jupiter Trine; Venus-Jupiter Trine
+2026-02-23,WAXING,5,Jupiter,Moon-Venus Sextile; Moon-Jupiter Sextile; Mercury-Venus Conjunction; Mercury-Jupiter Trine; Venus-Jupiter Trine
+2026-02-24,FIRST_QUARTER,6,Jupiter,Sun-Moon Square; Moon-Mars Square; Moon-Saturn Sextile; Mercury-Venus Conjunction; Mercury-Jupiter Trine
+2026-02-25,FIRST_QUARTER,6,"Mercury,Jupiter",Sun-Moon Square; Moon-Mercury Square; Moon-Venus Square; Mercury-Venus Conjunction; Mercury-Jupiter Trine
+2026-02-26,WAXING_GIBBOUS,6,"Mercury,Jupiter",Sun-Jupiter Trine; Moon-Mars Trine; Moon-Saturn Square; Mercury-Venus Conjunction; Mercury-Jupiter Trine
+2026-02-27,WAXING_GIBBOUS,8,"Mercury,Jupiter",Sun-Moon Trine; Sun-Jupiter Trine; Moon-Mercury Trine; Moon-Venus Trine; Moon-Jupiter Conjunction
+2026-02-28,WAXING_GIBBOUS,6,"Mercury,Jupiter",Sun-Jupiter Trine; Moon-Venus Trine; Moon-Saturn Trine; Mercury-Venus Conjunction; Mercury-Jupiter Trine
+2026-03-01,FULL_MOON,4,"Mercury,Jupiter",Sun-Jupiter Trine; Mercury-Venus Conjunction; Mercury-Jupiter Trine; Venus-Saturn Conjunction
+2026-03-02,FULL_MOON,6,"Mercury,Jupiter",Sun-Mercury Conjunction; Sun-Jupiter Trine; Moon-Mars Opposition; Mercury-Venus Conjunction; Mercury-Jupiter Trine
+2026-03-03,FULL_MOON,7,"Mercury,Jupiter",Sun-Moon Opposition; Sun-Mercury Conjunction; Sun-Jupiter Trine; Moon-Mars Opposition; Mercury-Venus Conjunction
+2026-03-04,FULL_MOON,7,"Mercury,Jupiter",Sun-Moon Opposition; Sun-Mercury Conjunction; Sun-Jupiter Trine; Moon-Mercury Opposition; Moon-Venus Opposition
+2026-03-05,FULL_MOON,6,"Mercury,Venus,Jupiter",Sun-Mercury Conjunction; Sun-Jupiter Trine; Moon-Venus Opposition; Moon-Saturn Opposition; Mercury-Jupiter Trine
+2026-03-06,FULL_MOON,5,"Mercury,Jupiter",Sun-Mercury Conjunction; Sun-Jupiter Trine; Moon-Jupiter Square; Mercury-Jupiter Trine; Venus-Saturn Conjunction
+2026-03-07,WAXING_GIBBOUS,4,"Mercury,Jupiter",Sun-Mercury Conjunction; Sun-Jupiter Trine; Mercury-Jupiter Trine; Venus-Saturn Conjunction
+2026-03-08,WAXING_GIBBOUS,7,"Mercury,Jupiter",Sun-Mercury Conjunction; Sun-Jupiter Trine; Moon-Mercury Trine; Moon-Mars Trine; Moon-Jupiter Trine
+2026-03-09,WAXING_GIBBOUS,8,"Mercury,Jupiter",Sun-Moon Trine; Sun-Mercury Conjunction; Sun-Jupiter Trine; Moon-Mercury Trine; Moon-Jupiter Trine
+2026-03-10,WAXING_GIBBOUS,8,"Mercury,Jupiter",Sun-Mercury Conjunction; Sun-Jupiter Trine; Moon-Venus Trine; Moon-Mars Square; Moon-Saturn Trine
+2026-03-11,FIRST_QUARTER,7,Mercury,Sun-Moon Square; Sun-Jupiter Trine; Moon-Mercury Square; Mercury-Mars Conjunction; Mercury-Jupiter Trine
+2026-03-12,FIRST_QUARTER,7,Mercury,Sun-Jupiter Trine; Moon-Venus Square; Moon-Saturn Square; Mercury-Mars Conjunction; Mercury-Jupiter Trine
+2026-03-13,WAXING,8,Mercury,Sun-Jupiter Trine; Moon-Mercury Sextile; Moon-Venus Square; Moon-Jupiter Opposition; Mercury-Mars Conjunction
+2026-03-14,WAXING,6,Mercury,Sun-Jupiter Trine; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Venus-Jupiter Square; Venus-Saturn Conjunction
+2026-03-15,WAXING,6,Mercury,Moon-Venus Sextile; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Venus-Jupiter Square; Venus-Saturn Conjunction
+2026-03-16,NEW_MOON,5,Mercury,Mercury-Mars Conjunction; Mercury-Jupiter Trine; Venus-Jupiter Square; Venus-Saturn Conjunction; Mars-Jupiter Trine
+2026-03-17,NEW_MOON,7,Mercury,Sun-Saturn Conjunction; Moon-Mercury Conjunction; Moon-Mars Conjunction; Mercury-Mars Conjunction; Mercury-Jupiter Trine
+2026-03-18,NEW_MOON,7,"Moon,Mercury",Sun-Saturn Conjunction; Moon-Mars Conjunction; Moon-Jupiter Trine; Mercury-Mars Conjunction; Mercury-Jupiter Trine
+2026-03-19,NEW_MOON,7,Mercury,Sun-Moon Conjunction; Sun-Saturn Conjunction; Moon-Saturn Conjunction; Mercury-Mars Conjunction; Mercury-Jupiter Trine
+2026-03-20,NEW_MOON,7,Sun,Sun-Saturn Conjunction; Moon-Venus Conjunction; Moon-Jupiter Square; Mercury-Mars Conjunction; Mercury-Jupiter Trine
+2026-03-21,NEW_MOON,5,,Sun-Saturn Conjunction; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Venus-Jupiter Square; Mars-Jupiter Trine
+2026-03-22,WAXING,6,,Sun-Saturn Conjunction; Moon-Mercury Sextile; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Venus-Jupiter Square
+2026-03-23,WAXING,5,,Sun-Saturn Conjunction; Mercury-Mars Conjunction; Mercury-Jupiter Trine; Venus-Jupiter Square; Mars-Jupiter Trine
+2026-03-24,WAXING,7,,Sun-Saturn Conjunction; Moon-Mercury Square; Moon-Mars Square; Mercury-Mars Conjunction; Mercury-Jupiter Trine
+2026-03-25,FIRST_QUARTER,6,,Sun-Moon Square; Sun-Saturn Conjunction; Moon-Saturn Square; Mercury-Jupiter Trine; Venus-Jupiter Square
+2026-03-26,FIRST_QUARTER,7,,Sun-Saturn Conjunction; Moon-Mercury Trine; Moon-Mars Trine; Moon-Jupiter Conjunction; Mercury-Jupiter Trine
+2026-03-27,WAXING_GIBBOUS,8,,Sun-Moon Trine; Sun-Saturn Conjunction; Moon-Venus Square; Moon-Mars Trine; Moon-Saturn Trine
+2026-03-28,WAXING_GIBBOUS,5,,Sun-Moon Trine; Sun-Saturn Conjunction; Moon-Saturn Trine; Mercury-Jupiter Trine; Mars-Jupiter Trine
+2026-03-29,WAXING_GIBBOUS,4,,Sun-Saturn Conjunction; Moon-Venus Trine; Mercury-Jupiter Trine; Mars-Jupiter Trine
+2026-03-30,FULL_MOON,4,,Sun-Saturn Conjunction; Moon-Mercury Opposition; Mercury-Jupiter Trine; Mars-Jupiter Trine
+2026-03-31,FULL_MOON,7,,Sun-Jupiter Square; Sun-Saturn Conjunction; Moon-Mercury Opposition; Moon-Mars Opposition; Moon-Jupiter Sextile
+2026-04-01,FULL_MOON,6,,Sun-Jupiter Square; Sun-Saturn Conjunction; Moon-Mars Opposition; Moon-Saturn Opposition; Mercury-Jupiter Trine
+2026-04-02,FULL_MOON,7,,Sun-Moon Opposition; Sun-Jupiter Square; Sun-Saturn Conjunction; Moon-Jupiter Square; Moon-Saturn Opposition
+2026-04-03,FULL_MOON,4,,Sun-Jupiter Square; Sun-Saturn Conjunction; Moon-Jupiter Square; Mercury-Jupiter Trine
+2026-04-04,FULL_MOON,5,,Sun-Jupiter Square; Sun-Saturn Conjunction; Moon-Venus Opposition; Mercury-Mars Conjunction; Mercury-Jupiter Trine
+2026-04-05,FULL_MOON,6,,Sun-Jupiter Square; Sun-Saturn Conjunction; Moon-Mercury Trine; Moon-Jupiter Trine; Mercury-Mars Conjunction
+2026-04-06,WAXING_GIBBOUS,5,,Sun-Jupiter Square; Moon-Mars Trine; Moon-Saturn Trine; Mercury-Mars Conjunction; Mercury-Jupiter Trine
+2026-04-07,WAXING_GIBBOUS,5,,Sun-Moon Trine; Sun-Jupiter Square; Moon-Saturn Trine; Mercury-Mars Conjunction; Mercury-Jupiter Trine
+2026-04-08,WAXING_GIBBOUS,6,Mars,Sun-Jupiter Square; Moon-Mercury Square; Moon-Mars Square; Mercury-Mars Conjunction; Mercury-Jupiter Trine
+2026-04-09,FIRST_QUARTER,8,,Sun-Moon Square; Sun-Jupiter Square; Moon-Venus Trine; Moon-Jupiter Opposition; Moon-Saturn Square
+2026-04-10,FIRST_QUARTER,7,,Sun-Moon Square; Sun-Jupiter Square; Moon-Mercury Sextile; Moon-Jupiter Opposition; Mercury-Mars Conjunction
+2026-04-11,WAXING,5,,Sun-Jupiter Square; Moon-Venus Square; Moon-Saturn Sextile; Mercury-Mars Conjunction; Mars-Saturn Conjunction
+2026-04-12,WAXING,5,,Sun-Moon Sextile; Sun-Jupiter Square; Moon-Venus Square; Mercury-Mars Conjunction; Mars-Saturn Conjunction
+2026-04-13,WAXING,3,,Sun-Jupiter Square; Mercury-Mars Conjunction; Mars-Saturn Conjunction
+2026-04-14,WAXING,7,Mercury,Sun-Jupiter Square; Moon-Venus Sextile; Moon-Jupiter Trine; Mercury-Mars Conjunction; Mercury-Saturn Conjunction
+2026-04-15,NEW_MOON,7,Moon,Sun-Jupiter Square; Moon-Mercury Conjunction; Moon-Jupiter Trine; Mercury-Mars Conjunction; Mercury-Saturn Conjunction
+2026-04-16,NEW_MOON,8,,Sun-Jupiter Square; Moon-Mercury Conjunction; Moon-Mars Conjunction; Moon-Saturn Conjunction; Mercury-Mars Conjunction
+2026-04-17,NEW_MOON,7,,Sun-Moon Conjunction; Sun-Jupiter Square; Moon-Jupiter Square; Mercury-Mars Conjunction; Mercury-Saturn Conjunction
+2026-04-18,NEW_MOON,5,,Sun-Jupiter Square; Mercury-Mars Conjunction; Mercury-Saturn Conjunction; Venus-Jupiter Sextile; Mars-Saturn Conjunction
+2026-04-19,NEW_MOON,6,,Moon-Venus Conjunction; Moon-Jupiter Sextile; Mercury-Mars Conjunction; Mercury-Saturn Conjunction; Venus-Jupiter Sextile
+2026-04-20,WAXING,7,,Moon-Mercury Sextile; Moon-Mars Sextile; Moon-Saturn Sextile; Mercury-Mars Conjunction; Mercury-Saturn Conjunction
+2026-04-21,WAXING,3,,Mercury-Mars Conjunction; Mercury-Saturn Conjunction; Mars-Saturn Conjunction
+2026-04-22,WAXING,6,,Moon-Mercury Square; Moon-Mars Square; Moon-Saturn Square; Mercury-Mars Conjunction; Mercury-Saturn Conjunction
+2026-04-23,FIRST_QUARTER,7,,Sun-Moon Square; Moon-Venus Sextile; Moon-Jupiter Conjunction; Mercury-Mars Conjunction; Mercury-Jupiter Square
+2026-04-24,FIRST_QUARTER,8,,Sun-Moon Square; Moon-Mercury Trine; Moon-Mars Trine; Moon-Saturn Trine; Mercury-Mars Conjunction
+2026-04-25,WAXING_GIBBOUS,6,,Moon-Mercury Trine; Moon-Venus Square; Mercury-Mars Conjunction; Mercury-Jupiter Square; Mercury-Saturn Conjunction
+2026-04-26,WAXING_GIBBOUS,6,,Sun-Moon Trine; Moon-Venus Square; Mercury-Mars Conjunction; Mercury-Jupiter Square; Mars-Jupiter Square
+2026-04-27,WAXING_GIBBOUS,5,,Moon-Jupiter Sextile; Mercury-Mars Conjunction; Mercury-Jupiter Square; Mars-Jupiter Square; Mars-Saturn Conjunction
+2026-04-28,WAXING_GIBBOUS,5,,Moon-Venus Trine; Mercury-Mars Conjunction; Mercury-Jupiter Square; Mars-Jupiter Square; Mars-Saturn Conjunction
+2026-04-29,FULL_MOON,7,,Moon-Venus Trine; Moon-Mars Opposition; Moon-Saturn Opposition; Mercury-Mars Conjunction; Mercury-Jupiter Square
+2026-04-30,FULL_MOON,7,,Moon-Mercury Opposition; Moon-Mars Opposition; Moon-Jupiter Square; Mercury-Jupiter Square; Venus-Saturn Sextile
+2026-05-01,FULL_MOON,6,,Sun-Moon Opposition; Moon-Mercury Opposition; Mercury-Jupiter Square; Venus-Saturn Sextile; Mars-Jupiter Square
+2026-05-02,FULL_MOON,6,,Sun-Moon Opposition; Moon-Jupiter Trine; Mercury-Jupiter Square; Venus-Saturn Sextile; Mars-Jupiter Square
+2026-05-03,FULL_MOON,5,,Moon-Jupiter Trine; Mercury-Jupiter Square; Venus-Saturn Sextile; Mars-Jupiter Square; Mars-Saturn Conjunction
+2026-05-04,FULL_MOON,4,,Moon-Venus Opposition; Moon-Saturn Trine; Venus-Saturn Sextile; Mars-Jupiter Square
+2026-05-05,WAXING_GIBBOUS,3,,Moon-Mars Trine; Venus-Saturn Sextile; Mars-Jupiter Square
+2026-05-06,WAXING_GIBBOUS,5,,Sun-Moon Trine; Moon-Mercury Trine; Moon-Saturn Square; Venus-Saturn Sextile; Mars-Jupiter Square
+2026-05-07,WAXING_GIBBOUS,4,,Sun-Moon Trine; Moon-Mars Square; Moon-Jupiter Opposition; Mars-Jupiter Square
+2026-05-08,WAXING_GIBBOUS,3,,Sun-Mercury Conjunction; Moon-Mercury Square; Mars-Jupiter Square
+2026-05-09,FIRST_QUARTER,5,,Sun-Moon Square; Sun-Mercury Conjunction; Moon-Mercury Square; Moon-Venus Trine; Mars-Jupiter Square
+2026-05-10,FIRST_QUARTER,3,,Sun-Mercury Conjunction; Venus-Mars Sextile; Mars-Jupiter Square
+2026-05-11,WAXING,3,,Sun-Mercury Conjunction; Venus-Mars Sextile; Mars-Jupiter Square
+2026-05-12,WAXING,7,Moon,Sun-Moon Sextile; Sun-Mercury Conjunction; Sun-Jupiter Sextile; Moon-Venus Square; Moon-Jupiter Trine
+2026-05-13,WAXING,6,,Sun-Mercury Conjunction; Sun-Jupiter Sextile; Moon-Saturn Conjunction; Mercury-Jupiter Sextile; Venus-Mars Sextile
+2026-05-14,NEW_MOON,7,,Sun-Mercury Conjunction; Sun-Jupiter Sextile; Moon-Jupiter Square; Moon-Saturn Conjunction; Mercury-Jupiter Sextile
+2026-05-15,NEW_MOON,7,,Sun-Mercury Conjunction; Sun-Jupiter Sextile; Moon-Mars Conjunction; Moon-Jupiter Square; Mercury-Jupiter Sextile
+2026-05-16,NEW_MOON,5,,Sun-Mercury Conjunction; Sun-Jupiter Sextile; Mercury-Jupiter Sextile; Venus-Mars Sextile; Mars-Jupiter Square
+2026-05-17,NEW_MOON,6,,Sun-Moon Conjunction; Sun-Mercury Conjunction; Sun-Jupiter Sextile; Moon-Mercury Conjunction; Venus-Mars Sextile
+2026-05-18,NEW_MOON,4,,Sun-Mercury Conjunction; Sun-Jupiter Sextile; Venus-Mars Sextile; Mars-Jupiter Square
+2026-05-19,NEW_MOON,6,,Sun-Mercury Conjunction; Sun-Jupiter Sextile; Moon-Venus Conjunction; Moon-Saturn Square; Venus-Mars Sextile
+2026-05-20,WAXING,5,,Sun-Mercury Conjunction; Sun-Jupiter Sextile; Moon-Jupiter Conjunction; Venus-Mars Sextile; Mars-Jupiter Square
+2026-05-21,WAXING,5,,Moon-Mercury Sextile; Moon-Mars Square; Moon-Saturn Trine; Venus-Mars Sextile; Mars-Jupiter Square
+2026-05-22,WAXING,4,,Mercury-Saturn Sextile; Venus-Mars Sextile; Venus-Saturn Square; Mars-Jupiter Square
+2026-05-23,FIRST_QUARTER,6,,Sun-Moon Square; Moon-Venus Sextile; Moon-Mars Trine; Mercury-Saturn Sextile; Venus-Saturn Square
+2026-05-24,FIRST_QUARTER,4,,Moon-Mercury Square; Mercury-Saturn Sextile; Venus-Saturn Square; Mars-Jupiter Square
+2026-05-25,WAXING_GIBBOUS,4,,Sun-Moon Trine; Moon-Jupiter Sextile; Mercury-Saturn Sextile; Venus-Saturn Square
+2026-05-26,WAXING_GIBBOUS,4,,Sun-Moon Trine; Moon-Venus Square; Moon-Saturn Opposition; Venus-Saturn Square
+2026-05-27,WAXING_GIBBOUS,5,,Moon-Mercury Trine; Moon-Venus Square; Moon-Jupiter Square; Moon-Saturn Opposition; Venus-Saturn Square
+2026-05-28,FULL_MOON,4,,Moon-Mercury Trine; Moon-Mars Opposition; Moon-Jupiter Square; Venus-Saturn Square
+2026-05-29,FULL_MOON,3,,Moon-Venus Trine; Moon-Mars Opposition; Venus-Saturn Square
+2026-05-30,FULL_MOON,3,,Moon-Venus Trine; Moon-Jupiter Trine; Venus-Saturn Square
+2026-05-31,FULL_MOON,4,,Sun-Moon Opposition; Sun-Saturn Sextile; Moon-Saturn Trine; Venus-Saturn Square
+2026-06-01,FULL_MOON,3,,Sun-Saturn Sextile; Moon-Saturn Trine; Venus-Saturn Square
+2026-06-02,FULL_MOON,5,,Sun-Saturn Sextile; Moon-Mercury Opposition; Moon-Mars Trine; Venus-Jupiter Conjunction; Venus-Saturn Square
+2026-06-03,FULL_MOON,6,,Sun-Saturn Sextile; Moon-Venus Opposition; Moon-Mars Trine; Moon-Saturn Square; Venus-Jupiter Conjunction
+2026-06-04,WAXING_GIBBOUS,5,,Sun-Saturn Sextile; Moon-Venus Opposition; Moon-Jupiter Opposition; Mercury-Saturn Square; Venus-Jupiter Conjunction
+2026-06-05,WAXING_GIBBOUS,7,,Sun-Moon Trine; Sun-Saturn Sextile; Moon-Mars Square; Moon-Saturn Sextile; Mercury-Mars Sextile
+2026-06-06,WAXING_GIBBOUS,4,,Sun-Saturn Sextile; Mercury-Mars Sextile; Mercury-Saturn Square; Venus-Jupiter Conjunction
+2026-06-07,WAXING_GIBBOUS,5,,Sun-Saturn Sextile; Moon-Mercury Trine; Mercury-Mars Sextile; Mercury-Saturn Square; Venus-Jupiter Conjunction
+2026-06-08,FIRST_QUARTER,7,,Sun-Moon Square; Sun-Saturn Sextile; Moon-Mercury Trine; Moon-Mars Sextile; Mercury-Mars Sextile
+2026-06-09,FIRST_QUARTER,5,Moon,Moon-Venus Trine; Moon-Jupiter Trine; Mercury-Mars Sextile; Mercury-Saturn Square; Venus-Jupiter Conjunction
+2026-06-10,WAXING,5,,Moon-Mercury Square; Moon-Saturn Conjunction; Mercury-Mars Sextile; Mercury-Saturn Square; Venus-Jupiter Conjunction
+2026-06-11,WAXING,6,,Moon-Mercury Square; Moon-Venus Square; Moon-Jupiter Square; Mercury-Mars Sextile; Mercury-Saturn Square
+2026-06-12,WAXING,4,,Moon-Venus Square; Mercury-Mars Sextile; Mercury-Saturn Square; Venus-Jupiter Conjunction
+2026-06-13,NEW_MOON,4,,Moon-Mars Conjunction; Mercury-Mars Sextile; Mercury-Saturn Square; Venus-Jupiter Conjunction
+2026-06-14,NEW_MOON,4,,Moon-Saturn Sextile; Mercury-Mars Sextile; Mercury-Saturn Square; Venus-Jupiter Conjunction
+2026-06-15,NEW_MOON,4,,Sun-Moon Conjunction; Mercury-Mars Sextile; Mercury-Saturn Square; Venus-Jupiter Conjunction
+2026-06-16,NEW_MOON,6,,Moon-Mercury Conjunction; Moon-Saturn Square; Mercury-Mars Sextile; Mercury-Jupiter Conjunction; Venus-Jupiter Conjunction
+2026-06-17,NEW_MOON,6,,Moon-Venus Conjunction; Moon-Jupiter Conjunction; Mercury-Mars Sextile; Mercury-Jupiter Conjunction; Venus-Jupiter Conjunction
+2026-06-18,WAXING,6,,Moon-Venus Conjunction; Moon-Mars Square; Moon-Saturn Trine; Mercury-Mars Sextile; Mercury-Jupiter Conjunction
+2026-06-19,WAXING,5,,Sun-Moon Sextile; Moon-Mars Square; Mercury-Mars Sextile; Mercury-Jupiter Conjunction; Venus-Saturn Trine
+2026-06-20,WAXING,3,,Mercury-Mars Sextile; Mercury-Jupiter Conjunction; Venus-Saturn Trine
+2026-06-21,FIRST_QUARTER,6,,Sun-Moon Square; Moon-Mercury Sextile; Moon-Mars Trine; Mercury-Mars Sextile; Mercury-Jupiter Conjunction
+2026-06-22,FIRST_QUARTER,5,,Sun-Moon Square; Moon-Jupiter Sextile; Mercury-Mars Sextile; Mercury-Jupiter Conjunction; Venus-Saturn Trine
+2026-06-23,WAXING_GIBBOUS,5,,Moon-Venus Sextile; Moon-Saturn Opposition; Mercury-Mars Sextile; Mercury-Jupiter Conjunction; Venus-Saturn Trine
+2026-06-24,WAXING_GIBBOUS,6,,Sun-Moon Trine; Moon-Mercury Square; Moon-Jupiter Square; Mercury-Mars Sextile; Mercury-Jupiter Conjunction
+2026-06-25,WAXING_GIBBOUS,5,,Sun-Moon Trine; Moon-Jupiter Square; Mercury-Mars Sextile; Mercury-Jupiter Conjunction; Venus-Saturn Trine
+2026-06-26,WAXING_GIBBOUS,6,,Moon-Mercury Trine; Moon-Venus Square; Moon-Mars Opposition; Mercury-Mars Sextile; Mercury-Jupiter Conjunction
+2026-06-27,FULL_MOON,8,,Sun-Saturn Square; Moon-Mercury Trine; Moon-Mars Opposition; Moon-Jupiter Trine; Mercury-Mars Sextile
+2026-06-28,FULL_MOON,7,,Sun-Saturn Square; Moon-Venus Trine; Moon-Saturn Trine; Mercury-Mars Sextile; Mercury-Jupiter Conjunction
+2026-06-29,FULL_MOON,7,Mercury,Sun-Saturn Square; Moon-Venus Trine; Mercury-Mars Sextile; Mercury-Jupiter Conjunction; Venus-Mars Square
+2026-06-30,FULL_MOON,7,Mercury,Sun-Moon Opposition; Sun-Saturn Square; Moon-Saturn Square; Mercury-Mars Sextile; Mercury-Jupiter Conjunction
+2026-07-01,FULL_MOON,8,Mercury,Sun-Saturn Square; Moon-Mercury Opposition; Moon-Mars Trine; Moon-Jupiter Opposition; Mercury-Mars Sextile
+2026-07-02,FULL_MOON,7,Mercury,Sun-Saturn Square; Moon-Mars Trine; Moon-Jupiter Opposition; Mercury-Mars Sextile; Mercury-Jupiter Conjunction
+2026-07-03,FULL_MOON,5,Mercury,Sun-Saturn Square; Moon-Venus Opposition; Mercury-Jupiter Conjunction; Venus-Mars Square; Mars-Jupiter Sextile
+2026-07-04,WAXING_GIBBOUS,6,Mercury,Sun-Saturn Square; Moon-Venus Opposition; Moon-Mars Square; Mercury-Jupiter Conjunction; Venus-Mars Square
+2026-07-05,WAXING_GIBBOUS,5,Mercury,Sun-Moon Trine; Sun-Saturn Square; Mercury-Jupiter Conjunction; Venus-Mars Square; Mars-Jupiter Sextile
+2026-07-06,WAXING_GIBBOUS,5,"Moon,Mercury",Sun-Saturn Square; Moon-Mercury Trine; Mercury-Jupiter Conjunction; Venus-Mars Square; Mars-Jupiter Sextile
+2026-07-07,FIRST_QUARTER,6,Mercury,Sun-Saturn Square; Moon-Mars Sextile; Moon-Jupiter Trine; Moon-Saturn Conjunction; Venus-Mars Square
+2026-07-08,FIRST_QUARTER,7,Mercury,Sun-Moon Square; Sun-Mercury Conjunction; Sun-Saturn Square; Moon-Mercury Square; Moon-Saturn Conjunction
+2026-07-09,WAXING,7,Mercury,Sun-Mercury Conjunction; Sun-Saturn Square; Moon-Mercury Square; Moon-Venus Trine; Moon-Jupiter Square
+2026-07-10,WAXING,5,Mercury,Sun-Moon Sextile; Sun-Mercury Conjunction; Sun-Saturn Square; Venus-Mars Square; Mars-Jupiter Sextile
+2026-07-11,WAXING,7,Mercury,Sun-Mercury Conjunction; Sun-Saturn Square; Moon-Venus Square; Moon-Mars Conjunction; Moon-Jupiter Sextile
+2026-07-12,NEW_MOON,5,Mercury,Sun-Mercury Conjunction; Sun-Saturn Square; Mercury-Saturn Square; Venus-Mars Square; Mars-Jupiter Sextile
+2026-07-13,NEW_MOON,6,Mercury,Sun-Mercury Conjunction; Moon-Venus Sextile; Moon-Saturn Square; Mercury-Saturn Square; Venus-Mars Square
+2026-07-14,NEW_MOON,6,Mercury,Sun-Moon Conjunction; Sun-Mercury Conjunction; Moon-Mercury Conjunction; Mercury-Saturn Square; Venus-Mars Square
+2026-07-15,NEW_MOON,6,Mercury,Sun-Mercury Conjunction; Moon-Mars Sextile; Moon-Jupiter Conjunction; Moon-Saturn Trine; Mercury-Saturn Square
+2026-07-16,NEW_MOON,4,Mercury,Sun-Mercury Conjunction; Mercury-Saturn Square; Venus-Mars Square; Mars-Saturn Sextile
+2026-07-17,WAXING,6,Mercury,Sun-Mercury Conjunction; Moon-Venus Conjunction; Moon-Mars Square; Mercury-Saturn Square; Venus-Mars Square
+2026-07-18,WAXING,6,Mercury,Moon-Mercury Sextile; Moon-Venus Conjunction; Moon-Mars Square; Mercury-Saturn Square; Venus-Mars Square
+2026-07-19,WAXING,6,Mercury,Sun-Moon Sextile; Sun-Jupiter Conjunction; Mercury-Saturn Square; Venus-Mars Square; Mars-Saturn Sextile
+2026-07-20,WAXING,8,Mercury,Sun-Jupiter Conjunction; Moon-Mercury Square; Moon-Mars Trine; Moon-Saturn Opposition; Mercury-Saturn Square
+2026-07-21,FIRST_QUARTER,8,Mercury,Sun-Moon Square; Sun-Jupiter Conjunction; Moon-Mercury Square; Mercury-Venus Sextile; Mercury-Saturn Square
+2026-07-22,FIRST_QUARTER,8,Mercury,Sun-Moon Square; Sun-Jupiter Conjunction; Moon-Jupiter Square; Mercury-Venus Sextile; Mercury-Saturn Square
+2026-07-23,WAXING_GIBBOUS,8,,Sun-Jupiter Conjunction; Moon-Mercury Trine; Moon-Venus Sextile; Mercury-Venus Sextile; Mercury-Saturn Square
+2026-07-24,WAXING_GIBBOUS,7,,Sun-Moon Trine; Sun-Jupiter Conjunction; Mercury-Venus Sextile; Mercury-Saturn Square; Venus-Mars Square
+2026-07-25,WAXING_GIBBOUS,11,,Sun-Moon Trine; Sun-Jupiter Conjunction; Moon-Venus Square; Moon-Mars Opposition; Moon-Jupiter Trine
+2026-07-26,WAXING_GIBBOUS,8,,Sun-Jupiter Conjunction; Moon-Venus Square; Moon-Mars Opposition; Mercury-Venus Sextile; Mercury-Saturn Square
+2026-07-27,FULL_MOON,7,,Sun-Jupiter Conjunction; Sun-Saturn Trine; Moon-Saturn Square; Mercury-Venus Sextile; Mercury-Saturn Square
+2026-07-28,FULL_MOON,9,Saturn,Sun-Jupiter Conjunction; Sun-Saturn Trine; Moon-Mercury Opposition; Moon-Venus Trine; Moon-Saturn Square
+2026-07-29,FULL_MOON,8,Saturn,Sun-Moon Opposition; Sun-Jupiter Conjunction; Sun-Saturn Trine; Moon-Jupiter Opposition; Mercury-Venus Sextile
+2026-07-30,FULL_MOON,10,Saturn,Sun-Moon Opposition; Sun-Jupiter Conjunction; Sun-Saturn Trine; Moon-Mars Trine; Moon-Jupiter Opposition
+2026-07-31,FULL_MOON,7,Saturn,Sun-Jupiter Conjunction; Sun-Saturn Trine; Moon-Mars Trine; Mercury-Venus Sextile; Mercury-Saturn Square
+2026-08-01,FULL_MOON,6,Saturn,Sun-Jupiter Conjunction; Sun-Saturn Trine; Mercury-Venus Sextile; Mercury-Saturn Square; Venus-Mars Square
+2026-08-02,WAXING_GIBBOUS,9,"Moon,Saturn",Sun-Jupiter Conjunction; Sun-Saturn Trine; Moon-Mercury Trine; Moon-Venus Opposition; Moon-Mars Square
+2026-08-03,WAXING_GIBBOUS,7,Saturn,Sun-Jupiter Conjunction; Sun-Saturn Trine; Moon-Venus Opposition; Moon-Jupiter Trine; Mercury-Venus Sextile
+2026-08-04,WAXING_GIBBOUS,8,Saturn,Sun-Moon Trine; Sun-Jupiter Conjunction; Sun-Saturn Trine; Moon-Jupiter Trine; Moon-Saturn Conjunction
+2026-08-05,FIRST_QUARTER,7,Saturn,Sun-Jupiter Conjunction; Sun-Saturn Trine; Moon-Mercury Square; Moon-Mars Sextile; Mercury-Venus Sextile
+2026-08-06,FIRST_QUARTER,7,Saturn,Sun-Moon Square; Sun-Jupiter Conjunction; Sun-Saturn Trine; Moon-Jupiter Square; Mercury-Venus Sextile
+2026-08-07,WAXING,7,Saturn,Sun-Jupiter Conjunction; Sun-Saturn Trine; Moon-Mercury Sextile; Moon-Venus Trine; Mercury-Venus Sextile
+2026-08-08,WAXING,7,Saturn,Sun-Jupiter Conjunction; Sun-Saturn Trine; Moon-Jupiter Sextile; Moon-Saturn Sextile; Mercury-Venus Sextile
+2026-08-09,WAXING,7,Saturn,Sun-Jupiter Conjunction; Sun-Saturn Trine; Moon-Venus Square; Moon-Mars Conjunction; Mercury-Venus Sextile
+2026-08-10,NEW_MOON,5,Saturn,Sun-Saturn Trine; Moon-Saturn Square; Mercury-Venus Sextile; Venus-Mars Square; Jupiter-Saturn Trine
+2026-08-11,NEW_MOON,7,Saturn,Sun-Saturn Trine; Moon-Mercury Conjunction; Moon-Venus Sextile; Mercury-Venus Sextile; Mercury-Jupiter Conjunction
+2026-08-12,NEW_MOON,9,Saturn,Sun-Moon Conjunction; Sun-Saturn Trine; Moon-Jupiter Conjunction; Moon-Saturn Trine; Mercury-Venus Sextile
+2026-08-13,NEW_MOON,6,Saturn,Moon-Mars Sextile; Mercury-Venus Sextile; Mercury-Jupiter Conjunction; Mercury-Saturn Trine; Venus-Mars Square
+2026-08-14,NEW_MOON,4,Saturn,Mercury-Jupiter Conjunction; Mercury-Saturn Trine; Venus-Mars Square; Jupiter-Saturn Trine
+2026-08-15,NEW_MOON,6,Saturn,Moon-Mars Square; Mercury-Jupiter Conjunction; Mercury-Saturn Trine; Venus-Mars Square; Venus-Saturn Opposition
+2026-08-16,WAXING,8,Saturn,Moon-Venus Conjunction; Moon-Mars Square; Moon-Saturn Opposition; Mercury-Jupiter Conjunction; Mercury-Saturn Trine
+2026-08-17,WAXING,7,Saturn,Moon-Mercury Sextile; Moon-Saturn Opposition; Mercury-Jupiter Conjunction; Mercury-Saturn Trine; Venus-Mars Square
+2026-08-18,WAXING,8,Saturn,Sun-Moon Sextile; Moon-Mars Trine; Mercury-Jupiter Conjunction; Mercury-Saturn Trine; Venus-Mars Square
+2026-08-19,FIRST_QUARTER,9,Saturn,Moon-Mercury Square; Moon-Mars Trine; Moon-Jupiter Square; Mercury-Jupiter Conjunction; Mercury-Saturn Trine
+2026-08-20,FIRST_QUARTER,8,Saturn,Sun-Moon Square; Sun-Mercury Conjunction; Moon-Mercury Square; Venus-Mars Square; Venus-Jupiter Sextile
+2026-08-21,WAXING_GIBBOUS,9,Saturn,Sun-Mercury Conjunction; Moon-Venus Sextile; Moon-Jupiter Trine; Moon-Saturn Trine; Venus-Mars Square
+2026-08-22,WAXING_GIBBOUS,9,Saturn,Sun-Mercury Conjunction; Moon-Mercury Trine; Moon-Jupiter Trine; Moon-Saturn Trine; Venus-Mars Square
+2026-08-23,WAXING_GIBBOUS,9,Saturn,Sun-Moon Trine; Sun-Mercury Conjunction; Moon-Mercury Trine; Moon-Mars Opposition; Venus-Mars Square
+2026-08-24,WAXING_GIBBOUS,8,Saturn,Sun-Mercury Conjunction; Moon-Venus Square; Moon-Saturn Square; Venus-Mars Square; Venus-Jupiter Sextile
+2026-08-25,FULL_MOON,6,Saturn,Sun-Mercury Conjunction; Venus-Mars Square; Venus-Jupiter Sextile; Venus-Saturn Opposition; Mars-Saturn Square
+2026-08-26,FULL_MOON,9,Saturn,Sun-Mercury Conjunction; Moon-Venus Trine; Moon-Jupiter Opposition; Moon-Saturn Sextile; Venus-Mars Square
+2026-08-27,FULL_MOON,6,Saturn,Sun-Mercury Conjunction; Venus-Mars Square; Venus-Jupiter Sextile; Venus-Saturn Opposition; Mars-Saturn Square
+2026-08-28,FULL_MOON,9,Saturn,Sun-Moon Opposition; Sun-Mercury Conjunction; Moon-Mercury Opposition; Moon-Mars Trine; Venus-Mars Square
+2026-08-29,FULL_MOON,8,"Moon,Saturn",Sun-Mercury Conjunction; Moon-Mars Trine; Mercury-Mars Sextile; Venus-Mars Square; Venus-Jupiter Sextile
+2026-08-30,FULL_MOON,7,Saturn,Sun-Mercury Conjunction; Mercury-Mars Sextile; Venus-Mars Square; Venus-Jupiter Sextile; Venus-Saturn Opposition
+2026-08-31,WAXING_GIBBOUS,11,Saturn,Sun-Mercury Conjunction; Moon-Venus Opposition; Moon-Mars Square; Moon-Jupiter Trine; Moon-Saturn Conjunction
+2026-09-01,WAXING_GIBBOUS,8,Saturn,Sun-Mercury Conjunction; Moon-Venus Opposition; Mercury-Mars Sextile; Venus-Mars Square; Venus-Jupiter Sextile
+2026-09-02,WAXING_GIBBOUS,7,Saturn,Sun-Moon Trine; Sun-Mercury Conjunction; Mercury-Mars Sextile; Venus-Mars Square; Venus-Saturn Opposition
+2026-09-03,WAXING_GIBBOUS,8,Saturn,Sun-Mercury Conjunction; Sun-Mars Sextile; Moon-Mercury Trine; Moon-Jupiter Square; Mercury-Mars Sextile
+2026-09-04,FIRST_QUARTER,7,Saturn,Sun-Moon Square; Sun-Mercury Conjunction; Sun-Mars Sextile; Mercury-Mars Sextile; Venus-Mars Square
+2026-09-05,WAXING,7,Saturn,Sun-Mercury Conjunction; Sun-Mars Sextile; Moon-Mercury Square; Moon-Venus Trine; Venus-Mars Square
+2026-09-06,WAXING,7,Saturn,Sun-Moon Sextile; Sun-Mars Sextile; Moon-Mars Conjunction; Moon-Saturn Square; Venus-Mars Square
+2026-09-07,WAXING,6,Saturn,Sun-Mars Sextile; Moon-Mercury Sextile; Moon-Venus Square; Venus-Mars Square; Mars-Saturn Square
+2026-09-08,WAXING,6,Saturn,Sun-Mars Sextile; Moon-Jupiter Conjunction; Moon-Saturn Trine; Venus-Mars Square; Mars-Saturn Square
+2026-09-09,NEW_MOON,6,Saturn,Sun-Mars Sextile; Moon-Venus Sextile; Moon-Jupiter Conjunction; Venus-Mars Square; Mars-Saturn Square
+2026-09-10,NEW_MOON,4,Saturn,Sun-Mars Sextile; Venus-Mars Square; Mars-Saturn Square; Jupiter-Saturn Trine
+2026-09-11,NEW_MOON,5,Saturn,Sun-Moon Conjunction; Sun-Mars Sextile; Moon-Mars Sextile; Venus-Mars Square; Jupiter-Saturn Trine
+2026-09-12,NEW_MOON,4,Saturn,Sun-Mars Sextile; Moon-Mercury Conjunction; Venus-Mars Square; Jupiter-Saturn Trine
+2026-09-13,NEW_MOON,6,Saturn,Sun-Mars Sextile; Moon-Mars Square; Moon-Jupiter Sextile; Moon-Saturn Opposition; Venus-Mars Square
+2026-09-14,WAXING,6,Saturn,Sun-Mars Sextile; Moon-Venus Conjunction; Moon-Mars Square; Mercury-Saturn Opposition; Venus-Mars Square
+2026-09-15,WAXING,4,Saturn,Sun-Mars Sextile; Mercury-Saturn Opposition; Venus-Mars Square; Jupiter-Saturn Trine
+2026-09-16,WAXING,7,Saturn,Sun-Moon Sextile; Sun-Mars Sextile; Moon-Mars Trine; Moon-Jupiter Square; Mercury-Saturn Opposition
+2026-09-17,WAXING,5,Saturn,Sun-Mars Sextile; Moon-Saturn Trine; Mercury-Saturn Opposition; Venus-Mars Square; Jupiter-Saturn Trine
+2026-09-18,FIRST_QUARTER,7,Saturn,Sun-Moon Square; Sun-Mars Sextile; Moon-Jupiter Trine; Moon-Saturn Trine; Mercury-Saturn Opposition
+2026-09-19,FIRST_QUARTER,6,Saturn,Sun-Moon Square; Sun-Mars Sextile; Moon-Venus Sextile; Mercury-Saturn Opposition; Venus-Mars Square
+2026-09-20,WAXING_GIBBOUS,6,Saturn,Sun-Mars Sextile; Moon-Mercury Square; Moon-Saturn Square; Mercury-Saturn Opposition; Venus-Mars Square
+2026-09-21,WAXING_GIBBOUS,6,Saturn,Sun-Moon Trine; Sun-Mars Sextile; Moon-Venus Square; Moon-Mars Opposition; Mercury-Saturn Opposition
+2026-09-22,WAXING_GIBBOUS,7,Saturn,Sun-Mars Sextile; Moon-Mercury Trine; Moon-Venus Square; Moon-Saturn Sextile; Mercury-Jupiter Sextile
+2026-09-23,WAXING_GIBBOUS,6,Saturn,Sun-Mars Sextile; Moon-Mercury Trine; Moon-Jupiter Opposition; Mercury-Jupiter Sextile; Mercury-Saturn Opposition
+2026-09-24,FULL_MOON,5,Saturn,Sun-Mars Sextile; Moon-Venus Trine; Mercury-Jupiter Sextile; Mercury-Saturn Opposition; Venus-Mars Square
+2026-09-25,FULL_MOON,3,Saturn,Sun-Mars Sextile; Mercury-Jupiter Sextile; Venus-Mars Square
+2026-09-26,FULL_MOON,5,"Moon,Saturn",Sun-Moon Opposition; Sun-Mars Sextile; Moon-Mars Trine; Mercury-Jupiter Sextile; Venus-Mars Square
+2026-09-27,FULL_MOON,6,Saturn,Sun-Moon Opposition; Sun-Mars Sextile; Moon-Mars Trine; Moon-Saturn Conjunction; Mercury-Jupiter Sextile
+2026-09-28,FULL_MOON,7,Saturn,Sun-Mars Sextile; Sun-Saturn Opposition; Moon-Mercury Opposition; Moon-Jupiter Trine; Mercury-Mars Square
+2026-09-29,FULL_MOON,8,Saturn,Sun-Mars Sextile; Sun-Saturn Opposition; Moon-Venus Opposition; Moon-Mars Square; Mercury-Venus Conjunction
+2026-09-30,WAXING_GIBBOUS,6,Saturn,Sun-Mars Sextile; Sun-Saturn Opposition; Moon-Jupiter Square; Mercury-Venus Conjunction; Mercury-Mars Square
+2026-10-01,WAXING_GIBBOUS,8,Saturn,Sun-Moon Trine; Sun-Mars Sextile; Sun-Saturn Opposition; Moon-Mars Sextile; Mercury-Venus Conjunction
+2026-10-02,WAXING_GIBBOUS,7,"Venus,Saturn",Sun-Mars Sextile; Sun-Saturn Opposition; Moon-Jupiter Sextile; Mercury-Venus Conjunction; Mercury-Mars Square
+2026-10-03,FIRST_QUARTER,10,"Venus,Saturn",Sun-Moon Square; Sun-Mars Sextile; Sun-Saturn Opposition; Moon-Mercury Trine; Moon-Venus Trine
+2026-10-04,FIRST_QUARTER,5,"Venus,Saturn",Sun-Saturn Opposition; Mercury-Venus Conjunction; Mercury-Mars Square; Venus-Mars Square; Mars-Saturn Trine
+2026-10-05,WAXING,10,"Venus,Saturn",Sun-Moon Sextile; Sun-Saturn Opposition; Moon-Mercury Square; Moon-Venus Square; Moon-Mars Conjunction
+2026-10-06,WAXING,6,"Venus,Saturn",Sun-Saturn Opposition; Moon-Jupiter Conjunction; Mercury-Venus Conjunction; Mercury-Mars Square; Venus-Mars Square
+2026-10-07,WAXING,7,"Venus,Saturn",Sun-Saturn Opposition; Moon-Mercury Sextile; Moon-Venus Sextile; Mercury-Venus Conjunction; Mercury-Mars Square
+2026-10-08,NEW_MOON,5,"Venus,Saturn",Sun-Saturn Opposition; Mercury-Venus Conjunction; Mercury-Mars Square; Venus-Mars Square; Mars-Saturn Trine
+2026-10-09,NEW_MOON,5,"Venus,Saturn",Sun-Saturn Opposition; Mercury-Venus Conjunction; Mercury-Mars Square; Venus-Mars Square; Mars-Saturn Trine
+2026-10-10,NEW_MOON,8,"Venus,Saturn",Sun-Moon Conjunction; Sun-Saturn Opposition; Moon-Mars Sextile; Moon-Saturn Opposition; Mercury-Venus Conjunction
+2026-10-11,NEW_MOON,6,"Venus,Saturn",Sun-Moon Conjunction; Sun-Saturn Opposition; Moon-Jupiter Sextile; Mercury-Venus Conjunction; Mercury-Mars Square
+2026-10-12,NEW_MOON,6,"Venus,Saturn",Sun-Saturn Opposition; Moon-Mercury Conjunction; Moon-Venus Conjunction; Moon-Mars Square; Mercury-Mars Square
+2026-10-13,NEW_MOON,6,"Venus,Saturn",Sun-Saturn Opposition; Moon-Mercury Conjunction; Moon-Mars Square; Moon-Jupiter Square; Mercury-Mars Square
+2026-10-14,WAXING,3,"Venus,Saturn",Moon-Jupiter Square; Mercury-Mars Square; Mars-Saturn Trine
+2026-10-15,WAXING,4,"Venus,Saturn",Moon-Mars Trine; Moon-Saturn Trine; Mercury-Mars Square; Mars-Saturn Trine
+2026-10-16,WAXING,5,"Venus,Saturn",Sun-Jupiter Sextile; Moon-Venus Sextile; Moon-Jupiter Trine; Mercury-Mars Square; Mars-Saturn Trine
+2026-10-17,WAXING,5,"Venus,Saturn",Sun-Venus Conjunction; Sun-Jupiter Sextile; Moon-Saturn Square; Mercury-Mars Square; Mars-Saturn Trine
+2026-10-18,FIRST_QUARTER,6,"Venus,Saturn",Sun-Moon Square; Sun-Venus Conjunction; Sun-Jupiter Sextile; Moon-Venus Square; Mercury-Mars Square
+2026-10-19,FIRST_QUARTER,6,"Venus,Saturn",Sun-Venus Conjunction; Sun-Jupiter Sextile; Moon-Venus Square; Mercury-Mars Square; Venus-Jupiter Sextile
+2026-10-20,WAXING_GIBBOUS,9,"Venus,Saturn",Sun-Moon Trine; Sun-Venus Conjunction; Sun-Jupiter Sextile; Moon-Mercury Square; Moon-Mars Opposition
+2026-10-21,WAXING_GIBBOUS,8,"Venus,Saturn",Sun-Moon Trine; Sun-Venus Conjunction; Sun-Jupiter Sextile; Moon-Venus Trine; Moon-Jupiter Opposition
+2026-10-22,WAXING_GIBBOUS,6,"Venus,Saturn",Sun-Venus Conjunction; Sun-Jupiter Sextile; Moon-Mercury Trine; Mercury-Mars Square; Venus-Jupiter Sextile
+2026-10-23,WAXING_GIBBOUS,6,"Moon,Venus,Saturn",Sun-Venus Conjunction; Sun-Jupiter Sextile; Moon-Mercury Trine; Mercury-Mars Square; Venus-Jupiter Sextile

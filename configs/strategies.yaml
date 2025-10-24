@@ -1,0 +1,30 @@
+constructions:
+  bull_call_spread:
+    long_strike_offset: 0.0
+    short_strike_offset: 0.10
+    min_credit: 0.3
+
+  bear_put_spread:
+    long_strike_offset: 0.0
+    short_strike_offset: -0.10
+    min_credit: 0.3
+
+  iron_condor:
+    call_short_offset: 0.05
+    call_long_offset: 0.10
+    put_short_offset: -0.05
+    put_long_offset: -0.10
+    min_credit: 0.5
+
+entry:
+  min_confidence: 0.65
+  max_positions_per_asset: 3
+
+exit:
+  tp_levels:
+    tp1: 0.50
+    tp2: 1.00
+    tp3: 2.00
+  time_stops:
+    days_before_expiry: 3
+    max_holding_days: 21

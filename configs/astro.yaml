@@ -1,0 +1,30 @@
+aspects:
+  major:
+    conjunction:
+      angle: 0
+      orb: 10.0
+      weight: 1.0
+    square:
+      angle: 90
+      orb: 10.0
+      weight: 0.9
+    trine:
+      angle: 120
+      orb: 10.0
+      weight: 0.7
+    opposition:
+      angle: 180
+      orb: 10.0
+      weight: 0.95
+
+planets:
+  weights:
+    sun: 1.0
+    moon: 0.9
+    mercury: 0.7
+    jupiter: 0.9
+    saturn: 0.95
+
+forecast:
+  horizon_days: 365
+  min_event_strength: 0.5
