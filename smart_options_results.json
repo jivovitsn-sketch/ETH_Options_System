@@ -1,0 +1,767 @@
+[
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bull_call",
+    "dte": 60,
+    "tp": 1.0,
+    "trades": 26,
+    "wr": 0.6923076923076923,
+    "return": 0.024399826747092266,
+    "final": 10243.998267470923,
+    "avg_hold": 7.346153846153846,
+    "exits": {
+      "opposite": 13,
+      "tp": 9,
+      "expiry": 4
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bull_call",
+    "dte": 60,
+    "tp": 0.75,
+    "trades": 26,
+    "wr": 0.6923076923076923,
+    "return": 0.020737184680245265,
+    "final": 10207.371846802453,
+    "avg_hold": 6.961538461538462,
+    "exits": {
+      "opposite": 12,
+      "tp": 10,
+      "expiry": 4
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bull_call",
+    "dte": 60,
+    "tp": 0.5,
+    "trades": 27,
+    "wr": 0.7407407407407407,
+    "return": 0.0194423254998419,
+    "final": 10194.423254998419,
+    "avg_hold": 5.962962962962963,
+    "exits": {
+      "tp": 14,
+      "opposite": 10,
+      "expiry": 3
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bull_call",
+    "dte": 14,
+    "tp": 1.0,
+    "trades": 30,
+    "wr": 0.6666666666666666,
+    "return": 0.018162793982243238,
+    "final": 10181.627939822432,
+    "avg_hold": 3.7333333333333334,
+    "exits": {
+      "expiry": 22,
+      "opposite": 7,
+      "tp": 1
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bull_call",
+    "dte": 14,
+    "tp": 0.75,
+    "trades": 30,
+    "wr": 0.6666666666666666,
+    "return": 0.01742387530653614,
+    "final": 10174.238753065361,
+    "avg_hold": 3.6666666666666665,
+    "exits": {
+      "expiry": 21,
+      "opposite": 7,
+      "tp": 2
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bull_call",
+    "dte": 14,
+    "tp": 0.5,
+    "trades": 30,
+    "wr": 0.6666666666666666,
+    "return": 0.016808287213689255,
+    "final": 10168.082872136893,
+    "avg_hold": 3.5,
+    "exits": {
+      "expiry": 18,
+      "tp": 6,
+      "opposite": 6
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bull_call",
+    "dte": 30,
+    "tp": 1.0,
+    "trades": 29,
+    "wr": 0.6206896551724138,
+    "return": 0.015526533390537042,
+    "final": 10155.26533390537,
+    "avg_hold": 5.586206896551724,
+    "exits": {
+      "expiry": 15,
+      "opposite": 10,
+      "tp": 4
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bull_call",
+    "dte": 14,
+    "tp": 0.25,
+    "trades": 30,
+    "wr": 0.7,
+    "return": 0.01489878615226644,
+    "final": 10148.987861522664,
+    "avg_hold": 2.966666666666667,
+    "exits": {
+      "expiry": 13,
+      "tp": 12,
+      "opposite": 5
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bull_call",
+    "dte": 30,
+    "tp": 0.75,
+    "trades": 29,
+    "wr": 0.6206896551724138,
+    "return": 0.014784475420494709,
+    "final": 10147.844754204947,
+    "avg_hold": 5.517241379310345,
+    "exits": {
+      "expiry": 15,
+      "opposite": 10,
+      "tp": 4
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bear_put",
+    "dte": 60,
+    "tp": 1.0,
+    "trades": 27,
+    "wr": 0.7037037037037037,
+    "return": 0.014120362701602244,
+    "final": 10141.203627016022,
+    "avg_hold": 6.555555555555555,
+    "exits": {
+      "opposite": 15,
+      "tp": 10,
+      "expiry": 2
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bull_call",
+    "dte": 30,
+    "tp": 0.5,
+    "trades": 29,
+    "wr": 0.6206896551724138,
+    "return": 0.01406726178152312,
+    "final": 10140.672617815231,
+    "avg_hold": 4.793103448275862,
+    "exits": {
+      "expiry": 11,
+      "tp": 10,
+      "opposite": 8
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bull_call",
+    "dte": 60,
+    "tp": 0.25,
+    "trades": 27,
+    "wr": 0.7407407407407407,
+    "return": 0.013297967025491199,
+    "final": 10132.979670254912,
+    "avg_hold": 4.962962962962963,
+    "exits": {
+      "tp": 16,
+      "opposite": 9,
+      "expiry": 2
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bear_put",
+    "dte": 60,
+    "tp": 0.75,
+    "trades": 27,
+    "wr": 0.7037037037037037,
+    "return": 0.012861183167837043,
+    "final": 10128.61183167837,
+    "avg_hold": 6.185185185185185,
+    "exits": {
+      "opposite": 15,
+      "tp": 10,
+      "expiry": 2
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bear_put",
+    "dte": 60,
+    "tp": 0.5,
+    "trades": 27,
+    "wr": 0.7037037037037037,
+    "return": 0.011522874045255958,
+    "final": 10115.22874045256,
+    "avg_hold": 5.62962962962963,
+    "exits": {
+      "tp": 13,
+      "opposite": 12,
+      "expiry": 2
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bull_call",
+    "dte": 30,
+    "tp": 0.25,
+    "trades": 29,
+    "wr": 0.6551724137931034,
+    "return": 0.010957598104946373,
+    "final": 10109.575981049464,
+    "avg_hold": 4.0,
+    "exits": {
+      "tp": 14,
+      "opposite": 8,
+      "expiry": 7
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bear_put",
+    "dte": 60,
+    "tp": 0.25,
+    "trades": 27,
+    "wr": 0.7037037037037037,
+    "return": 0.010414161744678858,
+    "final": 10104.141617446789,
+    "avg_hold": 5.518518518518518,
+    "exits": {
+      "tp": 15,
+      "opposite": 10,
+      "expiry": 2
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bear_put",
+    "dte": 30,
+    "tp": 1.0,
+    "trades": 28,
+    "wr": 0.6071428571428571,
+    "return": 0.007342229904169107,
+    "final": 10073.422299041691,
+    "avg_hold": 4.928571428571429,
+    "exits": {
+      "opposite": 11,
+      "expiry": 9,
+      "tp": 8
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bear_put",
+    "dte": 30,
+    "tp": 0.75,
+    "trades": 28,
+    "wr": 0.6071428571428571,
+    "return": 0.007301789624258345,
+    "final": 10073.017896242583,
+    "avg_hold": 4.714285714285714,
+    "exits": {
+      "opposite": 11,
+      "tp": 10,
+      "expiry": 7
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bear_put",
+    "dte": 60,
+    "tp": 1.0,
+    "trades": 26,
+    "wr": 0.4230769230769231,
+    "return": 0.007151451231360807,
+    "final": 10071.514512313608,
+    "avg_hold": 7.153846153846154,
+    "exits": {
+      "opposite": 18,
+      "expiry": 5,
+      "tp": 3
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bear_put",
+    "dte": 30,
+    "tp": 0.5,
+    "trades": 28,
+    "wr": 0.6071428571428571,
+    "return": 0.006911021951951625,
+    "final": 10069.110219519516,
+    "avg_hold": 4.321428571428571,
+    "exits": {
+      "tp": 13,
+      "opposite": 9,
+      "expiry": 6
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bear_put",
+    "dte": 60,
+    "tp": 0.75,
+    "trades": 26,
+    "wr": 0.4230769230769231,
+    "return": 0.006316960497357104,
+    "final": 10063.169604973571,
+    "avg_hold": 7.038461538461538,
+    "exits": {
+      "opposite": 17,
+      "expiry": 5,
+      "tp": 4
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bear_put",
+    "dte": 60,
+    "tp": 0.5,
+    "trades": 27,
+    "wr": 0.4444444444444444,
+    "return": 0.005965996967322644,
+    "final": 10059.659969673226,
+    "avg_hold": 6.481481481481482,
+    "exits": {
+      "opposite": 17,
+      "tp": 6,
+      "expiry": 4
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bear_put",
+    "dte": 30,
+    "tp": 0.25,
+    "trades": 28,
+    "wr": 0.6071428571428571,
+    "return": 0.005813032717329952,
+    "final": 10058.1303271733,
+    "avg_hold": 4.214285714285714,
+    "exits": {
+      "tp": 15,
+      "opposite": 7,
+      "expiry": 6
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bull_call",
+    "dte": 60,
+    "tp": 1.0,
+    "trades": 24,
+    "wr": 0.5,
+    "return": 0.0053966346648403486,
+    "final": 10053.966346648403,
+    "avg_hold": 9.625,
+    "exits": {
+      "opposite": 15,
+      "expiry": 8,
+      "tp": 1
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bull_call",
+    "dte": 60,
+    "tp": 0.75,
+    "trades": 24,
+    "wr": 0.5,
+    "return": 0.005107913405299041,
+    "final": 10051.07913405299,
+    "avg_hold": 9.583333333333334,
+    "exits": {
+      "opposite": 15,
+      "expiry": 8,
+      "tp": 1
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bull_call",
+    "dte": 60,
+    "tp": 0.25,
+    "trades": 27,
+    "wr": 0.6296296296296297,
+    "return": 0.004670531422890963,
+    "final": 10046.70531422891,
+    "avg_hold": 7.185185185185185,
+    "exits": {
+      "opposite": 14,
+      "tp": 12,
+      "expiry": 1
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bull_call",
+    "dte": 60,
+    "tp": 0.5,
+    "trades": 24,
+    "wr": 0.5,
+    "return": 0.004361110307490162,
+    "final": 10043.611103074902,
+    "avg_hold": 9.375,
+    "exits": {
+      "opposite": 15,
+      "expiry": 6,
+      "tp": 3
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bull_call",
+    "dte": 30,
+    "tp": 0.75,
+    "trades": 29,
+    "wr": 0.4827586206896552,
+    "return": 0.0040591854672780755,
+    "final": 10040.59185467278,
+    "avg_hold": 6.0,
+    "exits": {
+      "expiry": 16,
+      "opposite": 11,
+      "tp": 2
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bull_call",
+    "dte": 30,
+    "tp": 1.0,
+    "trades": 29,
+    "wr": 0.4827586206896552,
+    "return": 0.0040591854672780755,
+    "final": 10040.59185467278,
+    "avg_hold": 6.0,
+    "exits": {
+      "expiry": 16,
+      "opposite": 11,
+      "tp": 2
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bull_call",
+    "dte": 30,
+    "tp": 0.5,
+    "trades": 29,
+    "wr": 0.4827586206896552,
+    "return": 0.0040396640080402,
+    "final": 10040.396640080402,
+    "avg_hold": 5.9655172413793105,
+    "exits": {
+      "expiry": 15,
+      "opposite": 11,
+      "tp": 3
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bull_call",
+    "dte": 30,
+    "tp": 0.25,
+    "trades": 29,
+    "wr": 0.5172413793103449,
+    "return": 0.003621886873083349,
+    "final": 10036.218868730833,
+    "avg_hold": 5.344827586206897,
+    "exits": {
+      "expiry": 13,
+      "opposite": 11,
+      "tp": 5
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bear_put",
+    "dte": 60,
+    "tp": 0.25,
+    "trades": 27,
+    "wr": 0.4444444444444444,
+    "return": 0.0033698593977715065,
+    "final": 10033.698593977715,
+    "avg_hold": 5.962962962962963,
+    "exits": {
+      "opposite": 16,
+      "tp": 8,
+      "expiry": 3
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bear_put",
+    "dte": 30,
+    "tp": 1.0,
+    "trades": 28,
+    "wr": 0.39285714285714285,
+    "return": 0.0032529849457780076,
+    "final": 10032.52984945778,
+    "avg_hold": 5.392857142857143,
+    "exits": {
+      "opposite": 17,
+      "expiry": 9,
+      "tp": 2
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bear_put",
+    "dte": 30,
+    "tp": 0.5,
+    "trades": 28,
+    "wr": 0.42857142857142855,
+    "return": 0.00298885438268735,
+    "final": 10029.888543826874,
+    "avg_hold": 5.25,
+    "exits": {
+      "opposite": 17,
+      "expiry": 7,
+      "tp": 4
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bear_put",
+    "dte": 30,
+    "tp": 0.75,
+    "trades": 28,
+    "wr": 0.39285714285714285,
+    "return": 0.0028569880267803457,
+    "final": 10028.569880267803,
+    "avg_hold": 5.321428571428571,
+    "exits": {
+      "opposite": 17,
+      "expiry": 8,
+      "tp": 3
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bear_put",
+    "dte": 30,
+    "tp": 0.25,
+    "trades": 28,
+    "wr": 0.42857142857142855,
+    "return": 0.0018502348407617318,
+    "final": 10018.502348407617,
+    "avg_hold": 5.035714285714286,
+    "exits": {
+      "opposite": 16,
+      "tp": 6,
+      "expiry": 6
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bull_call",
+    "dte": 14,
+    "tp": 0.25,
+    "trades": 29,
+    "wr": 0.3103448275862069,
+    "return": 0.001631673988017792,
+    "final": 10016.316739880178,
+    "avg_hold": 3.3793103448275863,
+    "exits": {
+      "expiry": 21,
+      "tp": 6,
+      "opposite": 2
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bear_put",
+    "dte": 14,
+    "tp": 0.25,
+    "trades": 28,
+    "wr": 0.39285714285714285,
+    "return": 0.0013322683482250796,
+    "final": 10013.32268348225,
+    "avg_hold": 3.392857142857143,
+    "exits": {
+      "expiry": 15,
+      "tp": 7,
+      "opposite": 6
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bear_put",
+    "dte": 14,
+    "tp": 0.5,
+    "trades": 28,
+    "wr": 0.35714285714285715,
+    "return": 0.0008010962619417114,
+    "final": 10008.010962619417,
+    "avg_hold": 3.4642857142857144,
+    "exits": {
+      "expiry": 17,
+      "opposite": 6,
+      "tp": 5
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bull_call",
+    "dte": 14,
+    "tp": 0.5,
+    "trades": 29,
+    "wr": 0.3103448275862069,
+    "return": 0.0007891029061695007,
+    "final": 10007.891029061695,
+    "avg_hold": 3.793103448275862,
+    "exits": {
+      "expiry": 26,
+      "opposite": 3
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bull_call",
+    "dte": 14,
+    "tp": 0.75,
+    "trades": 29,
+    "wr": 0.3103448275862069,
+    "return": 0.0007891029061695007,
+    "final": 10007.891029061695,
+    "avg_hold": 3.793103448275862,
+    "exits": {
+      "expiry": 26,
+      "opposite": 3
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bull_call",
+    "dte": 14,
+    "tp": 1.0,
+    "trades": 29,
+    "wr": 0.3103448275862069,
+    "return": 0.0007891029061695007,
+    "final": 10007.891029061695,
+    "avg_hold": 3.793103448275862,
+    "exits": {
+      "expiry": 26,
+      "opposite": 3
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bear_put",
+    "dte": 14,
+    "tp": 1.0,
+    "trades": 28,
+    "wr": 0.2857142857142857,
+    "return": -0.0004728561417749006,
+    "final": 9995.271438582251,
+    "avg_hold": 3.2857142857142856,
+    "exits": {
+      "expiry": 16,
+      "opposite": 6,
+      "tp": 6
+    }
+  },
+  {
+    "asset": "ETHUSDT",
+    "strategy": "bear_put",
+    "dte": 14,
+    "tp": 0.75,
+    "trades": 28,
+    "wr": 0.2857142857142857,
+    "return": -0.0005580156936473941,
+    "final": 9994.419843063526,
+    "avg_hold": 3.392857142857143,
+    "exits": {
+      "expiry": 17,
+      "opposite": 6,
+      "tp": 5
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bear_put",
+    "dte": 14,
+    "tp": 0.5,
+    "trades": 28,
+    "wr": 0.21428571428571427,
+    "return": -0.005395531052134356,
+    "final": 9946.044689478656,
+    "avg_hold": 3.642857142857143,
+    "exits": {
+      "expiry": 19,
+      "opposite": 8,
+      "tp": 1
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bear_put",
+    "dte": 14,
+    "tp": 0.75,
+    "trades": 28,
+    "wr": 0.21428571428571427,
+    "return": -0.005395531052134356,
+    "final": 9946.044689478656,
+    "avg_hold": 3.642857142857143,
+    "exits": {
+      "expiry": 19,
+      "opposite": 8,
+      "tp": 1
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bear_put",
+    "dte": 14,
+    "tp": 1.0,
+    "trades": 28,
+    "wr": 0.21428571428571427,
+    "return": -0.005395531052134356,
+    "final": 9946.044689478656,
+    "avg_hold": 3.642857142857143,
+    "exits": {
+      "expiry": 19,
+      "opposite": 8,
+      "tp": 1
+    }
+  },
+  {
+    "asset": "BTCUSDT",
+    "strategy": "bear_put",
+    "dte": 14,
+    "tp": 0.25,
+    "trades": 28,
+    "wr": 0.21428571428571427,
+    "return": -0.005995511021120364,
+    "final": 9940.044889788796,
+    "avg_hold": 3.6785714285714284,
+    "exits": {
+      "expiry": 19,
+      "opposite": 8,
+      "tp": 1
+    }
+  }
+]
