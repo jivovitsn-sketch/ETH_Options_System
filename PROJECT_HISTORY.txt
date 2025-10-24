@@ -1,0 +1,6 @@
+61860bb Final: SMA works (57% WR). Everything else failed.
+07f15f1 Ultimate backtest: 8 option strategies + 4 indicators. Best: Order Blocks + Bear Put (18.6%, 75% WR)
+2d0f252 Complete system: SMA baseline (57% WR), ML + Astro modules (for future improvement)
+6c8f84e Phase 4: Backtest Engine + Baseline + Hybrid strategies working. +32% return, 57% WR
+6ffabe5 Full system V20.2: configs + ML agents + ensemble + signal generator
+88aa9fb Clean start V20.2 with Git workflow
