@@ -1,0 +1,13 @@
+{
+  "bot_token": "YOUR_BOT_TOKEN",
+  "channels": {
+    "free_signals": "CHAT_ID_1",
+    "vip_analytics": "CHAT_ID_2", 
+    "admin_logs": "CHAT_ID_3"
+  },
+  "proxy": {
+    "enabled": true,
+    "http": "http://uQnxk4:wgu4pJ@77.83.186.47:8000",
+    "https": "http://uQnxk4:wgu4pJ@77.83.186.47:8000"
+  }
+}

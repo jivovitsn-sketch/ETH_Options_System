@@ -1,11 +1,5 @@
 {
-  "free_channel": "YOUR_FREE_WEBHOOK_URL",
-  "vip_channel": "YOUR_VIP_WEBHOOK_URL",
-  "admin_channel": "YOUR_ADMIN_WEBHOOK_URL",
-  "setup_instructions": [
-    "1. Create Discord server",
-    "2. Create 3 channels: #free-signals, #vip-analytics, #admin-logs",
-    "3. For each channel: Edit \u2192 Integrations \u2192 Webhooks \u2192 Create",
-    "4. Copy webhook URLs and paste here"
-  ]
+  "free_channel": "https://discord.com/api/webhooks/1431540043994103808/xmEcgsNwu0xHu4m7TvdUbkGqUe_EiEnOv8xm_OWqOHQbMxeSNgzD0Rd_3xAQ5Waanv7h",
+  "vip_channel": "https://discord.com/api/webhooks/1431540774180360304/a11lOAva77RKsm5LJPRGzk4NqbgDLAC0kYjYD2Q0nsixvksRep_iUIMqBDeaiyi_wXld",
+  "admin_channel": "https://discord.com/api/webhooks/1431541075989758023/xWJvWsG9SaSXgARp_HlNeJhn49DhJclHe9H0ZqD-oJfbApoLwv2CBn_bYGXylRSC-dos"
 }

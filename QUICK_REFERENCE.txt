@@ -1,0 +1,61 @@
+╔══════════════════════════════════════════════════════════════╗
+║           ETH OPTIONS SYSTEM - QUICK REFERENCE               ║
+╚══════════════════════════════════════════════════════════════╝
+
+📊 STATS:
+  • 70 Python files
+  • 6,225 CSV data files (96MB)
+  • 20 Git commits
+  • Best result: SOL +66.1% (spot)
+
+⚡ QUICK COMMANDS:
+
+  # Discord test
+  python3 bot/discord_multi_channel.py
+
+  # Excel test
+  python3 bot/auto_excel_system.py
+
+  # Paper trading
+  python3 bot/live_trader.py
+
+  # Backtest
+  python3 backtest/options_real_prices.py
+
+  # Backup
+  python3 bot/backup_system.py
+
+🔧 SETUP (5 MIN):
+
+  1. nano config/discord.json
+     → Add 3 webhooks (see DISCORD_SETUP.md)
+
+  2. Test Discord:
+     python3 bot/discord_multi_channel.py
+
+  3. Open Excel:
+     data/Live_Trading_Journal.xlsx
+
+  4. Start paper trading:
+     python3 bot/live_trader.py
+
+📁 KEY FILES:
+
+  config/discord.json          → Discord webhooks
+  data/Live_Trading_Journal.xlsx → Trade journal
+  bot/live_trader.py           → Live bot
+  NEW_CHAT_PROMPT.md           → For new chat
+
+🔗 LINKS:
+
+  GitHub: https://github.com/jivovitsn-sketch/ETH_Options_System
+  Server: ~/ETH_Options_System
+
+⚠️  IMPORTANT:
+
+  ✅ Start with PAPER TRADING
+  ✅ Setup Discord webhooks first
+  ✅ Do regular backups
+  ✅ Forward test 1-3 months
+
+═══════════════════════════════════════════════════════════════

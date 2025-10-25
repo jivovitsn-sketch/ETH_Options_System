@@ -1,0 +1,12 @@
+{
+  "bot_token": "8465104192:AAHaKFyt6KzvhEo1YplPiFri8QF3hwj6-qM",
+  "channels": {
+    "free": "-1003076380291",
+    "vip": "-1003001252760", 
+    "admin": "-1002937496262"
+  },
+  "proxy": {
+    "http": "http://uQnxk4:wgu4pJ@77.83.186.47:8000",
+    "https": "http://uQnxk4:wgu4pJ@77.83.186.47:8000"
+  }
+}
