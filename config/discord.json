@@ -1,10 +1,11 @@
 {
-  "webhook_url": "YOUR_DISCORD_WEBHOOK_URL_HERE",
-  "instructions": [
-    "1. Go to Discord Server Settings",
-    "2. Integrations \u2192 Webhooks",
-    "3. Create Webhook",
-    "4. Copy webhook URL",
-    "5. Paste it here"
+  "free_channel": "YOUR_FREE_WEBHOOK_URL",
+  "vip_channel": "YOUR_VIP_WEBHOOK_URL",
+  "admin_channel": "YOUR_ADMIN_WEBHOOK_URL",
+  "setup_instructions": [
+    "1. Create Discord server",
+    "2. Create 3 channels: #free-signals, #vip-analytics, #admin-logs",
+    "3. For each channel: Edit \u2192 Integrations \u2192 Webhooks \u2192 Create",
+    "4. Copy webhook URLs and paste here"
   ]
 }
