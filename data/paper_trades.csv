@@ -1,0 +1,2 @@
+trade_id,timestamp,strategy,asset,action,entry_price,exit_price,dte,position_size,long_strike,short_strike,premium_paid,premium_received,pnl,pnl_percent,status,exit_reason,notes
+BTC_Long Straddle_1026_1138,2025-10-26T11:38:29.962899,Long Straddle,BTC,OPEN,70000.0,,45,5000,,,400.0,0,0,0,OPEN,,Paper trading test

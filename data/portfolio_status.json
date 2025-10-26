@@ -1,0 +1,17 @@
+{
+  "cash": 49600.0,
+  "total_value": 50000,
+  "open_positions": [
+    {
+      "trade_id": "BTC_Long Straddle_1026_1138",
+      "strategy": "Long Straddle",
+      "asset": "BTC",
+      "cost": 400.0,
+      "timestamp": "2025-10-26T11:38:29.962899"
+    }
+  ],
+  "total_trades": 0,
+  "winning_trades": 0,
+  "total_pnl": 0,
+  "created": "2025-10-26T11:37:45.205437"
+}
