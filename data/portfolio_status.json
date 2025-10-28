@@ -1,5 +1,5 @@
 {
-  "cash": 49600.0,
+  "cash": 49472.0,
   "total_value": 50000,
   "open_positions": [
     {
@@ -8,6 +8,13 @@
       "asset": "BTC",
       "cost": 400.0,
       "timestamp": "2025-10-26T11:38:29.962899"
+    },
+    {
+      "trade_id": "BTC_Bull Call Spread (Real Bybit)_1026_1249",
+      "strategy": "Bull Call Spread (Real Bybit)",
+      "asset": "BTC",
+      "cost": 128.0,
+      "timestamp": "2025-10-26T12:49:01.725091"
     }
   ],
   "total_trades": 0,

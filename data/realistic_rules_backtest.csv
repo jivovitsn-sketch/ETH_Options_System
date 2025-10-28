@@ -1,0 +1,157 @@
+asset,strategy,move_pct,pnl,profitable
+BTC,Bull Call Spread,-15,-1852.8790500000002,False
+BTC,Bull Call Spread,-10,-1852.8790500000002,False
+BTC,Bull Call Spread,-8,-1852.8790500000002,False
+BTC,Bull Call Spread,-5,-1852.8790500000002,False
+BTC,Bull Call Spread,-3,-1852.8790500000002,False
+BTC,Bull Call Spread,-1,-1459.8440999999962,False
+BTC,Bull Call Spread,0,-336.8871000000013,False
+BTC,Bull Call Spread,1,786.0698999999936,True
+BTC,Bull Call Spread,3,2161.6922250000002,True
+BTC,Bull Call Spread,5,2161.6922250000002,True
+BTC,Bull Call Spread,8,2161.6922250000002,True
+BTC,Bull Call Spread,10,2161.6922250000002,True
+BTC,Bull Call Spread,15,2161.6922250000002,True
+BTC,Long Straddle,-15,4491.828,True
+BTC,Long Straddle,-10,4491.828,True
+BTC,Long Straddle,-8,4491.827999999988,True
+BTC,Long Straddle,-5,1122.957000000003,True
+BTC,Long Straddle,-3,-1122.9570000000012,False
+BTC,Long Straddle,-1,-2245.914,False
+BTC,Long Straddle,0,-2245.914,False
+BTC,Long Straddle,1,-2245.914,False
+BTC,Long Straddle,3,-1122.9570000000012,False
+BTC,Long Straddle,5,1122.957000000003,True
+BTC,Long Straddle,8,4491.828,True
+BTC,Long Straddle,10,4491.828,True
+BTC,Long Straddle,15,4491.828,True
+BTC,Iron Condor,-15,-4491.828,False
+BTC,Iron Condor,-10,-4491.828,False
+BTC,Iron Condor,-8,-4491.828,False
+BTC,Iron Condor,-5,561.4785,True
+BTC,Iron Condor,-3,561.4785,True
+BTC,Iron Condor,-1,561.4785,True
+BTC,Iron Condor,0,561.4785,True
+BTC,Iron Condor,1,561.4785,True
+BTC,Iron Condor,3,561.4785,True
+BTC,Iron Condor,5,561.4785,True
+BTC,Iron Condor,8,-4491.828,False
+BTC,Iron Condor,10,-4491.828,False
+BTC,Iron Condor,15,-4491.828,False
+ETH,Bull Call Spread,-15,-65.75052000000001,False
+ETH,Bull Call Spread,-10,-65.75052000000001,False
+ETH,Bull Call Spread,-8,-65.75052000000001,False
+ETH,Bull Call Spread,-5,-65.75052000000001,False
+ETH,Bull Call Spread,-3,-65.75052000000001,False
+ETH,Bull Call Spread,-1,-51.80344000000005,False
+ETH,Bull Call Spread,0,-11.954639999999841,False
+ETH,Bull Call Spread,1,27.89416000000037,True
+ETH,Bull Call Spread,3,76.70894000000001,True
+ETH,Bull Call Spread,5,76.70894000000001,True
+ETH,Bull Call Spread,8,76.70894000000001,True
+ETH,Bull Call Spread,10,76.70894000000001,True
+ETH,Bull Call Spread,15,76.70894000000001,True
+ETH,Long Straddle,-15,159.39520000000002,True
+ETH,Long Straddle,-10,159.39520000000002,True
+ETH,Long Straddle,-8,159.39519999999985,True
+ETH,Long Straddle,-5,39.848800000000125,True
+ETH,Long Straddle,-3,-39.84879999999984,False
+ETH,Long Straddle,-1,-79.69760000000001,False
+ETH,Long Straddle,0,-79.69760000000001,False
+ETH,Long Straddle,1,-79.69760000000001,False
+ETH,Long Straddle,3,-39.84879999999984,False
+ETH,Long Straddle,5,39.84880000000058,True
+ETH,Long Straddle,8,159.39519999999985,True
+ETH,Long Straddle,10,159.39520000000002,True
+ETH,Long Straddle,15,159.39520000000002,True
+ETH,Iron Condor,-15,-159.39520000000002,False
+ETH,Iron Condor,-10,-159.39520000000002,False
+ETH,Iron Condor,-8,-159.39520000000002,False
+ETH,Iron Condor,-5,19.924400000000002,True
+ETH,Iron Condor,-3,19.924400000000002,True
+ETH,Iron Condor,-1,19.924400000000002,True
+ETH,Iron Condor,0,19.924400000000002,True
+ETH,Iron Condor,1,19.924400000000002,True
+ETH,Iron Condor,3,19.924400000000002,True
+ETH,Iron Condor,5,19.924400000000002,True
+ETH,Iron Condor,8,-159.39520000000002,False
+ETH,Iron Condor,10,-159.39520000000002,False
+ETH,Iron Condor,15,-159.39520000000002,False
+SOL,Bull Call Spread,-15,-3.2236050000000005,False
+SOL,Bull Call Spread,-10,-3.2236050000000005,False
+SOL,Bull Call Spread,-8,-3.2236050000000005,False
+SOL,Bull Call Spread,-5,-3.2236050000000005,False
+SOL,Bull Call Spread,-3,-3.2236050000000005,False
+SOL,Bull Call Spread,-1,-2.5398100000000055,False
+SOL,Bull Call Spread,0,-0.5861100000000077,False
+SOL,Bull Call Spread,1,1.36758999999999,True
+SOL,Bull Call Spread,3,3.7608725000000005,True
+SOL,Bull Call Spread,5,3.7608725000000005,True
+SOL,Bull Call Spread,8,3.7608725000000005,True
+SOL,Bull Call Spread,10,3.7608725000000005,True
+SOL,Bull Call Spread,15,3.7608725000000005,True
+SOL,Long Straddle,-15,7.8148,True
+SOL,Long Straddle,-10,7.8148,True
+SOL,Long Straddle,-8,7.814799999999982,True
+SOL,Long Straddle,-5,1.9537000000000173,True
+SOL,Long Straddle,-3,-1.9537000000000067,False
+SOL,Long Straddle,-1,-3.9074,False
+SOL,Long Straddle,0,-3.9074,False
+SOL,Long Straddle,1,-3.9074,False
+SOL,Long Straddle,3,-1.9537000000000067,False
+SOL,Long Straddle,5,1.9537000000000173,True
+SOL,Long Straddle,8,7.8148,True
+SOL,Long Straddle,10,7.8148,True
+SOL,Long Straddle,15,7.8148,True
+SOL,Iron Condor,-15,-7.8148,False
+SOL,Iron Condor,-10,-7.8148,False
+SOL,Iron Condor,-8,-7.8148,False
+SOL,Iron Condor,-5,0.97685,True
+SOL,Iron Condor,-3,0.97685,True
+SOL,Iron Condor,-1,0.97685,True
+SOL,Iron Condor,0,0.97685,True
+SOL,Iron Condor,1,0.97685,True
+SOL,Iron Condor,3,0.97685,True
+SOL,Iron Condor,5,0.97685,True
+SOL,Iron Condor,8,-7.8148,False
+SOL,Iron Condor,10,-7.8148,False
+SOL,Iron Condor,15,-7.8148,False
+XRP,Bull Call Spread,-15,-0.043824000000000064,False
+XRP,Bull Call Spread,-10,-0.043824000000000064,False
+XRP,Bull Call Spread,-8,-0.043824000000000064,False
+XRP,Bull Call Spread,-5,-0.043824000000000064,False
+XRP,Bull Call Spread,-3,-0.043824000000000064,False
+XRP,Bull Call Spread,-1,-0.03452799999999985,False
+XRP,Bull Call Spread,0,-0.007967999999999933,False
+XRP,Bull Call Spread,1,0.018591999999999984,True
+XRP,Bull Call Spread,3,0.051128000000000076,True
+XRP,Bull Call Spread,5,0.051128000000000076,True
+XRP,Bull Call Spread,8,0.051128000000000076,True
+XRP,Bull Call Spread,10,0.051128000000000076,True
+XRP,Bull Call Spread,15,0.051128000000000076,True
+XRP,Long Straddle,-15,0.10624,True
+XRP,Long Straddle,-10,0.10624,True
+XRP,Long Straddle,-8,0.10623999999999978,True
+XRP,Long Straddle,-5,0.026560000000000028,True
+XRP,Long Straddle,-3,-0.026559999999999806,False
+XRP,Long Straddle,-1,-0.05312,False
+XRP,Long Straddle,0,-0.05312,False
+XRP,Long Straddle,1,-0.05312,False
+XRP,Long Straddle,3,-0.026559999999999806,False
+XRP,Long Straddle,5,0.026560000000000028,True
+XRP,Long Straddle,8,0.10624,True
+XRP,Long Straddle,10,0.10624,True
+XRP,Long Straddle,15,0.10624,True
+XRP,Iron Condor,-15,-0.10624,False
+XRP,Iron Condor,-10,-0.10624,False
+XRP,Iron Condor,-8,-0.10624,False
+XRP,Iron Condor,-5,0.01328,True
+XRP,Iron Condor,-3,0.01328,True
+XRP,Iron Condor,-1,0.01328,True
+XRP,Iron Condor,0,0.01328,True
+XRP,Iron Condor,1,0.01328,True
+XRP,Iron Condor,3,0.01328,True
+XRP,Iron Condor,5,0.01328,True
+XRP,Iron Condor,8,-0.10624,False
+XRP,Iron Condor,10,-0.10624,False
+XRP,Iron Condor,15,-0.10624,False
