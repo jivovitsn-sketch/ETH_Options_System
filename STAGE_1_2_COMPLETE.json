@@ -1,0 +1,19 @@
+{
+  "stage": "1.2",
+  "title": "Фьючерсные данные - 6 активов",
+  "status": "completed",
+  "timestamp": "2025-10-30T20:02:00+00:00",
+  "data_collected": {
+    "futures_records": 24,
+    "assets": ["BTC", "ETH", "SOL", "XRP", "DOGE", "MNT"],
+    "metrics": ["price", "volume", "open_interest", "funding_rate"]
+  },
+  "database": "data/futures_data.db",
+  "monitor_script": "futures_data_monitor.py",
+  "update_interval": "60 seconds",
+  "next_stage": "2.1 - Аналитическое ядро",
+  "commits": [
+    "7e01a0f - Add futures_data_monitor.py",
+    "6669895 - Stage 1.2 Complete"
+  ]
+}
