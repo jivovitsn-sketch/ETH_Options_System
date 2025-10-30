@@ -8,7 +8,7 @@ class UnlimitedOIMonitor:
     def __init__(self):
         self.base_url = "https://api.bybit.com"
         self.db_path = "data/unlimited_oi.db"
-        self.assets = ['BTC', 'ETH', 'SOL', 'XRP']
+        self.assets = ['BTC', 'ETH', 'SOL', 'XRP', 'DOGE', 'MNT']
         self.init_database()
         
     def init_database(self):
