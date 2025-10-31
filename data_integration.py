@@ -113,3 +113,101 @@ def check_critical_alerts(asset):
         alerts.append(f"⚡ ДИСБАЛАНС ЛИКВИДАЦИЙ: ratio = {liquidations['ratio']:.1f}")
     
     return alerts
+
+def get_max_pain(symbol):
+    """Получить данные Max Pain из JSON файлов"""
+    try:
+        max_pain_dir = './data/max_pain/'
+        if not os.path.exists(max_pain_dir):
+            return None
+        
+        files = [f for f in os.listdir(max_pain_dir) if f.startswith(symbol) and f.endswith('.json')]
+        if not files:
+            return None
+        
+        latest_file = max(files)
+        with open(os.path.join(max_pain_dir, latest_file), 'r') as f:
+            data = json.load(f)
+        
+        return {
+            'max_pain_strike': data.get('max_pain_strike'),
+            'spot_price': data.get('spot_price'),
+            'distance_pct': data.get('distance_pct'),
+            'put_call_ratio': data.get('put_call_ratio'),
+            'total_oi': data.get('total_oi')
+        }
+    except Exception as e:
+        print(f"Error getting Max Pain data for {symbol}: {e}")
+        return None
+
+def get_pcr_data(symbol):
+    """Получить данные PCR из JSON файлов"""
+    try:
+        pcr_dir = './data/pcr/'
+        if not os.path.exists(pcr_dir):
+            return None
+        
+        files = [f for f in os.listdir(pcr_dir) if f.startswith(symbol) and f.endswith('.json')]
+        if not files:
+            return None
+        
+        latest_file = max(files)
+        with open(os.path.join(pcr_dir, latest_file), 'r') as f:
+            data = json.load(f)
+        
+        return {
+            'pcr_oi': data.get('pcr_oi'),
+            'pcr_rsi': data.get('pcr_rsi'),
+            'interpretation': data.get('interpretation')
+        }
+    except Exception as e:
+        print(f"Error getting PCR data for {symbol}: {e}")
+        return None
+
+def get_vanna_data(symbol):
+    """Получить данные Vanna из JSON файлов"""
+    try:
+        vanna_dir = './data/vanna/'
+        if not os.path.exists(vanna_dir):
+            return None
+        
+        files = [f for f in os.listdir(vanna_dir) if f.startswith(symbol) and f.endswith('.json')]
+        if not files:
+            return None
+        
+        latest_file = max(files)
+        with open(os.path.join(vanna_dir, latest_file), 'r') as f:
+            data = json.load(f)
+        
+        return {
+            'total_vanna': data.get('total_vanna'),
+            'interpretation': data.get('interpretation')
+        }
+    except Exception as e:
+        print(f"Error getting Vanna data for {symbol}: {e}")
+        return None
+
+def get_iv_rank_data(symbol):
+    """Получить данные IV Rank из JSON файлов"""
+    try:
+        iv_dir = './data/iv_rank/'
+        if not os.path.exists(iv_dir):
+            return None
+        
+        files = [f for f in os.listdir(iv_dir) if f.startswith(symbol) and f.endswith('.json')]
+        if not files:
+            return None
+        
+        latest_file = max(files)
+        with open(os.path.join(iv_dir, latest_file), 'r') as f:
+            data = json.load(f)
+        
+        return {
+            'current_iv': data.get('current_iv'),
+            'iv_rank': data.get('iv_rank_52w'),
+            'iv_percentile': data.get('iv_percentile_52w'),
+            'interpretation': data.get('interpretation')
+        }
+    except Exception as e:
+        print(f"Error getting IV Rank data for {symbol}: {e}")
+        return None

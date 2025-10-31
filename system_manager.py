@@ -53,7 +53,10 @@ class SystemManager:
         self.analytics = {
             'gamma': './gamma_exposure_calculator.py',
             'max_pain': './max_pain_calculator.py',
-            'volatility': './volatility_greeks_analyzer.py'
+            'volatility': './volatility_greeks_analyzer.py',
+            'pcr': './pcr_calculator.py',
+            'vanna': './vanna_calculator.py',
+            'iv_rank': './iv_rank_calculator.py'
         }
         
         self.signal_generator = './advanced_signals_generator.py'
