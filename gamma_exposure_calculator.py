@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""GAMMA EXPOSURE CALCULATOR - ЭТАП 1.3.1 [FIXED]"""
+"""GAMMA EXPOSURE CALCULATOR - ЭТАП 1.3.1 [FIXED v2]"""
 
 import sqlite3, pandas as pd, numpy as np, json, logging
 from datetime import datetime
@@ -40,43 +40,20 @@ class GammaExposureCalculator:
     def get_spot_price(self):
         try:
             conn = sqlite3.connect(FUTURES_DB_PATH)
-            cursor = conn.cursor()
-            # FIX: Проверяем структуру и используем правильные колонки
-            cursor.execute("PRAGMA table_info(spot_data)")
-            columns = [row[1] for row in cursor.fetchall()]
-            logger.info(f"spot_data columns: {columns}")
-            
-            # Пробуем разные варианты колонок
-            if 'spot_price' in columns:
-                query = "SELECT spot_price FROM spot_data WHERE symbol = ? ORDER BY timestamp DESC LIMIT 1"
-            elif 'last_price' in columns:
-                query = "SELECT last_price FROM spot_data WHERE symbol = ? ORDER BY timestamp DESC LIMIT 1"
-            elif 'mark_price' in columns:
-                query = "SELECT mark_price FROM spot_data WHERE symbol = ? ORDER BY timestamp DESC LIMIT 1"
-            else:
-                # Используем первую числовую колонку после symbol
-                logger.warning(f"Unknown price column, using: {columns[1] if len(columns) > 1 else 'unknown'}")
-                query = f"SELECT {columns[1]} FROM spot_data WHERE symbol = ? ORDER BY timestamp DESC LIMIT 1"
-            
-            result = pd.read_sql_query(query, conn, params=(self.symbol,))
+            # FIX: Добавляем USDT к символу для поиска в БД
+            symbol_usdt = f"{self.symbol}USDT"
+            query = "SELECT last_price FROM spot_data WHERE symbol = ? ORDER BY timestamp DESC LIMIT 1"
+            result = pd.read_sql_query(query, conn, params=(symbol_usdt,))
             conn.close()
             
             if not result.empty:
-                self.spot_price = float(result.iloc[0, 0])
+                self.spot_price = float(result['last_price'].iloc[0])
                 logger.info(f"{self.symbol} Spot: ${self.spot_price:.2f}")
                 return self.spot_price
+            else:
+                logger.warning(f"No spot data for {symbol_usdt}")
         except Exception as e: 
             logger.error(f"Spot error: {e}")
-            # FALLBACK: Берем из futures_data
-            try:
-                conn = sqlite3.connect(FUTURES_DB_PATH)
-                result = pd.read_sql_query("SELECT mark_price FROM futures_data WHERE symbol = ? ORDER BY timestamp DESC LIMIT 1", conn, params=(self.symbol,))
-                conn.close()
-                if not result.empty:
-                    self.spot_price = float(result['mark_price'].iloc[0])
-                    logger.info(f"{self.symbol} Spot (from futures): ${self.spot_price:.2f}")
-                    return self.spot_price
-            except: pass
         return None
     
     def load_options_data(self):
@@ -88,11 +65,15 @@ class GammaExposureCalculator:
             if not self.options_data.empty:
                 logger.info(f"Loaded {len(self.options_data)} options for {self.symbol}")
                 return self.options_data
+            else:
+                logger.warning(f"No options data for {self.symbol}")
         except Exception as e: logger.error(f"Load error: {e}")
         return pd.DataFrame()
     
     def calculate_gamma_exposure(self):
-        if self.options_data is None or self.options_data.empty or not self.spot_price: return {}
+        if self.options_data is None or self.options_data.empty or not self.spot_price: 
+            logger.warning(f"Cannot calculate GEX: options_data={len(self.options_data) if self.options_data is not None else 0}, spot_price={self.spot_price}")
+            return {}
         gex_by_strike = {}
         for _, row in self.options_data.iterrows():
             try:
@@ -102,7 +83,8 @@ class GammaExposureCalculator:
                 gex = bs.gamma() * row['open_interest'] * CONTRACT_MULTIPLIER * self.spot_price
                 if row['option_type'] == 'put': gex = -gex
                 gex_by_strike[row['strike']] = gex_by_strike.get(row['strike'], 0) + gex
-            except: pass
+            except Exception as e: 
+                logger.debug(f"Error calculating for strike {row['strike']}: {e}")
         self.gex_by_strike = dict(sorted(gex_by_strike.items()))
         self.total_gex = sum(gex_by_strike.values())
         logger.info(f"GEX: {len(gex_by_strike)} strikes, Total: ${self.total_gex:,.0f}")
@@ -135,7 +117,9 @@ class GammaExposureCalculator:
         except Exception as e: logger.error(f"DB error: {e}")
     
     def plot_gamma_exposure(self):
-        if not self.gex_by_strike: return
+        if not self.gex_by_strike: 
+            logger.warning("No GEX data to plot")
+            return
         strikes, gex_values = list(self.gex_by_strike.keys()), list(self.gex_by_strike.values())
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(14, 10))
         colors = ['green' if g > 0 else 'red' for g in gex_values]
@@ -169,8 +153,15 @@ class GammaExposureCalculator:
     
     def run_full_calculation(self):
         logger.info(f"{'='*80}\nGAMMA EXPOSURE: {self.symbol}\n{'='*80}")
-        if not self.get_spot_price() or self.load_options_data().empty: return False
-        self.calculate_gamma_exposure()
+        if not self.get_spot_price():
+            logger.error("Failed to get spot price")
+            return False
+        if self.load_options_data().empty:
+            logger.error("No options data")
+            return False
+        if not self.calculate_gamma_exposure():
+            logger.error("Failed to calculate GEX")
+            return False
         self.find_zero_gamma_level()
         self.save_to_database()
         self.plot_gamma_exposure()
@@ -179,7 +170,7 @@ class GammaExposureCalculator:
         return True
 
 def main():
-    print("="*80 + "\n🧮 GAMMA EXPOSURE CALCULATOR [FIXED]\n" + "="*80)
+    print("="*80 + "\n🧮 GAMMA EXPOSURE CALCULATOR [FIXED v2]\n" + "="*80)
     results = {}
     for symbol in SYMBOLS:
         try:
