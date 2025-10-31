@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""GAMMA EXPOSURE CALCULATOR - ЭТАП 1.3.1"""
+"""GAMMA EXPOSURE CALCULATOR - ЭТАП 1.3.1 [FIXED]"""
 
 import sqlite3, pandas as pd, numpy as np, json, logging
 from datetime import datetime
@@ -40,13 +40,43 @@ class GammaExposureCalculator:
     def get_spot_price(self):
         try:
             conn = sqlite3.connect(FUTURES_DB_PATH)
-            result = pd.read_sql_query("SELECT price FROM spot_data WHERE symbol = ? ORDER BY timestamp DESC LIMIT 1", conn, params=(self.symbol,))
+            cursor = conn.cursor()
+            # FIX: Проверяем структуру и используем правильные колонки
+            cursor.execute("PRAGMA table_info(spot_data)")
+            columns = [row[1] for row in cursor.fetchall()]
+            logger.info(f"spot_data columns: {columns}")
+            
+            # Пробуем разные варианты колонок
+            if 'spot_price' in columns:
+                query = "SELECT spot_price FROM spot_data WHERE symbol = ? ORDER BY timestamp DESC LIMIT 1"
+            elif 'last_price' in columns:
+                query = "SELECT last_price FROM spot_data WHERE symbol = ? ORDER BY timestamp DESC LIMIT 1"
+            elif 'mark_price' in columns:
+                query = "SELECT mark_price FROM spot_data WHERE symbol = ? ORDER BY timestamp DESC LIMIT 1"
+            else:
+                # Используем первую числовую колонку после symbol
+                logger.warning(f"Unknown price column, using: {columns[1] if len(columns) > 1 else 'unknown'}")
+                query = f"SELECT {columns[1]} FROM spot_data WHERE symbol = ? ORDER BY timestamp DESC LIMIT 1"
+            
+            result = pd.read_sql_query(query, conn, params=(self.symbol,))
             conn.close()
+            
             if not result.empty:
-                self.spot_price = float(result['price'].iloc[0])
+                self.spot_price = float(result.iloc[0, 0])
                 logger.info(f"{self.symbol} Spot: ${self.spot_price:.2f}")
                 return self.spot_price
-        except Exception as e: logger.error(f"Spot error: {e}")
+        except Exception as e: 
+            logger.error(f"Spot error: {e}")
+            # FALLBACK: Берем из futures_data
+            try:
+                conn = sqlite3.connect(FUTURES_DB_PATH)
+                result = pd.read_sql_query("SELECT mark_price FROM futures_data WHERE symbol = ? ORDER BY timestamp DESC LIMIT 1", conn, params=(self.symbol,))
+                conn.close()
+                if not result.empty:
+                    self.spot_price = float(result['mark_price'].iloc[0])
+                    logger.info(f"{self.symbol} Spot (from futures): ${self.spot_price:.2f}")
+                    return self.spot_price
+            except: pass
         return None
     
     def load_options_data(self):
@@ -149,7 +179,7 @@ class GammaExposureCalculator:
         return True
 
 def main():
-    print("="*80 + "\n🧮 GAMMA EXPOSURE CALCULATOR\n" + "="*80)
+    print("="*80 + "\n🧮 GAMMA EXPOSURE CALCULATOR [FIXED]\n" + "="*80)
     results = {}
     for symbol in SYMBOLS:
         try:
