@@ -1,0 +1,19 @@
+{
+  "symbol": "DOGE",
+  "timestamp": "2025-10-31T09:37:25.241738",
+  "spot_price": 0.18468,
+  "overall_max_pain": 0.14,
+  "expirations": {
+    "2025-11-28": {
+      "max_pain": 0.14,
+      "spot_price": 0.18468,
+      "distance_pct": 24.193199047000213,
+      "direction": "\u2193",
+      "dte": 28,
+      "total_oi": 121500.0,
+      "call_oi": 121400.0,
+      "put_oi": 100.0,
+      "put_call_ratio": 0.0008237232289950577
+    }
+  }
+}
