@@ -1,0 +1,80 @@
+{
+  "symbol": "BTC",
+  "timestamp": "2025-10-31T06:57:36.751309",
+  "spot_price": 109224.3,
+  "overall_max_pain": 112254.53111547117,
+  "expirations": {
+    "2025-10-29": {
+      "max_pain": 119000.0,
+      "distance_pct": 8.950114580729743,
+      "direction": "\u2191",
+      "dte": 1,
+      "total_oi": 194.07999999999996,
+      "put_call_ratio": 0.0010315659170621004
+    },
+    "2025-10-31": {
+      "max_pain": 113000.0,
+      "distance_pct": 3.4568314926257226,
+      "direction": "\u2191",
+      "dte": 4,
+      "total_oi": 693169.37,
+      "put_call_ratio": 0.6902207993590727
+    },
+    "2025-11-14": {
+      "max_pain": 114000.0,
+      "distance_pct": 4.372378673976392,
+      "direction": "\u2191",
+      "dte": 18,
+      "total_oi": 143559.45,
+      "put_call_ratio": 1.1515198201804517
+    },
+    "2025-11-21": {
+      "max_pain": 115000.0,
+      "distance_pct": 5.287925855327063,
+      "direction": "\u2191",
+      "dte": 21,
+      "total_oi": 721.71,
+      "put_call_ratio": 1.08924849467346
+    },
+    "2025-11-28": {
+      "max_pain": 113000.0,
+      "distance_pct": 3.4568314926257226,
+      "direction": "\u2191",
+      "dte": 32,
+      "total_oi": 607043.37,
+      "put_call_ratio": 0.7054094335104857
+    },
+    "2025-12-26": {
+      "max_pain": 110000.0,
+      "distance_pct": 0.7101899485737122,
+      "direction": "\u2191",
+      "dte": 60,
+      "total_oi": 797167.6700000002,
+      "put_call_ratio": 0.5823573066019232
+    },
+    "2026-03-27": {
+      "max_pain": 115000.0,
+      "distance_pct": 5.287925855327063,
+      "direction": "\u2191",
+      "dte": 151,
+      "total_oi": 85728.04999999999,
+      "put_call_ratio": 0.47304673820891446
+    },
+    "2026-06-26": {
+      "max_pain": 130000.0,
+      "distance_pct": 19.021133575587115,
+      "direction": "\u2191",
+      "dte": 242,
+      "total_oi": 17989.790000000005,
+      "put_call_ratio": 0.5977460770834886
+    },
+    "2026-09-25": {
+      "max_pain": 120000.0,
+      "distance_pct": 9.865661762080414,
+      "direction": "\u2191",
+      "dte": 333,
+      "total_oi": 2517.7400000000002,
+      "put_call_ratio": 3.181528292172526
+    }
+  }
+}
