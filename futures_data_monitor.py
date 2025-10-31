@@ -29,17 +29,16 @@ class FuturesDataMonitor:
         self.conn.commit()
         print("Database initialized")
     
-    def fetch_ticker(self, symbol):
+    def fetch_ticker(self, symbol, category='linear'):
         try:
             url = self.base_url + "/v5/market/tickers"
-            params = {'category': 'linear', 'symbol': symbol}
+            params = {'category': category, 'symbol': symbol}
             r = requests.get(url, params=params, timeout=10)
             if r.status_code == 200:
                 data = r.json()
                 if data.get('retCode') == 0:
                     return data['result']['list'][0]
-        except Exception as e:
-            print("Error:", e)
+        except: pass
         return None
     
     def fetch_funding(self, symbol):
@@ -51,18 +50,17 @@ class FuturesDataMonitor:
                 data = r.json()
                 if data.get('retCode') == 0 and data['result']['list']:
                     return float(data['result']['list'][0]['fundingRate'])
-        except:
-            pass
+        except: pass
         return 0
     
     def run_cycle(self):
         ts = int(datetime.now().timestamp())
         print("\n" + "="*80)
-        print(datetime.now().strftime('[%Y-%m-%d %H:%M:%S] Futures Cycle'))
+        print(datetime.now().strftime('[%H:%M:%S] Futures + Spot'))
         print("="*80)
         
         for symbol in self.symbols:
-            ticker = self.fetch_ticker(symbol)
+            ticker = self.fetch_ticker(symbol, 'linear')
             if ticker:
                 funding = self.fetch_funding(symbol)
                 price = float(ticker['lastPrice'])
@@ -75,15 +73,29 @@ class FuturesDataMonitor:
                     VALUES (?, ?, ?, ?, ?, ?)
                 """, (ts, symbol, price, vol, oi, funding))
                 
-                print("  OK %s | $%.2f | FR: %.4f%% | OI: $%.1fM" % 
-                      (symbol, price, funding, oi/1e6))
+                spot_ticker = self.fetch_ticker(symbol, 'spot')
+                if spot_ticker:
+                    spot_price = float(spot_ticker['lastPrice'])
+                    spot_vol = float(spot_ticker.get('volume24h', 0))
+                    
+                    self.conn.execute("""
+                        INSERT OR REPLACE INTO spot_data 
+                        (timestamp, symbol, last_price, volume_24h)
+                        VALUES (?, ?, ?, ?)
+                    """, (ts, symbol, spot_price, spot_vol))
+                    
+                    basis = price - spot_price
+                    basis_pct = (basis / spot_price) * 100 if spot_price > 0 else 0
+                    
+                    print("  %s | Fut: $%.2f | Spot: $%.2f | Basis: %+.2f%%" % 
+                          (symbol, price, spot_price, basis_pct))
             time.sleep(0.2)
         
         self.conn.commit()
         print("="*80 + "\n")
     
     def run(self):
-        print("Futures Monitor Started")
+        print("Futures + Spot Monitor Started")
         while True:
             try:
                 self.run_cycle()
