@@ -1,0 +1,14 @@
+{
+  "symbol": "ETH",
+  "timestamp": "2025-10-31T11:39:58.251037",
+  "spot_price": 3837.34,
+  "iv_analysis": {
+    "avg_iv": 67.1807503113325,
+    "call_iv": 67.12016383112791,
+    "put_iv": 67.23992
+  },
+  "greeks": {
+    "total_delta": 5886033.43251,
+    "total_gamma": 14780.755140000001
+  }
+}
