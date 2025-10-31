@@ -7,3 +7,20 @@ data/oi/*.csv
 *.log
 .DS_Store
 !.gitkeep
+
+# SQLite временные файлы
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs
+*.log
+
+# Temp
+temp_*
+test_*
