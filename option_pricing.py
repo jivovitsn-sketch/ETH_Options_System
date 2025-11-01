@@ -317,3 +317,64 @@ def format_option_signal_message(asset, signal_type, confidence, spot_price, str
 """
 
     return message
+
+def get_dynamic_expiration_days(signal_type):
+    """Динамический выбор дней до экспирации на основе типа сигнала"""
+    import random
+    if signal_type == "BULLISH":
+        return random.randint(30, 60)  # Длинные экспирации для бычьих
+    elif signal_type == "BEARISH":
+        return random.randint(7, 30)   # Короткие экспирации для медвежьих
+    else:
+        return random.randint(21, 45)  # Средние для нейтральных
+
+def generate_option_strategy(asset, signal_type, spot_price):
+    """Генерация опционной стратегии на основе сигнала"""
+    # Получаем динамическую экспирацию
+    expiration_days = get_dynamic_expiration_days(signal_type)
+    
+    if signal_type == "BULLISH":
+        return generate_bull_call_spread(asset, spot_price, expiration_days)
+    elif signal_type == "BEARISH":
+        return generate_bear_put_spread(asset, spot_price, expiration_days)
+    else:
+        return generate_long_straddle(asset, spot_price, expiration_days)
+
+def generate_bull_call_spread(asset, spot_price, expiration_days):
+    """Генерация бычьей стратегии кол спред"""
+    return {
+        'strategy_type': 'BULL_CALL_SPREAD',
+        'long_call_strike': spot_price * 0.95,
+        'short_call_strike': spot_price * 1.10,
+        'premium_collected': spot_price * 0.02,
+        'max_profit': spot_price * 0.08,
+        'max_loss': spot_price * 0.02,
+        'probability_of_profit': 0.65,
+        'expiration_days': expiration_days
+    }
+
+def generate_bear_put_spread(asset, spot_price, expiration_days):
+    """Генерация медвежьей стратегии пут спред"""
+    return {
+        'strategy_type': 'BEAR_PUT_SPREAD',
+        'long_put_strike': spot_price * 1.05,
+        'short_put_strike': spot_price * 0.90,
+        'premium_collected': spot_price * 0.015,
+        'max_profit': spot_price * 0.06,
+        'max_loss': spot_price * 0.015,
+        'probability_of_profit': 0.60,
+        'expiration_days': expiration_days
+    }
+
+def generate_long_straddle(asset, spot_price, expiration_days):
+    """Генерация нейтральной стратегии стрэддл"""
+    return {
+        'strategy_type': 'LONG_STRADDLE',
+        'strike': spot_price,
+        'call_premium': spot_price * 0.02,
+        'put_premium': spot_price * 0.018,
+        'total_premium': spot_price * 0.038,
+        'max_loss': spot_price * 0.038,
+        'probability_of_profit': 0.55,
+        'expiration_days': expiration_days
+    }
