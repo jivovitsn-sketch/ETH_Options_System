@@ -211,3 +211,12 @@ def get_iv_rank_data(symbol):
     except Exception as e:
         print(f"Error getting IV Rank data for {symbol}: {e}")
         return None
+
+def get_option_vwap(symbol):
+    """Получить OPTION VWAP данные"""
+    try:
+        from option_vwap_calculator import get_option_vwap
+        return get_option_vwap(symbol)
+    except Exception as e:
+        logger.error(f"Error getting option vwap for {symbol}: {e}")
+        return None

@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-DATA INTEGRATOR - Объединяет данные из всех источников
-Stage 1.4.2
+DATA INTEGRATOR - Stage 1.4.2 (Updated with VWAP)
+Объединяет данные из всех источников
 """
 
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime
 from typing import Dict, Any, Optional
 from data_integration import (
     get_futures_data,
-    get_recent_liquidations, 
+    get_recent_liquidations,
     get_gamma_exposure,
     get_max_pain,
     get_pcr_data,
     get_vanna_data,
-    get_iv_rank_data
+    get_iv_rank_data,
+    get_option_vwap  # НОВОЕ
 )
 
 logging.basicConfig(level=logging.INFO)
@@ -32,7 +33,8 @@ class DataIntegrator:
             'max_pain': get_max_pain,
             'gex': get_gamma_exposure,
             'vanna': get_vanna_data,
-            'iv_rank': get_iv_rank_data
+            'iv_rank': get_iv_rank_data,
+            'option_vwap': get_option_vwap  # ДОБАВЛЕНО
         }
     
     def get_all_data(self, asset: str) -> Dict[str, Any]:
@@ -130,22 +132,23 @@ if __name__ == '__main__':
     integrator = DataIntegrator()
     
     print("=" * 60)
-    print("🧪 ТЕСТИРОВАНИЕ DATA INTEGRATOR")
+    print("🧪 DATA INTEGRATOR TEST (with VWAP)")
     print("=" * 60)
     
-    for asset in ['BTC', 'ETH', 'SOL']:
-        print(f"\n📊 Анализ {asset}:")
+    for asset in ['BTC', 'ETH', 'SOL', 'XRP', 'DOGE', 'MNT']:
+        print(f"\n📊 {asset}:")
         data = integrator.get_all_data(asset)
         
         quality = data.get('quality', {})
-        print(f"  Status: {quality.get('status')}")
-        print(f"  Completeness: {quality.get('completeness', 0)*100:.0f}%")
-        print(f"  Available: {quality.get('available_sources')}/{quality.get('total_sources')}")
-        print(f"  Spot Price: ${data.get('spot_price', 0):,.2f}")
+        print(f"  Quality: {quality.get('status')} ({quality.get('completeness', 0)*100:.0f}%)")
+        print(f"  Sources: {quality.get('available_sources')}/{quality.get('total_sources')}")
+        print(f"  Price: ${data.get('spot_price', 0):,.2f}")
         
-        if quality.get('missing_sources'):
-            print(f"  Missing: {', '.join(quality['missing_sources'][:3])}")
+        # Проверяем VWAP
+        vwap = data.get('option_vwap')
+        if vwap:
+            print(f"  ✅ VWAP: ${vwap.get('total_vwap', 0):,.2f}")
     
     print("\n" + "=" * 60)
-    print("✅ ТЕСТИРОВАНИЕ ЗАВЕРШЕНО")
+    print("✅ TEST COMPLETE")
     print("=" * 60)
