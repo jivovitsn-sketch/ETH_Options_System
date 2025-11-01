@@ -1,301 +1,343 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-Signal Analyzer v3 - оптимизирован для бэктеста Stage 1.5
+SIGNAL ANALYZER - Stage 1.4.3 (ROADMAP Implementation)
+Анализирует данные и генерирует сигналы с настраиваемыми параметрами
 """
 
 import logging
-import numpy as np
-from typing import Dict, Any, List
-from datetime import datetime
+from typing import Dict, Any, List, Optional
+import hashlib
+import json
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 class SignalAnalyzer:
-    def __init__(self, config: Dict[str, Any] = None):
-        self.logger = logging.getLogger('SignalAnalyzer')
-        self.config = config or self._get_default_config()
+    """Анализирует данные и генерирует сигнал с настраиваемыми параметрами"""
+    
+    def __init__(self, config: Dict[str, Any]):
+        self.config = self._validate_config(config)
         self.signal_history = []
-
-    def _get_default_config(self) -> Dict[str, Any]:
-        """Получить конфигурацию по умолчанию для бэктеста"""
-        return {
-            # Веса групп (будут оптимизироваться)
-            'futures_weight': 0.35,
-            'options_weight': 0.45,
-            'timing_weight': 0.20,
-            
-            # Пороги (будут оптимизироваться)
-            'min_confidence': 0.60,  # Оптимизировано для текущих данных
-            'strong_threshold': 0.75,
-            'min_data_sources': 2,
-            
-            # Параметры для ML оптимизации
-            'pcr_bullish_threshold': 0.8,
-            'pcr_bearish_threshold': 1.2,
-            'max_pain_threshold': 0.02,  # 2%
-            'vanna_threshold': 0
-        }
-
-    def analyze(self, data: Dict[str, Any]) -> Dict[str, Any]:
-        """Анализировать данные и генерировать сигнал"""
-        self.logger.info(f"Analyzing data for {data.get('asset', 'unknown')}")
-
-        # Реальный анализ на основе доступных данных
-        futures_analysis = self._analyze_futures(data)
-        options_analysis = self._analyze_options(data)
-        timing_analysis = self._analyze_timing(data)
-
-        # Взвешенная уверенность
+    
+    def _validate_config(self, config: Dict[str, Any]) -> Dict[str, Any]:
+        """Валидация конфигурации"""
+        total_weights = (
+            config.get('futures_weight', 0) +
+            config.get('options_weight', 0) +
+            config.get('timing_weight', 0)
+        )
+        
+        if abs(total_weights - 1.0) > 0.01:
+            logger.warning(f"Group weights sum to {total_weights}, normalizing...")
+            factor = 1.0 / total_weights
+            config['futures_weight'] *= factor
+            config['options_weight'] *= factor
+            config['timing_weight'] *= factor
+        
+        logger.info("✅ Config validation passed")
+        return config
+    
+    def analyze(self, data: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        """Анализ данных и генерация сигнала"""
+        
+        if not self._check_data_quality(data):
+            logger.warning(f"Data quality too low for {data.get('asset')}")
+            return None
+        
+        futures_signal = self._analyze_futures(data)
+        options_signal = self._analyze_options(data)
+        timing_signal = self._analyze_timing(data)
+        
+        if not self._pass_filters(futures_signal, options_signal, timing_signal):
+            logger.info(f"Signal filters not passed for {data.get('asset')}")
+            return None
+        
         total_confidence = (
-            futures_analysis['confidence'] * self.config['futures_weight'] +
-            options_analysis['confidence'] * self.config['options_weight'] +
-            timing_analysis['confidence'] * self.config['timing_weight']
+            futures_signal['confidence'] * self.config['futures_weight'] +
+            options_signal['confidence'] * self.config['options_weight'] +
+            timing_signal['confidence'] * self.config['timing_weight']
         )
-
-        # Определение сигнала
+        
         signal_type = self._determine_signal_type(
-            futures_analysis, options_analysis, timing_analysis, total_confidence
+            futures_signal,
+            options_signal,
+            timing_signal
         )
-
-        signal_result = {
+        
+        reasoning = self._build_reasoning(
+            futures_signal,
+            options_signal,
+            timing_signal
+        )
+        
+        result = {
             'signal_type': signal_type,
-            'confidence': round(total_confidence, 3),
-            'timestamp': datetime.now().isoformat(),
-            'asset': data.get('asset', 'unknown'),
+            'confidence': total_confidence,
+            'strength': self._classify_strength(total_confidence),
             'components': {
-                'futures': futures_analysis,
-                'options': options_analysis,
-                'timing': timing_analysis
+                'futures': futures_signal,
+                'options': options_signal,
+                'timing': timing_signal
             },
-            'reasoning': self._build_reasoning(signal_type, total_confidence, futures_analysis, options_analysis),
-            'data_quality': data.get('data_quality', {})
+            'reasoning': reasoning,
+            'config_version': self._get_config_hash(),
+            'data_quality': data.get('quality')
         }
         
-        # Сохраняем для истории (для бэктеста)
-        self.signal_history.append(signal_result)
+        self.signal_history.append(result)
+        return result
+    
+    def _check_data_quality(self, data: Dict[str, Any]) -> bool:
+        """Проверка минимального качества данных"""
+        quality = data.get('quality', {})
         
-        return signal_result
-
+        min_sources = self.config.get('min_data_sources', 2)
+        if quality.get('available_sources', 0) < min_sources:
+            return False
+        
+        required_quality = self.config.get('min_data_quality', 'ACCEPTABLE')
+        quality_levels = ['POOR', 'ACCEPTABLE', 'GOOD', 'EXCELLENT']
+        
+        actual = quality.get('status', 'POOR')
+        if quality_levels.index(actual) < quality_levels.index(required_quality):
+            return False
+        
+        return True
+    
     def _analyze_futures(self, data: Dict[str, Any]) -> Dict[str, Any]:
-        """Анализ фьючерсных данных"""
-        indicators_used = []
+        """Анализ фьючерсных индикаторов"""
         confidence = 0.5
-        direction = 'neutral'
-        details = []
-
-        # Используем опционные данные как прокси пока нет фьючерсных
-        if data.get('pcr'):
-            pcr_data = data['pcr']
-            if 'ratio' in pcr_data:
-                pcr_ratio = pcr_data['ratio']
-                indicators_used.append('pcr_proxy')
-                
-                # Адаптивная логика на основе конфига
-                if pcr_ratio > self.config['pcr_bearish_threshold']:
-                    direction = 'bearish'
-                    confidence = 0.7
-                    details.append(f"PCR медвежий: {pcr_ratio:.2f}")
-                elif pcr_ratio < self.config['pcr_bullish_threshold']:
-                    direction = 'bullish'
-                    confidence = 0.7
-                    details.append(f"PCR бычий: {pcr_ratio:.2f}")
-
-        return {
-            'confidence': confidence,
-            'direction': direction,
-            'indicators_used': indicators_used,
-            'details': details
-        }
-
-    def _analyze_options(self, data: Dict[str, Any]) -> Dict[str, Any]:
-        """Анализ опционных данных"""
-        indicators_used = []
-        confidence_scores = []
-        direction_votes = []
-        details = []
-
-        # Анализ PCR
-        if data.get('pcr'):
-            pcr_data = data['pcr']
-            if 'ratio' in pcr_data:
-                pcr_ratio = pcr_data['ratio']
-                indicators_used.append('pcr')
-                
-                if pcr_ratio > self.config['pcr_bearish_threshold']:
-                    direction_votes.append('bearish')
-                    confidence_scores.append(0.8)
-                    details.append(f"Сильный медвежий PCR: {pcr_ratio:.2f}")
-                elif pcr_ratio > 1.0:
-                    direction_votes.append('bearish')
-                    confidence_scores.append(0.6)
-                    details.append(f"Медвежий PCR: {pcr_ratio:.2f}")
-                elif pcr_ratio < self.config['pcr_bullish_threshold']:
-                    direction_votes.append('bullish')
-                    confidence_scores.append(0.8)
-                    details.append(f"Сильный бычий PCR: {pcr_ratio:.2f}")
-                elif pcr_ratio < 1.0:
-                    direction_votes.append('bullish')
-                    confidence_scores.append(0.6)
-                    details.append(f"Бычий PCR: {pcr_ratio:.2f}")
-
-        # Анализ Max Pain
-        if data.get('max_pain'):
-            max_pain_data = data['max_pain']
-            if 'max_pain_price' in max_pain_data and 'current_price' in max_pain_data:
-                max_pain = max_pain_data['max_pain_price']
-                current = max_pain_data['current_price']
-                price_diff_pct = (current - max_pain) / max_pain
-                indicators_used.append('max_pain')
-                
-                threshold = self.config['max_pain_threshold']
-                if price_diff_pct > threshold:
-                    direction_votes.append('bullish')
-                    confidence_scores.append(0.7)
-                    details.append(f"Цена выше Max Pain на {price_diff_pct*100:.1f}%")
-                elif price_diff_pct < -threshold:
-                    direction_votes.append('bearish')
-                    confidence_scores.append(0.7)
-                    details.append(f"Цена ниже Max Pain на {abs(price_diff_pct)*100:.1f}%")
-
-        # Анализ Vanna
-        if data.get('vanna'):
-            vanna_data = data['vanna']
-            if 'total_vanna' in vanna_data:
-                total_vanna = vanna_data['total_vanna']
-                indicators_used.append('vanna')
-                
-                if total_vanna > self.config['vanna_threshold']:
-                    direction_votes.append('bullish')
-                    confidence_scores.append(0.6)
-                    details.append(f"Положительная Vanna: {total_vanna:,.0f}")
-                else:
-                    direction_votes.append('bearish')
-                    confidence_scores.append(0.6)
-                    details.append(f"Отрицательная Vanna: {total_vanna:,.0f}")
-
-        # Определяем общее направление и уверенность
-        if not direction_votes:
-            return {
-                'confidence': 0.5,
-                'direction': 'neutral',
-                'indicators_used': indicators_used,
-                'details': details
-            }
+        signal = 'NEUTRAL'
+        reasons = []
         
-        # Голосование по направлению
-        bullish_count = direction_votes.count('bullish')
-        bearish_count = direction_votes.count('bearish')
-        
-        if bullish_count > bearish_count:
-            direction = 'bullish'
-        elif bearish_count > bullish_count:
-            direction = 'bearish'
-        else:
-            direction = 'neutral'
-        
-        # Средняя уверенность
-        confidence = np.mean(confidence_scores) if confidence_scores else 0.5
-
-        return {
-            'confidence': confidence,
-            'direction': direction,
-            'indicators_used': indicators_used,
-            'details': details
-        }
-
-    def _analyze_timing(self, data: Dict[str, Any]) -> Dict[str, Any]:
-        """Анализ тайминговых данных"""
-        return {
-            'confidence': 0.5,
-            'direction': 'neutral',
-            'indicators_used': [],
-            'details': ['Timing indicators not yet implemented']
-        }
-
-    def _determine_signal_type(self, futures: Dict, options: Dict, timing: Dict, confidence: float) -> str:
-        """Определить тип сигнала"""
-        if confidence < self.config['min_confidence']:
-            return 'NO_SIGNAL'
-        
-        # Определяем общее направление
-        directions = {
-            'bullish': 0,
-            'bearish': 0,
-            'neutral': 0
-        }
-        
-        for analysis in [futures, options, timing]:
-            directions[analysis['direction']] += 1
-        
-        if directions['bullish'] > directions['bearish']:
-            signal_direction = 'BULLISH'
-        elif directions['bearish'] > directions['bullish']:
-            signal_direction = 'BEARISH'
-        else:
-            signal_direction = 'NEUTRAL'
-
-        if confidence >= self.config['strong_threshold']:
-            return f"STRONG_{signal_direction}"
-        else:
-            return f"WEAK_{signal_direction}"
-
-    def _build_reasoning(self, signal_type: str, confidence: float, futures: Dict, options: Dict) -> str:
-        """Построить объяснение сигнала"""
-        if signal_type == 'NO_SIGNAL':
-            return f"Confidence too low: {confidence} < {self.config['min_confidence']}"
-        
-        reasoning_parts = []
-        
-        if futures['details']:
-            reasoning_parts.append(f"Futures: {', '.join(futures['details'])}")
-        if options['details']:
-            reasoning_parts.append(f"Options: {', '.join(options['details'])}")
+        # Funding Rate
+        futures = data.get('futures')
+        if futures and 'funding_rate' in futures:
+            fr = futures['funding_rate']
             
-        if reasoning_parts:
-            return f"{signal_type} with {confidence} confidence. " + ". ".join(reasoning_parts)
+            if fr and fr > 0.0001:
+                confidence -= 0.15
+                signal = 'BEARISH'
+                reasons.append(f"High funding {fr*100:.4f}%")
+            elif fr and fr < -0.0001:
+                confidence += 0.15
+                signal = 'BULLISH'
+                reasons.append(f"Negative funding {fr*100:.4f}%")
+        
+        # Liquidations
+        liq = data.get('liquidations')
+        if liq and 'ratio' in liq:
+            ratio = liq['ratio']
+            
+            if ratio and ratio > 2.0:
+                confidence -= 0.20
+                if signal == 'NEUTRAL':
+                    signal = 'BEARISH'
+                reasons.append(f"Liq ratio {ratio:.2f} (longs squeezed)")
+            elif ratio and ratio < 0.5:
+                confidence += 0.20
+                if signal == 'NEUTRAL':
+                    signal = 'BULLISH'
+                reasons.append(f"Liq ratio {ratio:.2f} (shorts squeezed)")
+        
+        return {
+            'signal': signal,
+            'confidence': max(min(confidence, 1.0), 0.0),
+            'reasoning': reasons,
+            'data_used': ['futures', 'liquidations']
+        }
+    
+    def _analyze_options(self, data: Dict[str, Any]) -> Dict[str, Any]:
+        """Анализ опционных индикаторов - С ПРОВЕРКАМИ None"""
+        confidence = 0.5
+        signal = 'NEUTRAL'
+        reasons = []
+        
+        # Max Pain
+        max_pain = data.get('max_pain')
+        if max_pain and 'distance_pct' in max_pain:
+            distance_pct = max_pain['distance_pct']
+            
+            if distance_pct is not None and abs(distance_pct) > 3:
+                confidence += 0.10
+                if distance_pct > 0:
+                    reasons.append(f"Above Max Pain {distance_pct:.1f}%")
+                else:
+                    reasons.append(f"Below Max Pain {abs(distance_pct):.1f}%")
+        
+        # GEX
+        gex = data.get('gex')
+        if gex and 'total_gex' in gex:
+            total_gex = gex['total_gex']
+            
+            if total_gex is not None and total_gex < 0:
+                confidence += 0.10
+                signal = 'BULLISH' if signal == 'NEUTRAL' else signal
+                reasons.append("Negative GEX")
+        
+        # PCR
+        pcr = data.get('pcr')
+        if pcr and 'pcr_oi' in pcr:
+            pcr_oi = pcr['pcr_oi']
+            
+            if pcr_oi is not None:
+                if pcr_oi > 1.5:
+                    confidence += 0.08
+                    reasons.append(f"High PCR {pcr_oi:.2f}")
+                elif pcr_oi < 0.7:
+                    confidence -= 0.08
+                    reasons.append(f"Low PCR {pcr_oi:.2f}")
+        
+        # Vanna
+        vanna = data.get('vanna')
+        if vanna and 'total_vanna' in vanna:
+            total_vanna = vanna['total_vanna']
+            
+            if total_vanna is not None and abs(total_vanna) > 500:
+                if total_vanna > 0:
+                    confidence += 0.12
+                    signal = 'BULLISH' if signal == 'NEUTRAL' else signal
+                else:
+                    confidence -= 0.12
+                    signal = 'BEARISH' if signal == 'NEUTRAL' else signal
+                reasons.append(f"Vanna {total_vanna:.0f}")
+        
+        return {
+            'signal': signal,
+            'confidence': max(min(confidence, 1.0), 0.0),
+            'reasoning': reasons,
+            'data_used': ['max_pain', 'gex', 'pcr', 'vanna']
+        }
+    
+    def _analyze_timing(self, data: Dict[str, Any]) -> Dict[str, Any]:
+        """Анализ тайминговых индикаторов"""
+        confidence = 0.5
+        signal = 'NEUTRAL'
+        reasons = []
+        
+        # PCR RSI
+        pcr = data.get('pcr')
+        if pcr and 'pcr_rsi' in pcr:
+            rsi_val = pcr['pcr_rsi']
+            
+            if rsi_val is not None:
+                if rsi_val > 70:
+                    confidence += 0.10
+                    signal = 'BULLISH'
+                    reasons.append(f"PCR RSI {rsi_val:.0f} (fear)")
+                elif rsi_val < 30:
+                    confidence -= 0.10
+                    signal = 'BEARISH'
+                    reasons.append(f"PCR RSI {rsi_val:.0f} (greed)")
+        
+        return {
+            'signal': signal,
+            'confidence': max(min(confidence, 1.0), 0.0),
+            'reasoning': reasons,
+            'data_used': ['pcr_rsi']
+        }
+    
+    def _pass_filters(self, futures_sig, options_sig, timing_sig) -> bool:
+        """Проверка фильтров"""
+        
+        if self.config.get('require_futures_confirm', False):
+            if futures_sig['confidence'] < 0.5:
+                return False
+        
+        if self.config.get('require_options_confirm', True):
+            if options_sig['confidence'] < 0.5:
+                return False
+        
+        return True
+    
+    def _determine_signal_type(self, futures_sig, options_sig, timing_sig) -> str:
+        """Определение направления сигнала"""
+        signals = [
+            futures_sig['signal'],
+            options_sig['signal'],
+            timing_sig['signal']
+        ]
+        
+        bullish_count = signals.count('BULLISH')
+        bearish_count = signals.count('BEARISH')
+        
+        if bullish_count >= 2:
+            return 'BULLISH'
+        elif bearish_count >= 2:
+            return 'BEARISH'
         else:
-            return f"{signal_type} signal with {confidence} confidence"
+            return 'NO_SIGNAL'
+    
+    def _build_reasoning(self, futures_sig, options_sig, timing_sig) -> List[str]:
+        """Объединение обоснований"""
+        all_reasons = []
+        all_reasons.extend(futures_sig['reasoning'])
+        all_reasons.extend(options_sig['reasoning'])
+        all_reasons.extend(timing_sig['reasoning'])
+        return all_reasons[:8]
+    
+    def _classify_strength(self, confidence: float) -> str:
+        """Классификация силы"""
+        strong = self.config.get('strong_threshold', 0.75)
+        min_conf = self.config.get('min_confidence', 0.60)
+        
+        if confidence >= strong:
+            return 'STRONG'
+        elif confidence >= min_conf:
+            return 'MODERATE'
+        else:
+            return 'WEAK'
+    
+    def _get_config_hash(self) -> str:
+        """Хэш конфигурации"""
+        config_str = json.dumps(self.config, sort_keys=True)
+        return hashlib.md5(config_str.encode()).hexdigest()[:8]
     
     def get_performance_metrics(self) -> Dict[str, Any]:
-        """Получить метрики производительности для оптимизации"""
+        """Метрики производительности"""
         if not self.signal_history:
-            return {}
+            return {'total_signals': 0}
         
-        signals = [s for s in self.signal_history if s['signal_type'] != 'NO_SIGNAL']
-        total_signals = len(signals)
-        
-        if total_signals == 0:
-            return {}
-        
-        bullish_signals = len([s for s in signals if 'BULLISH' in s['signal_type']])
-        bearish_signals = len([s for s in signals if 'BEARISH' in s['signal_type']])
-        avg_confidence = np.mean([s['confidence'] for s in signals])
+        total = len(self.signal_history)
+        bullish = sum(1 for s in self.signal_history if s['signal_type'] == 'BULLISH')
+        bearish = sum(1 for s in self.signal_history if s['signal_type'] == 'BEARISH')
         
         return {
-            'total_signals': total_signals,
-            'bullish_signals': bullish_signals,
-            'bearish_signals': bearish_signals,
-            'avg_confidence': avg_confidence,
-            'signal_frequency': total_signals / len(self.signal_history) if self.signal_history else 0
+            'total_signals': total,
+            'bullish_count': bullish,
+            'bearish_count': bearish,
+            'avg_confidence': sum(s['confidence'] for s in self.signal_history) / total
         }
 
-# Тестовый запуск
-if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO)
-    
+
+if __name__ == '__main__':
     from data_integrator import DataIntegrator
+    from backtest_params import get_default_config
     
+    print("=" * 60)
+    print("🧪 SIGNAL ANALYZER - FIXED")
+    print("=" * 60)
+    
+    config = get_default_config()
     integrator = DataIntegrator()
-    analyzer = SignalAnalyzer()
+    analyzer = SignalAnalyzer(config)
     
-    print("🧪 SignalAnalyzer v3 - ОПТИМИЗИРОВАН ДЛЯ БЭКТЕСТА")
-    print("=" * 50)
+    assets = ['BTC', 'ETH', 'SOL', 'XRP', 'DOGE', 'MNT']
     
-    data = integrator.get_all_data('ETH')
-    signal = analyzer.analyze(data)
+    for asset in assets:
+        print(f"\n📊 {asset}:")
+        data = integrator.get_all_data(asset)
+        signal = analyzer.analyze(data)
+        
+        if signal:
+            print(f"  Signal: {signal['signal_type']}")
+            print(f"  Confidence: {signal['confidence']*100:.1f}% [{signal['strength']}]")
+            if signal['reasoning']:
+                print(f"  Reasons: {', '.join(signal['reasoning'][:2])}")
+        else:
+            print(f"  ❌ No signal")
     
-    print(f"📊 Данные: {data['data_quality']['available_sources']} источников")
-    print(f"📈 Сигнал: {signal['signal_type']}")
-    print(f"🎯 Уверенность: {signal['confidence']}")
-    print(f"🧠 Обоснование: {signal['reasoning']}")
-    
-    metrics = analyzer.get_performance_metrics()
-    print(f"📈 Метрики: {metrics}")
+    print("\n" + "=" * 60)
+    print("✅ ТЕСТ ЗАВЕРШЁН")
+    print("=" * 60)
