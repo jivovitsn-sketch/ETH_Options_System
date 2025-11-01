@@ -1,0 +1,145 @@
+{
+  "asset": "DOGE",
+  "signal": {
+    "signal_type": "BULLISH",
+    "confidence": 0.5680000000000001,
+    "strength": "WEAK",
+    "components": {
+      "futures": {
+        "signal": "BULLISH",
+        "confidence": 0.7,
+        "reasoning": [
+          "Liq ratio 0.06 (shorts squeezed)"
+        ],
+        "data_used": [
+          "futures",
+          "liquidations"
+        ]
+      },
+      "options": {
+        "signal": "BULLISH",
+        "confidence": 0.54,
+        "reasoning": [
+          "Low PCR 0.10",
+          "Vanna 2837835"
+        ],
+        "data_used": [
+          "max_pain",
+          "gex",
+          "pcr",
+          "vanna"
+        ]
+      },
+      "timing": {
+        "signal": "BEARISH",
+        "confidence": 0.4,
+        "reasoning": [
+          "PCR RSI 0 (greed)"
+        ],
+        "data_used": [
+          "pcr_rsi"
+        ]
+      }
+    },
+    "reasoning": [
+      "Liq ratio 0.06 (shorts squeezed)",
+      "Low PCR 0.10",
+      "Vanna 2837835",
+      "PCR RSI 0 (greed)"
+    ],
+    "config_version": "63a48001",
+    "data_quality": {
+      "status": "EXCELLENT",
+      "available_sources": 7,
+      "total_sources": 8,
+      "completeness": 0.875,
+      "missing_sources": [
+        "iv_rank"
+      ]
+    }
+  },
+  "data_snapshot": {
+    "asset": "DOGE",
+    "timestamp": "2025-11-01 22:54:37.030643",
+    "spot_price": 0.18719,
+    "available_sources": [
+      "futures",
+      "liquidations",
+      "pcr",
+      "max_pain",
+      "gex",
+      "vanna",
+      "option_vwap"
+    ],
+    "futures": {
+      "price": 0.18719,
+      "volume_24h": 756637692.0,
+      "open_interest": 954023614.0,
+      "funding_rate": 6.005e-05
+    },
+    "liquidations": {
+      "long": 1083.11358,
+      "short": 17652.817479999998,
+      "total_count": 12,
+      "ratio": 0.06135641413769379
+    },
+    "pcr": {
+      "pcr_oi": 0.1,
+      "pcr_rsi": 0.0,
+      "interpretation": "BULLISH_EXTREME"
+    },
+    "max_pain": {
+      "max_pain_strike": null,
+      "spot_price": 0.18704,
+      "distance_pct": null,
+      "put_call_ratio": null,
+      "total_oi": null
+    },
+    "gex": {
+      "spot_price": 0.18704,
+      "total_gex": 51364239.72917218,
+      "zero_gamma_level": 0.185014178924415,
+      "gex_by_strike": {
+        "0.14": 1195266.7773575247,
+        "0.16": 980630.2745213843,
+        "0.17": 14066925.376366412,
+        "0.18": 2591731.432230406,
+        "0.185": -33465.017322590415,
+        "0.19": 11767506.742999377,
+        "0.2": 8170869.823706367,
+        "0.21": 4582678.424020272,
+        "0.22": 2588365.802262928,
+        "0.23": 130.21569969626051,
+        "0.24": 3283810.9978989772,
+        "0.25": 1999213.4004752694,
+        "0.26": 170575.4789561511
+      }
+    },
+    "vanna": {
+      "total_vanna": 2837834.84,
+      "interpretation": "BULLISH_STRONG"
+    },
+    "iv_rank": null,
+    "option_vwap": {
+      "asset": "DOGE",
+      "timestamp": "2025-11-01T22:54:37.128331",
+      "call_vwap": 0.19,
+      "put_vwap": 0.17,
+      "total_vwap": 0.19,
+      "call_volume": 37283900.0,
+      "put_volume": 3725700.0,
+      "total_volume": 41009600.0,
+      "vwap_ratio": 1.125
+    },
+    "quality": {
+      "status": "EXCELLENT",
+      "available_sources": 7,
+      "total_sources": 8,
+      "completeness": 0.875,
+      "missing_sources": [
+        "iv_rank"
+      ]
+    }
+  },
+  "strategies": []
+}

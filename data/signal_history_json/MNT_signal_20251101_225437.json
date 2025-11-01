@@ -1,0 +1,142 @@
+{
+  "asset": "MNT",
+  "signal": {
+    "signal_type": "NO_SIGNAL",
+    "confidence": 0.518,
+    "strength": "WEAK",
+    "components": {
+      "futures": {
+        "signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "data_used": [
+          "futures",
+          "liquidations"
+        ]
+      },
+      "options": {
+        "signal": "BULLISH",
+        "confidence": 0.54,
+        "reasoning": [
+          "Low PCR 0.20",
+          "Vanna 2547209"
+        ],
+        "data_used": [
+          "max_pain",
+          "gex",
+          "pcr",
+          "vanna"
+        ]
+      },
+      "timing": {
+        "signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "data_used": [
+          "pcr_rsi"
+        ]
+      }
+    },
+    "reasoning": [
+      "Low PCR 0.20",
+      "Vanna 2547209"
+    ],
+    "config_version": "63a48001",
+    "data_quality": {
+      "status": "EXCELLENT",
+      "available_sources": 7,
+      "total_sources": 8,
+      "completeness": 0.875,
+      "missing_sources": [
+        "iv_rank"
+      ]
+    }
+  },
+  "data_snapshot": {
+    "asset": "MNT",
+    "timestamp": "2025-11-01 22:54:37.141640",
+    "spot_price": 1.4409,
+    "available_sources": [
+      "futures",
+      "liquidations",
+      "pcr",
+      "max_pain",
+      "gex",
+      "vanna",
+      "option_vwap"
+    ],
+    "futures": {
+      "price": 1.4409,
+      "volume_24h": 25849241.5,
+      "open_interest": 88643215.2,
+      "funding_rate": 4.72e-05
+    },
+    "liquidations": {
+      "long": 0,
+      "short": 1684.07784,
+      "total_count": 4,
+      "ratio": 0.0
+    },
+    "pcr": {
+      "pcr_oi": 0.195,
+      "pcr_rsi": 52.1,
+      "interpretation": "NEUTRAL"
+    },
+    "max_pain": {
+      "max_pain_strike": null,
+      "spot_price": 1.4401,
+      "distance_pct": null,
+      "put_call_ratio": null,
+      "total_oi": null
+    },
+    "gex": {
+      "spot_price": 1.4412,
+      "total_gex": 7078641.996482757,
+      "zero_gamma_level": 1.4457528258421806,
+      "gex_by_strike": {
+        "1.1": -398781.29202494025,
+        "1.2": 20163.668207306993,
+        "1.25": -13948.917317193898,
+        "1.3": -69821.59907487253,
+        "1.4": -459425.7501297292,
+        "1.45": 42647.88321749748,
+        "1.5": 36762.47277421313,
+        "1.55": 550365.2092241896,
+        "1.58": 956690.9156951212,
+        "1.6": 819676.8808097732,
+        "1.68": 1421.780926945627,
+        "1.89": 1513816.038165519,
+        "1.92": 1586236.5237603602,
+        "1.98": 1794454.2394838885,
+        "1.99": 5655.13227071296,
+        "2.0": 692728.8104939649
+      }
+    },
+    "vanna": {
+      "total_vanna": 2547208.67,
+      "interpretation": "BULLISH_STRONG"
+    },
+    "iv_rank": null,
+    "option_vwap": {
+      "asset": "MNT",
+      "timestamp": "2025-11-01T22:54:37.198426",
+      "call_vwap": 1.85,
+      "put_vwap": 1.33,
+      "total_vwap": 1.77,
+      "call_volume": 9191190.0,
+      "put_volume": 1655000.0,
+      "total_volume": 10846190.0,
+      "vwap_ratio": 1.3898
+    },
+    "quality": {
+      "status": "EXCELLENT",
+      "available_sources": 7,
+      "total_sources": 8,
+      "completeness": 0.875,
+      "missing_sources": [
+        "iv_rank"
+      ]
+    }
+  },
+  "strategies": []
+}

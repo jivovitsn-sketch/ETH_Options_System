@@ -1,0 +1,11 @@
+{
+  "asset": "MNT",
+  "timestamp": "2025-11-01T23:30:13.264047",
+  "call_vwap": 1.85,
+  "put_vwap": 1.33,
+  "total_vwap": 1.77,
+  "call_volume": 9401990.0,
+  "put_volume": 1740880.0,
+  "total_volume": 11142870.0,
+  "vwap_ratio": 1.3958
+}

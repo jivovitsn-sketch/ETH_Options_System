@@ -1,0 +1,161 @@
+{
+  "asset": "XRP",
+  "signal": {
+    "signal_type": "BULLISH",
+    "confidence": 0.588,
+    "strength": "WEAK",
+    "components": {
+      "futures": {
+        "signal": "BULLISH",
+        "confidence": 0.7,
+        "reasoning": [
+          "Liq ratio 0.03 (shorts squeezed)"
+        ],
+        "data_used": [
+          "futures",
+          "liquidations"
+        ]
+      },
+      "options": {
+        "signal": "BULLISH",
+        "confidence": 0.54,
+        "reasoning": [
+          "Low PCR 0.27",
+          "Vanna 118309517"
+        ],
+        "data_used": [
+          "max_pain",
+          "gex",
+          "pcr",
+          "vanna"
+        ]
+      },
+      "timing": {
+        "signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "data_used": [
+          "pcr_rsi"
+        ]
+      }
+    },
+    "reasoning": [
+      "Liq ratio 0.03 (shorts squeezed)",
+      "Low PCR 0.27",
+      "Vanna 118309517"
+    ],
+    "config_version": "63a48001",
+    "data_quality": {
+      "status": "EXCELLENT",
+      "available_sources": 7,
+      "total_sources": 8,
+      "completeness": 0.875,
+      "missing_sources": [
+        "iv_rank"
+      ]
+    }
+  },
+  "data_snapshot": {
+    "asset": "XRP",
+    "timestamp": "2025-11-01 22:54:36.922885",
+    "spot_price": 2.5042,
+    "available_sources": [
+      "futures",
+      "liquidations",
+      "pcr",
+      "max_pain",
+      "gex",
+      "vanna",
+      "option_vwap"
+    ],
+    "futures": {
+      "price": 2.5042,
+      "volume_24h": 133328859.0,
+      "open_interest": 184606644.0,
+      "funding_rate": 2.405e-05
+    },
+    "liquidations": {
+      "long": 12335.43792,
+      "short": 381766.10881999996,
+      "total_count": 24,
+      "ratio": 0.03231150601117417
+    },
+    "pcr": {
+      "pcr_oi": 0.267,
+      "pcr_rsi": 49.6,
+      "interpretation": "NEUTRAL"
+    },
+    "max_pain": {
+      "max_pain_strike": null,
+      "spot_price": 2.4996,
+      "distance_pct": null,
+      "put_call_ratio": null,
+      "total_oi": null
+    },
+    "gex": {
+      "spot_price": 2.5005,
+      "total_gex": 329859386.4757731,
+      "zero_gamma_level": 2.5248479597072313,
+      "gex_by_strike": {
+        "1.4": -11.11018958445021,
+        "1.6": -626.0904812791595,
+        "1.8": -873941.9645292022,
+        "2.0": -43197813.36915758,
+        "2.1": -1455637.5242137301,
+        "2.2": -5726470.920421831,
+        "2.3": -4488628.292843886,
+        "2.35": -799567.7755203777,
+        "2.4": -16164214.31788481,
+        "2.45": -8487986.279395068,
+        "2.475": -27566.07699846667,
+        "2.5": -8835169.25205723,
+        "2.525": 54060.84586303409,
+        "2.55": 2417425.214498208,
+        "2.6": 7031633.8502840595,
+        "2.625": -138455.84805577734,
+        "2.65": 699015.3997739233,
+        "2.675": 592982.3949303576,
+        "2.7": 90627529.21494444,
+        "2.725": 367491.31316785346,
+        "2.75": 320097.13392402284,
+        "2.8": 73955729.42349836,
+        "2.85": 1981.7555677275868,
+        "2.9": 525147.1466904585,
+        "2.95": 69.75641695893589,
+        "3.0": 169990745.55510378,
+        "3.1": 256705.12046960575,
+        "3.2": 7750103.4880218655,
+        "3.4": 7036061.880348837,
+        "3.6": 20054755.31828731,
+        "3.8": 38144440.1999629,
+        "4.0": 229500.28576819794
+      }
+    },
+    "vanna": {
+      "total_vanna": 118309517.16,
+      "interpretation": "BULLISH_STRONG"
+    },
+    "iv_rank": null,
+    "option_vwap": {
+      "asset": "XRP",
+      "timestamp": "2025-11-01T22:54:37.023430",
+      "call_vwap": 3.2,
+      "put_vwap": 2.13,
+      "total_vwap": 2.99,
+      "call_volume": 391365890.0,
+      "put_volume": 95936250.0,
+      "total_volume": 487302140.0,
+      "vwap_ratio": 1.5007
+    },
+    "quality": {
+      "status": "EXCELLENT",
+      "available_sources": 7,
+      "total_sources": 8,
+      "completeness": 0.875,
+      "missing_sources": [
+        "iv_rank"
+      ]
+    }
+  },
+  "strategies": []
+}
