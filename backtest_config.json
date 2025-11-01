@@ -1,0 +1,12 @@
+{
+    "test_period_days": 30,
+    "assets": [
+        "ETH",
+        "BTC",
+        "SOL"
+    ],
+    "initial_balance": 10000,
+    "position_size": 0.1,
+    "commission": 0.001,
+    "risk_free_rate": 0.02
+}

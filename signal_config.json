@@ -1,0 +1,12 @@
+{
+    "futures_weight": 0.35,
+    "options_weight": 0.45,
+    "timing_weight": 0.2,
+    "min_confidence": 0.6,
+    "strong_threshold": 0.75,
+    "min_data_sources": 2,
+    "pcr_bullish_threshold": 0.8,
+    "pcr_bearish_threshold": 1.2,
+    "max_pain_threshold": 0.02,
+    "vanna_threshold": 0
+}
