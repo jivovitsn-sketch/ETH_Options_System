@@ -145,178 +145,7 @@ class OptionPositionManager:
             logger.error(f"❌ Ошибка получения позиций: {e}")
             return []
 
-def generate_option_strategies(asset, signal_type, spot_price, confidence, expiry_days=45):
-    """Генерация опционных стратегий на основе сигнала"""
-    
-    strategies = []
-    base_iv = 0.6 if asset in ['BTC', 'ETH'] else 0.8
-    
-    if signal_type == "BULLISH":
-        # 1. LONG CALL Strategy
-        strike_call = spot_price * 1.08  # 8% OTM
-        premium_call = spot_price * 0.045  # 4.5% премии
-        greeks_call = OptionPricing.calculate_greeks("CALL", spot_price, strike_call, expiry_days, base_iv)
-        pop_call = OptionPricing.calculate_pop("CALL", spot_price, strike_call, expiry_days, base_iv)
-        
-        strategies.append({
-            'type': 'LONG_CALL',
-            'option_type': 'CALL',
-            'strike': round(strike_call, 2),
-            'expiry_days': expiry_days,
-            'premium': round(premium_call, 2),
-            'delta': greeks_call['delta'],
-            'theta': greeks_call['theta'],
-            'vega': greeks_call['vega'],
-            'pop': pop_call,
-            'max_profit': 'Unlimited',
-            'max_loss': round(premium_call, 2),
-            'breakeven': round(strike_call + premium_call, 2),
-            'description': 'BUY CALL {:.0f} | Premium: ${:.0f}'.format(strike_call, premium_call)
-        })
-        
-        # 2. BULL CALL SPREAD - ИСПРАВЛЕНО: добавлены theta и vega
-        strike_short = spot_price * 1.15
-        premium_spread = (spot_price * 0.045) - (spot_price * 0.025)
-        
-        strategies.append({
-            'type': 'BULL_CALL_SPREAD',
-            'option_type': 'CALL_SPREAD',
-            'strike_long': round(strike_call, 2),
-            'strike_short': round(strike_short, 2),
-            'expiry_days': expiry_days,
-            'premium': round(premium_spread, 2),
-            'delta': greeks_call['delta'] * 0.6,
-            'theta': greeks_call['theta'] * 0.6,  # ДОБАВЛЕНО
-            'vega': greeks_call['vega'] * 0.6,   # ДОБАВЛЕНО
-            'pop': min(0.95, pop_call * 1.1),
-            'max_profit': round((strike_short - strike_call) - premium_spread, 2),
-            'max_loss': round(premium_spread, 2),
-            'breakeven': round(strike_call + premium_spread, 2),
-            'description': 'Call Spread {:.0f}/{:.0f}'.format(strike_call, strike_short)
-        })
-    
-    elif signal_type == "BEARISH":
-        # 1. LONG PUT Strategy
-        strike_put = spot_price * 0.92  # 8% OTM
-        premium_put = spot_price * 0.038  # 3.8% премии
-        greeks_put = OptionPricing.calculate_greeks("PUT", spot_price, strike_put, expiry_days, base_iv)
-        pop_put = OptionPricing.calculate_pop("PUT", spot_price, strike_put, expiry_days, base_iv)
-        
-        strategies.append({
-            'type': 'LONG_PUT',
-            'option_type': 'PUT',
-            'strike': round(strike_put, 2),
-            'expiry_days': expiry_days,
-            'premium': round(premium_put, 2),
-            'delta': greeks_put['delta'],
-            'theta': greeks_put['theta'],
-            'vega': greeks_put['vega'],
-            'pop': pop_put,
-            'max_profit': round(strike_put - premium_put, 2),
-            'max_loss': round(premium_put, 2),
-            'breakeven': round(strike_put - premium_put, 2),
-            'description': 'BUY PUT {:.0f} | Premium: ${:.0f}'.format(strike_put, premium_put)
-        })
-        
-        # 2. BEAR PUT SPREAD - ИСПРАВЛЕНО: добавлены theta и vega
-        strike_short_put = spot_price * 0.85
-        premium_spread_put = (spot_price * 0.038) - (spot_price * 0.022)
-        
-        strategies.append({
-            'type': 'BEAR_PUT_SPREAD',
-            'option_type': 'PUT_SPREAD',
-            'strike_long': round(strike_put, 2),
-            'strike_short': round(strike_short_put, 2),
-            'expiry_days': expiry_days,
-            'premium': round(premium_spread_put, 2),
-            'delta': greeks_put['delta'] * 0.6,
-            'theta': greeks_put['theta'] * 0.6,  # ДОБАВЛЕНО
-            'vega': greeks_put['vega'] * 0.6,   # ДОБАВЛЕНО
-            'pop': min(0.95, pop_put * 1.1),
-            'max_profit': round((strike_put - strike_short_put) - premium_spread_put, 2),
-            'max_loss': round(premium_spread_put, 2),
-            'breakeven': round(strike_put - premium_spread_put, 2),
-            'description': 'Put Spread {:.0f}/{:.0f}'.format(strike_put, strike_short_put)
-        })
-    
-    return strategies
 
-def format_option_signal_message(asset, signal_type, confidence, spot_price, strategies):
-    """Форматирование опционного сигнала с греками"""
-    
-    message = """
-🎯 **{} OPTIONS SIGNAL: {}**
-⏰ {} | 📊 Уверенность: {:.0%}
-
-💰 **СПОТ ЦЕНА:** ${:,.0f}
-📈 **IV РАНГ:** 65% | 🕒 **ЭКСПИРАЦИЯ:** 45-60 дней
-
----
-
-📊 **РЕКОМЕНДУЕМЫЕ СТРАТЕГИИ:**
-""".format(
-        signal_type, 
-        asset,
-        datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-        confidence,
-        spot_price
-    )
-
-    for i, strat in enumerate(strategies[:2], 1):
-        premium_pct = (strat['premium'] / spot_price) * 100
-        
-        # Для спредов используем strike_long, для одиночных - strike
-        if 'strike_long' in strat:
-            strike_display = strat['strike_long']
-        else:
-            strike_display = strat['strike']
-            
-        message += """
-**{}. {}**
-`{}`
-
-📈 **ПАРАМЕТРЫ:**
-• Страйк: `${:.0f}`
-• Премия: `${:.0f}` ({:.1f}% от спота)
-• Break-Even: `${:.0f}`
-• Probability of Profit: `{:.1%}`
-
-🎯 **ГРЕКИ:**
-• Delta: `{:.3f}` | Theta: `{:.3f}`
-• Vega: `{:.3f}` | Max Loss: `${:.0f}`
-
-💼 **РИСК-МЕНЕДЖМЕНТ:**
-• Бюджет: `${:.0f}` на контракт
-• Фиксация прибыли: 50% от максимальной
-• Стоп-лосс: 60% от премии
-• Роллирование: за 21 день до экспирации
-""".format(
-            i,
-            strat['type'].replace('_', ' ').title(),
-            strat['description'],
-            strike_display,
-            strat['premium'],
-            premium_pct,
-            strat['breakeven'],
-            strat['pop'],
-            strat['delta'],
-            strat['theta'],
-            strat['vega'],
-            strat['max_loss'],
-            strat['premium']
-        )
-
-    message += """
----
-
-⚠️ **ВАЖНО:** 
-• Временной decay (Theta) ускоряется за 30 дней до экспирации
-• IV может значительно влиять на премию
-• Всегда диверсифицируйте по страйкам и экспирациям
-• Максимальный риск = уплаченная премия
-"""
-
-    return message
 
 def get_dynamic_expiration_days(signal_type):
     """Динамический выбор дней до экспирации на основе типа сигнала"""
@@ -340,41 +169,208 @@ def generate_option_strategy(asset, signal_type, spot_price):
     else:
         return generate_long_straddle(asset, spot_price, expiration_days)
 
+
 def generate_bull_call_spread(asset, spot_price, expiration_days):
-    """Генерация бычьей стратегии кол спред"""
+    """Бычий Call Spread с оптимальными страйками"""
+    # Длинный колл: ATM или немного ITM
+    long_strike = spot_price * 0.98  # 2% ITM
+    # Короткий колл: дальше OTM для лучшего профита
+    short_strike = spot_price * 1.25  # 25% OTM
+    
+    # Расчёт параметров
+    spread_width = short_strike - long_strike
+    max_profit = spread_width * 0.6  # ~60% от ширины
+    premium = spread_width * 0.3  # ~30% от ширины
+    
     return {
+        'asset': asset,
         'strategy_type': 'BULL_CALL_SPREAD',
-        'long_call_strike': spot_price * 0.95,
-        'short_call_strike': spot_price * 1.10,
-        'premium_collected': spot_price * 0.02,
-        'max_profit': spot_price * 0.08,
-        'max_loss': spot_price * 0.02,
-        'probability_of_profit': 0.65,
-        'expiration_days': expiration_days
+        'long_call_strike': round(long_strike, 2),
+        'short_call_strike': round(short_strike, 2),
+        'premium_paid': round(premium, 2),
+        'max_profit': round(max_profit, 2),
+        'max_loss': round(premium, 2),
+        'break_even': round(long_strike + premium, 2),
+        'probability_of_profit': 0.55,
+        'expiration_days': expiration_days,
+        'risk_reward_ratio': round(max_profit / premium, 2)
     }
+
 
 def generate_bear_put_spread(asset, spot_price, expiration_days):
-    """Генерация медвежьей стратегии пут спред"""
+    """Медвежий Put Spread с оптимальными страйками"""
+    # Длинный пут: ATM или немного ITM
+    long_strike = spot_price * 1.02  # 2% ITM
+    # Короткий пут: дальше OTM
+    short_strike = spot_price * 0.75  # 25% OTM
+    
+    # Расчёт параметров
+    spread_width = long_strike - short_strike
+    max_profit = spread_width * 0.55  # ~55% от ширины
+    premium = spread_width * 0.35  # ~35% от ширины
+    
     return {
+        'asset': asset,
         'strategy_type': 'BEAR_PUT_SPREAD',
-        'long_put_strike': spot_price * 1.05,
-        'short_put_strike': spot_price * 0.90,
-        'premium_collected': spot_price * 0.015,
-        'max_profit': spot_price * 0.06,
-        'max_loss': spot_price * 0.015,
-        'probability_of_profit': 0.60,
+        'long_put_strike': round(long_strike, 2),
+        'short_put_strike': round(short_strike, 2),
+        'premium_paid': round(premium, 2),
+        'max_profit': round(max_profit, 2),
+        'max_loss': round(premium, 2),
+        'break_even': round(long_strike - premium, 2),
+        'probability_of_profit': 0.50,
+        'expiration_days': expiration_days,
+        'risk_reward_ratio': round(max_profit / premium, 2)
+    }
+
+
+def generate_long_straddle(asset, spot_price, expiration_days):
+    """Стрэддл для волатильности"""
+    strike = spot_price
+    
+    # Для стрэддла нужна высокая премия
+    call_premium = spot_price * 0.04
+    put_premium = spot_price * 0.038
+    total_premium = call_premium + put_premium
+    
+    return {
+        'asset': asset,
+        'strategy_type': 'LONG_STRADDLE',
+        'strike': round(strike, 2),
+        'call_premium': round(call_premium, 2),
+        'put_premium': round(put_premium, 2),
+        'total_premium': round(total_premium, 2),
+        'max_loss': round(total_premium, 2),
+        'upper_breakeven': round(strike + total_premium, 2),
+        'lower_breakeven': round(strike - total_premium, 2),
+        'probability_of_profit': 0.45,
         'expiration_days': expiration_days
     }
 
-def generate_long_straddle(asset, spot_price, expiration_days):
-    """Генерация нейтральной стратегии стрэддл"""
-    return {
-        'strategy_type': 'LONG_STRADDLE',
-        'strike': spot_price,
-        'call_premium': spot_price * 0.02,
-        'put_premium': spot_price * 0.018,
-        'total_premium': spot_price * 0.038,
-        'max_loss': spot_price * 0.038,
-        'probability_of_profit': 0.55,
-        'expiration_days': expiration_days
-    }
+
+def get_dynamic_expiration_days(asset, signal_type):
+    """Динамический выбор РЕАЛЬНОЙ экспирации"""
+    from real_expirations import expiration_manager
+    
+    # Получаем лучшую экспирацию из РЕАЛЬНЫХ данных
+    dte = expiration_manager.get_best_expiration(asset, signal_type)
+    
+    return dte
+
+
+def generate_option_strategy(asset, signal_type, spot_price):
+    """Генерация стратегии с РЕАЛЬНОЙ экспирацией"""
+    # Получаем динамическую экспирацию из РЕАЛЬНЫХ данных
+    expiration_days = get_dynamic_expiration_days(asset, signal_type)
+
+    if signal_type == "BULLISH":
+        return generate_bull_call_spread(asset, spot_price, expiration_days)
+    elif signal_type == "BEARISH":
+        return generate_bear_put_spread(asset, spot_price, expiration_days)
+    else:
+        return generate_long_straddle(asset, spot_price, expiration_days)
+def generate_option_strategies(asset, signal_type, spot_price, confidence, expiry_days=45):
+    """Генерация опционных стратегий с РЕАЛЬНЫМИ экспирациями и широкими спредами"""
+    from real_expirations import expiration_manager
+    
+    # Получаем РЕАЛЬНУЮ экспирацию
+    dte = expiration_manager.get_best_expiration(asset, signal_type)
+    
+    # Генерируем стратегию через НОВЫЕ функции
+    if signal_type == "BULLISH":
+        strategy = generate_bull_call_spread(asset, spot_price, dte)
+    elif signal_type == "BEARISH":
+        strategy = generate_bear_put_spread(asset, spot_price, dte)
+    else:
+        strategy = generate_long_straddle(asset, spot_price, dte)
+    
+    return [strategy]
+def format_option_signal_message(asset, signal_type, confidence, spot_price, strategies):
+    """Форматирование опционного сигнала с НОВЫМИ стратегиями"""
+    
+    message = f"""🎯 {signal_type} OPTIONS SIGNAL: {asset}
+⏰ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | 📊 Уверенность: {confidence:.0%}
+
+💰 СПОТ ЦЕНА: ${spot_price:,.2f}
+📈 IV РАНГ: 65% | 🕒 ЭКСПИРАЦИЯ: {strategies[0]['expiration_days']} дней
+
+---
+
+📊 РЕКОМЕНДУЕМЫЕ СТРАТЕГИИ:
+
+"""
+    
+    for i, strat in enumerate(strategies[:2], 1):
+        strategy_type = strat['strategy_type']
+        premium = strat.get('premium_paid', strat.get('total_premium', 0))
+        
+        if strategy_type == 'BULL_CALL_SPREAD':
+            message += f"""**{i}. Bull Call Spread**
+LONG CALL ${strat['long_call_strike']:.2f} / SHORT CALL ${strat['short_call_strike']:.2f}
+
+📈 ПАРАМЕТРЫ:
+- Премия: ${premium:.2f} ({premium/spot_price*100:.1f}% от спота)
+- Max Profit: ${strat['max_profit']:.2f}
+- Max Loss: ${strat['max_loss']:.2f}
+- Break-Even: ${strat['break_even']:.2f}
+- Risk/Reward: {strat['risk_reward_ratio']:.2f}
+- Probability of Profit: {strat['probability_of_profit']:.0%}
+- Экспирация: {strat['expiration_days']} дней
+
+💼 РИСК-МЕНЕДЖМЕНТ:
+- Бюджет: ${premium:.2f} на спред
+- Фиксация прибыли: 50% от max profit
+- Стоп-лосс: 60% от премии
+- Роллирование: за 21 день до экспирации
+
+"""
+        elif strategy_type == 'BEAR_PUT_SPREAD':
+            message += f"""**{i}. Bear Put Spread**
+LONG PUT ${strat['long_put_strike']:.2f} / SHORT PUT ${strat['short_put_strike']:.2f}
+
+📈 ПАРАМЕТРЫ:
+- Премия: ${premium:.2f} ({premium/spot_price*100:.1f}% от спота)
+- Max Profit: ${strat['max_profit']:.2f}
+- Max Loss: ${strat['max_loss']:.2f}
+- Break-Even: ${strat['break_even']:.2f}
+- Risk/Reward: {strat['risk_reward_ratio']:.2f}
+- Probability of Profit: {strat['probability_of_profit']:.0%}
+- Экспирация: {strat['expiration_days']} дней
+
+💼 РИСК-МЕНЕДЖМЕНТ:
+- Бюджет: ${premium:.2f} на спред
+- Фиксация прибыли: 50% от max profit
+- Стоп-лосс: 60% от премии
+- Роллирование: за 21 день до экспирации
+
+"""
+        elif strategy_type == 'LONG_STRADDLE':
+            message += f"""**{i}. Long Straddle**
+STRADDLE @ ${strat['strike']:.2f}
+
+📈 ПАРАМЕТРЫ:
+- Call Premium: ${strat['call_premium']:.2f}
+- Put Premium: ${strat['put_premium']:.2f}
+- Total Premium: ${strat['total_premium']:.2f} ({strat['total_premium']/spot_price*100:.1f}% от спота)
+- Upper Break-Even: ${strat['upper_breakeven']:.2f}
+- Lower Break-Even: ${strat['lower_breakeven']:.2f}
+- Probability of Profit: {strat['probability_of_profit']:.0%}
+- Экспирация: {strat['expiration_days']} дней
+
+💼 РИСК-МЕНЕДЖМЕНТ:
+- Бюджет: ${strat['total_premium']:.2f} на стрэддл
+- Max Loss: ${strat['max_loss']:.2f}
+- Требуется движение ±{abs(strat['upper_breakeven']-spot_price)/spot_price*100:.1f}%
+
+"""
+    
+    message += """---
+
+⚠️ ВАЖНО: 
+- Временной decay (Theta) ускоряется за 30 дней до экспирации
+- IV может значительно влиять на премию
+- Всегда диверсифицируйте по страйкам и экспирациям
+- Максимальный риск = уплаченная премия
+"""
+    
+    return message
