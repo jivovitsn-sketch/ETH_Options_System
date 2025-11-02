@@ -1,0 +1,11 @@
+{
+  "asset": "SOL",
+  "timestamp": "2025-11-02T04:30:07.526364",
+  "call_vwap": 242.22,
+  "put_vwap": 180.9,
+  "total_vwap": 226.17,
+  "call_volume": 22235727.0,
+  "put_volume": 7879985.0,
+  "total_volume": 30115712.0,
+  "vwap_ratio": 1.3389
+}

@@ -1,0 +1,11 @@
+{
+  "asset": "XRP",
+  "timestamp": "2025-11-02T01:05:09.634612",
+  "call_vwap": 3.19,
+  "put_vwap": 2.13,
+  "total_vwap": 2.98,
+  "call_volume": 399188510.0,
+  "put_volume": 98046930.0,
+  "total_volume": 497235440.0,
+  "vwap_ratio": 1.4991
+}

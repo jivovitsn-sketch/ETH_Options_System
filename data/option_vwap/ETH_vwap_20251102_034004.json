@@ -1,0 +1,11 @@
+{
+  "asset": "ETH",
+  "timestamp": "2025-11-02T03:40:04.966561",
+  "call_vwap": 5004.08,
+  "put_vwap": 3290.01,
+  "total_vwap": 4244.57,
+  "call_volume": 27418532.8,
+  "put_volume": 21816026.3,
+  "total_volume": 49234559.1,
+  "vwap_ratio": 1.521
+}

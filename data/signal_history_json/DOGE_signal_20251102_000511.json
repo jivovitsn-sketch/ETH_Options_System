@@ -1,0 +1,159 @@
+{
+  "asset": "DOGE",
+  "signal": {
+    "signal_type": "BULLISH",
+    "confidence": 0.608,
+    "strength": "MODERATE",
+    "components": {
+      "futures": {
+        "signal": "BULLISH",
+        "confidence": 0.7,
+        "reasoning": [
+          "Liq ratio 0.02 (shorts squeezed)"
+        ],
+        "data_used": [
+          "futures",
+          "liquidations"
+        ]
+      },
+      "options": {
+        "signal": "BULLISH",
+        "confidence": 0.54,
+        "reasoning": [
+          "Low PCR 0.10",
+          "Vanna 2933404"
+        ],
+        "data_used": [
+          "max_pain",
+          "gex",
+          "pcr",
+          "vanna"
+        ]
+      },
+      "timing": {
+        "signal": "BULLISH",
+        "confidence": 0.6,
+        "reasoning": [
+          "PCR RSI 100 (fear)"
+        ],
+        "data_used": [
+          "pcr_rsi"
+        ]
+      }
+    },
+    "reasoning": [
+      "Liq ratio 0.02 (shorts squeezed)",
+      "Low PCR 0.10",
+      "Vanna 2933404",
+      "PCR RSI 100 (fear)"
+    ],
+    "config_version": "63a48001",
+    "data_quality": {
+      "status": "EXCELLENT",
+      "available_sources": 7,
+      "total_sources": 8,
+      "completeness": 0.875,
+      "missing_sources": [
+        "iv_rank"
+      ]
+    }
+  },
+  "data_snapshot": {
+    "asset": "DOGE",
+    "timestamp": "2025-11-02 00:05:11.038917",
+    "spot_price": 0.18761,
+    "available_sources": [
+      "futures",
+      "liquidations",
+      "pcr",
+      "max_pain",
+      "gex",
+      "vanna",
+      "option_vwap"
+    ],
+    "futures": {
+      "price": 0.18761,
+      "volume_24h": 704151094.0,
+      "open_interest": 951204312.0,
+      "funding_rate": 6.005e-05
+    },
+    "liquidations": {
+      "long": 991.9503,
+      "short": 41807.88724000002,
+      "total_count": 24,
+      "ratio": 0.023726391489377725
+    },
+    "pcr": {
+      "pcr_oi": 0.1,
+      "pcr_rsi": 100,
+      "interpretation": "BEARISH_EXTREME"
+    },
+    "max_pain": {
+      "max_pain_strike": null,
+      "spot_price": 0.18787,
+      "distance_pct": null,
+      "put_call_ratio": null,
+      "total_oi": null
+    },
+    "gex": {
+      "spot_price": 0.18791,
+      "total_gex": 53987017.14969298,
+      "zero_gamma_level": 0.18501428676123974,
+      "gex_by_strike": {
+        "0.14": 1215765.0677110194,
+        "0.16": 998045.8185762932,
+        "0.17": 14612450.49984182,
+        "0.18": 2730040.404322235,
+        "0.185": -35707.636941484896,
+        "0.19": 12461049.445465518,
+        "0.2": 8619385.249181312,
+        "0.21": 4857614.436241478,
+        "0.22": 2756994.8635409484,
+        "0.23": 132.40072600121033,
+        "0.24": 3534408.21990232,
+        "0.25": 2052152.698931803,
+        "0.26": 184685.6821937123
+      }
+    },
+    "vanna": {
+      "total_vanna": 2933403.92,
+      "interpretation": "BULLISH_STRONG"
+    },
+    "iv_rank": null,
+    "option_vwap": {
+      "asset": "DOGE",
+      "timestamp": "2025-11-02T00:05:11.100426",
+      "call_vwap": 0.19,
+      "put_vwap": 0.17,
+      "total_vwap": 0.19,
+      "call_volume": 38704900.0,
+      "put_volume": 3879700.0,
+      "total_volume": 42584600.0,
+      "vwap_ratio": 1.1243
+    },
+    "quality": {
+      "status": "EXCELLENT",
+      "available_sources": 7,
+      "total_sources": 8,
+      "completeness": 0.875,
+      "missing_sources": [
+        "iv_rank"
+      ]
+    }
+  },
+  "strategies": [
+    {
+      "asset": "DOGE",
+      "strategy_type": "BULL_CALL_SPREAD",
+      "long_call_strike": 0.18,
+      "short_call_strike": 0.23,
+      "premium_paid": 0.02,
+      "max_profit": 0.03,
+      "max_loss": 0.02,
+      "break_even": 0.2,
+      "probability_of_profit": 0.55,
+      "expiration_days": 45,
+      "risk_reward_ratio": 2.0
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "asset": "DOGE",
+  "timestamp": "2025-11-02T05:10:11.552132",
+  "call_vwap": 0.19,
+  "put_vwap": 0.17,
+  "total_vwap": 0.19,
+  "call_volume": 45000700.0,
+  "put_volume": 4561700.0,
+  "total_volume": 49562400.0,
+  "vwap_ratio": 1.1218
+}
