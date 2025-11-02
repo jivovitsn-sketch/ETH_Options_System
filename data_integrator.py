@@ -39,6 +39,7 @@ class DataIntegrator:
             'iv_rank': get_iv_rank_data,
             'option_vwap': get_option_vwap,
             'expiration_walls': get_expiration_walls_data,
+            'oi_dynamics': get_oi_dynamics_data,
             'pcr_rsi': get_pcr_rsi,
             'gex_rsi': get_gex_rsi,
             'oi_macd': get_oi_macd
@@ -161,4 +162,14 @@ def get_expiration_walls_data(symbol: str) -> Optional[Dict[str, Any]]:
         return get_walls(symbol)
     except Exception as e:
         logger.error(f"Error getting expiration walls: {e}")
+        return None
+
+
+def get_oi_dynamics_data(asset: str) -> Optional[Dict[str, Any]]:
+    """OI Dynamics"""
+    try:
+        from oi_dynamics_analyzer import get_oi_dynamics_data as get_dynamics
+        return get_dynamics(asset)
+    except Exception as e:
+        logger.error(f"Error getting OI dynamics: {e}")
         return None
