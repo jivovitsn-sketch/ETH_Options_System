@@ -1,0 +1,1491 @@
+{
+  "timestamp": "2025-11-02T07:26:11.719861",
+  "volatility_analysis": {
+    "BTC": {
+      "daily_vol": 0.0021198287320399445,
+      "annual_vol": 0.04049927106024821,
+      "mean_daily_return": -5.4780063183029535e-05,
+      "n_datapoints": 554,
+      "days_covered": 6.308935185185185,
+      "avg_price": 111771.01606498194,
+      "min_price": 107679.7,
+      "max_price": 116085.7
+    },
+    "DOGE": {
+      "daily_vol": 0.0021526866092687657,
+      "annual_vol": 0.04112701992327726,
+      "mean_daily_return": 0.00011054390593830399,
+      "n_datapoints": 231,
+      "days_covered": 2.4900462962962964,
+      "avg_price": 0.18647519480519475,
+      "min_price": 0.18174,
+      "max_price": 0.18823
+    },
+    "ETH": {
+      "daily_vol": 0.0030893898216440034,
+      "annual_vol": 0.05902270966821425,
+      "mean_daily_return": -8.195654486125769e-05,
+      "n_datapoints": 553,
+      "days_covered": 6.30875,
+      "avg_price": 3971.033092224232,
+      "min_price": 3765.86,
+      "max_price": 4245.52
+    },
+    "MNT": {
+      "daily_vol": 0.0034719267554912873,
+      "annual_vol": 0.06633106752763845,
+      "mean_daily_return": -0.00015245473717015554,
+      "n_datapoints": 230,
+      "days_covered": 2.4900462962962964,
+      "avg_price": 1.4444604347826089,
+      "min_price": 1.4146,
+      "max_price": 1.485
+    },
+    "SOL": {
+      "daily_vol": 0.0036821642373159884,
+      "annual_vol": 0.0703476489781828,
+      "mean_daily_return": -0.0001080059190155012,
+      "n_datapoints": 552,
+      "days_covered": 6.308622685185185,
+      "avg_price": 192.8920108695652,
+      "min_price": 184.33,
+      "max_price": 205.04
+    },
+    "XRP": {
+      "daily_vol": 0.0031371242769129095,
+      "annual_vol": 0.059934675155628114,
+      "mean_daily_return": -7.016175864287494e-05,
+      "n_datapoints": 552,
+      "days_covered": 6.308321759259259,
+      "avg_price": 2.571151811594203,
+      "min_price": 2.4538,
+      "max_price": 2.6918
+    }
+  },
+  "dte_analysis": {
+    "BTC": {
+      "1": {
+        "n_contracts": 5111,
+        "total_oi": 114829.72000000002,
+        "avg_oi": 22.46717276462532,
+        "avg_strike_distance": 0.1809451132744815,
+        "spot_price": 112576.71150459793
+      },
+      "2": {
+        "n_contracts": 7777,
+        "total_oi": 277539.55999999994,
+        "avg_oi": 35.6872264369294,
+        "avg_strike_distance": 0.15364961514421488,
+        "spot_price": 114391.21234409156
+      },
+      "3": {
+        "n_contracts": 8032,
+        "total_oi": 297284.86,
+        "avg_oi": 37.01255727091633,
+        "avg_strike_distance": 0.15504948128919377,
+        "spot_price": 115102.34509462152
+      },
+      "4": {
+        "n_contracts": 100,
+        "total_oi": 3709.3100000000004,
+        "avg_oi": 37.09310000000001,
+        "avg_strike_distance": 0.16017453391511308,
+        "spot_price": 113445.0
+      },
+      "11": {
+        "n_contracts": 2420,
+        "total_oi": 50519.270000000004,
+        "avg_oi": 20.875731404958678,
+        "avg_strike_distance": 0.10211598091851137,
+        "spot_price": 110042.95909090909
+      },
+      "12": {
+        "n_contracts": 7480,
+        "total_oi": 150290.19,
+        "avg_oi": 20.092271390374332,
+        "avg_strike_distance": 0.10213775289940506,
+        "spot_price": 110014.42205882353
+      },
+      "13": {
+        "n_contracts": 2695,
+        "total_oi": 52318.03,
+        "avg_oi": 19.41299814471243,
+        "avg_strike_distance": 0.10249188254187301,
+        "spot_price": 109759.6530612245
+      },
+      "14": {
+        "n_contracts": 3834,
+        "total_oi": 62263.299999999996,
+        "avg_oi": 16.23977569118414,
+        "avg_strike_distance": 0.10343045953317899,
+        "spot_price": 109960.67605633802
+      },
+      "15": {
+        "n_contracts": 4589,
+        "total_oi": 33886.97,
+        "avg_oi": 7.384390934844193,
+        "avg_strike_distance": 0.10164363874633757,
+        "spot_price": 112501.7954674221
+      },
+      "16": {
+        "n_contracts": 4346,
+        "total_oi": 24943.57,
+        "avg_oi": 5.739431661297745,
+        "avg_strike_distance": 0.10198800036389191,
+        "spot_price": 114395.28902439025
+      },
+      "17": {
+        "n_contracts": 4143,
+        "total_oi": 22213.74,
+        "avg_oi": 5.361752353367126,
+        "avg_strike_distance": 0.10149600564306525,
+        "spot_price": 115109.87089065895
+      },
+      "18": {
+        "n_contracts": 2336,
+        "total_oi": 7109.18,
+        "avg_oi": 3.0433133561643837,
+        "avg_strike_distance": 0.09047131405164643,
+        "spot_price": 110112.8640410959
+      },
+      "19": {
+        "n_contracts": 6976,
+        "total_oi": 18397.739999999998,
+        "avg_oi": 2.637290711009174,
+        "avg_strike_distance": 0.08903177243654134,
+        "spot_price": 110015.50774082569
+      },
+      "20": {
+        "n_contracts": 2476,
+        "total_oi": 5558.389999999999,
+        "avg_oi": 2.244907108239095,
+        "avg_strike_distance": 0.08915995506663409,
+        "spot_price": 109757.89422455573
+      },
+      "21": {
+        "n_contracts": 674,
+        "total_oi": 721.7099999999999,
+        "avg_oi": 1.0707863501483679,
+        "avg_strike_distance": 0.09905791334299667,
+        "spot_price": 108740.32373887238
+      },
+      "25": {
+        "n_contracts": 3432,
+        "total_oi": 92537.25,
+        "avg_oi": 26.963068181818183,
+        "avg_strike_distance": 0.15039383713283008,
+        "spot_price": 110042.95909090909
+      },
+      "26": {
+        "n_contracts": 10608,
+        "total_oi": 284781.26,
+        "avg_oi": 26.845895550527903,
+        "avg_strike_distance": 0.15051931284343165,
+        "spot_price": 110014.42205882353
+      },
+      "27": {
+        "n_contracts": 3821,
+        "total_oi": 102243.57,
+        "avg_oi": 26.75832766291547,
+        "avg_strike_distance": 0.15175194957676094,
+        "spot_price": 109759.67851347814
+      },
+      "28": {
+        "n_contracts": 5270,
+        "total_oi": 141789.91999999998,
+        "avg_oi": 26.905108159392785,
+        "avg_strike_distance": 0.14609874239159043,
+        "spot_price": 109954.92330170776
+      },
+      "29": {
+        "n_contracts": 6282,
+        "total_oi": 159998.47,
+        "avg_oi": 25.469352117160142,
+        "avg_strike_distance": 0.13300570622784325,
+        "spot_price": 112501.97357529447
+      },
+      "30": {
+        "n_contracts": 5904,
+        "total_oi": 151503.98,
+        "avg_oi": 25.66124322493225,
+        "avg_strike_distance": 0.12564106255190474,
+        "spot_price": 114395.28902439027
+      },
+      "31": {
+        "n_contracts": 5832,
+        "total_oi": 151861.7,
+        "avg_oi": 26.039386145404666,
+        "avg_strike_distance": 0.12423638390281107,
+        "spot_price": 115102.18148148147
+      },
+      "32": {
+        "n_contracts": 72,
+        "total_oi": 1889.3000000000002,
+        "avg_oi": 26.24027777777778,
+        "avg_strike_distance": 0.12789604360409598,
+        "spot_price": 113445.0
+      },
+      "53": {
+        "n_contracts": 2992,
+        "total_oi": 109645.69999999998,
+        "avg_oi": 36.64629010695187,
+        "avg_strike_distance": 0.31942842706103397,
+        "spot_price": 110042.9590909091
+      },
+      "54": {
+        "n_contracts": 9248,
+        "total_oi": 338903.35,
+        "avg_oi": 36.64612348615917,
+        "avg_strike_distance": 0.31948839706977744,
+        "spot_price": 110014.42205882352
+      },
+      "55": {
+        "n_contracts": 3332,
+        "total_oi": 122308.93,
+        "avg_oi": 36.70736194477791,
+        "avg_strike_distance": 0.32028278944660393,
+        "spot_price": 109759.6530612245
+      },
+      "56": {
+        "n_contracts": 4828,
+        "total_oi": 175857.32,
+        "avg_oi": 36.42446561723281,
+        "avg_strike_distance": 0.3196435004828419,
+        "spot_price": 109960.67605633802
+      },
+      "57": {
+        "n_contracts": 5848,
+        "total_oi": 213758.65,
+        "avg_oi": 36.55243673050615,
+        "avg_strike_distance": 0.31436590979129386,
+        "spot_price": 112506.55465116279
+      },
+      "58": {
+        "n_contracts": 5576,
+        "total_oi": 203807.57,
+        "avg_oi": 36.550855451936876,
+        "avg_strike_distance": 0.31063235860833527,
+        "spot_price": 114395.28902439025
+      },
+      "59": {
+        "n_contracts": 5508,
+        "total_oi": 201253.65000000002,
+        "avg_oi": 36.53842592592593,
+        "avg_strike_distance": 0.30931874204572685,
+        "spot_price": 115102.18148148149
+      },
+      "60": {
+        "n_contracts": 68,
+        "total_oi": 2490.4800000000005,
+        "avg_oi": 36.62470588235295,
+        "avg_strike_distance": 0.3124953009102624,
+        "spot_price": 113445.0
+      },
+      "144": {
+        "n_contracts": 1936,
+        "total_oi": 12683.22,
+        "avg_oi": 6.55125,
+        "avg_strike_distance": 0.31485317261202883,
+        "spot_price": 110042.95909090909
+      },
+      "145": {
+        "n_contracts": 5987,
+        "total_oi": 38973.33,
+        "avg_oi": 6.5096592617337565,
+        "avg_strike_distance": 0.31492341775343047,
+        "spot_price": 110014.45406714549
+      },
+      "146": {
+        "n_contracts": 2156,
+        "total_oi": 13891.05,
+        "avg_oi": 6.442973098330241,
+        "avg_strike_distance": 0.3165688741430022,
+        "spot_price": 109759.6530612245
+      },
+      "147": {
+        "n_contracts": 3124,
+        "total_oi": 18998.410000000003,
+        "avg_oi": 6.0814372599231765,
+        "avg_strike_distance": 0.31532536692665647,
+        "spot_price": 109960.67605633802
+      },
+      "148": {
+        "n_contracts": 3784,
+        "total_oi": 22966.39,
+        "avg_oi": 6.069341966173361,
+        "avg_strike_distance": 0.301986717133785,
+        "spot_price": 112506.55465116279
+      },
+      "149": {
+        "n_contracts": 3563,
+        "total_oi": 21898.62,
+        "avg_oi": 6.14611843951726,
+        "avg_strike_distance": 0.29511639784201177,
+        "spot_price": 114398.40813920854
+      },
+      "150": {
+        "n_contracts": 3483,
+        "total_oi": 21599.2,
+        "avg_oi": 6.201320700545507,
+        "avg_strike_distance": 0.2940329234947154,
+        "spot_price": 115102.18148148149
+      },
+      "151": {
+        "n_contracts": 42,
+        "total_oi": 265.43,
+        "avg_oi": 6.319761904761905,
+        "avg_strike_distance": 0.30611645248694036,
+        "spot_price": 113445.0
+      },
+      "235": {
+        "n_contracts": 1144,
+        "total_oi": 2566.96,
+        "avg_oi": 2.243846153846154,
+        "avg_strike_distance": 0.4822990854655513,
+        "spot_price": 110042.95909090909
+      },
+      "236": {
+        "n_contracts": 3562,
+        "total_oi": 7947.379999999999,
+        "avg_oi": 2.2311566535654124,
+        "avg_strike_distance": 0.4824417733943775,
+        "spot_price": 110014.88832116789
+      },
+      "237": {
+        "n_contracts": 1274,
+        "total_oi": 2839.06,
+        "avg_oi": 2.2284615384615383,
+        "avg_strike_distance": 0.4840794068970364,
+        "spot_price": 109759.6530612245
+      },
+      "238": {
+        "n_contracts": 1846,
+        "total_oi": 4066.83,
+        "avg_oi": 2.203049837486457,
+        "avg_strike_distance": 0.4827725668579403,
+        "spot_price": 109960.67605633802
+      },
+      "239": {
+        "n_contracts": 2236,
+        "total_oi": 4826.379999999999,
+        "avg_oi": 2.158488372093023,
+        "avg_strike_distance": 0.4700536012737388,
+        "spot_price": 112506.55465116279
+      },
+      "240": {
+        "n_contracts": 2132,
+        "total_oi": 4587.9,
+        "avg_oi": 2.151923076923077,
+        "avg_strike_distance": 0.4610226904532432,
+        "spot_price": 114395.28902439025
+      },
+      "241": {
+        "n_contracts": 2106,
+        "total_oi": 4454.51,
+        "avg_oi": 2.1151519468186137,
+        "avg_strike_distance": 0.457718931998034,
+        "spot_price": 115102.18148148147
+      },
+      "242": {
+        "n_contracts": 26,
+        "total_oi": 54.17,
+        "avg_oi": 2.0834615384615387,
+        "avg_strike_distance": 0.4655288737002342,
+        "spot_price": 113445.0
+      },
+      "326": {
+        "n_contracts": 704,
+        "total_oi": 560.1200000000001,
+        "avg_oi": 0.7956250000000001,
+        "avg_strike_distance": 0.5678136144020779,
+        "spot_price": 110042.95909090909
+      },
+      "327": {
+        "n_contracts": 2208,
+        "total_oi": 1756.7400000000002,
+        "avg_oi": 0.7956250000000001,
+        "avg_strike_distance": 0.5680766073626765,
+        "spot_price": 110012.27173913043
+      },
+      "328": {
+        "n_contracts": 769,
+        "total_oi": 621.12,
+        "avg_oi": 0.8076983094928478,
+        "avg_strike_distance": 0.5766615725426298,
+        "spot_price": 109758.2409622887
+      },
+      "329": {
+        "n_contracts": 1007,
+        "total_oi": 898.49,
+        "avg_oi": 0.8922442899702085,
+        "avg_strike_distance": 0.6193183015549837,
+        "spot_price": 109956.7833167825
+      },
+      "330": {
+        "n_contracts": 1135,
+        "total_oi": 896.5,
+        "avg_oi": 0.7898678414096917,
+        "avg_strike_distance": 0.6285372015641771,
+        "spot_price": 112485.48669603524
+      },
+      "331": {
+        "n_contracts": 1066,
+        "total_oi": 481.43,
+        "avg_oi": 0.4516228893058161,
+        "avg_strike_distance": 0.6181218613975497,
+        "spot_price": 114395.28902439025
+      },
+      "332": {
+        "n_contracts": 1053,
+        "total_oi": 239.06,
+        "avg_oi": 0.2270275403608737,
+        "avg_strike_distance": 0.6110187807188497,
+        "spot_price": 115102.18148148149
+      },
+      "333": {
+        "n_contracts": 13,
+        "total_oi": 2.2599999999999993,
+        "avg_oi": 0.1738461538461538,
+        "avg_strike_distance": 0.6278101553785805,
+        "spot_price": 113445.0
+      }
+    },
+    "DOGE": {
+      "11": {
+        "n_contracts": 215,
+        "total_oi": 137600.0,
+        "avg_oi": 640.0,
+        "avg_strike_distance": 0.07848526929998823,
+        "spot_price": 0.18672441860465114
+      },
+      "12": {
+        "n_contracts": 680,
+        "total_oi": 435600.0,
+        "avg_oi": 640.5882352941177,
+        "avg_strike_distance": 0.07540637055740158,
+        "spot_price": 0.18675080882352943
+      },
+      "13": {
+        "n_contracts": 162,
+        "total_oi": 112800.0,
+        "avg_oi": 696.2962962962963,
+        "avg_strike_distance": 0.030933993521289865,
+        "spot_price": 0.18561728395061727
+      },
+      "18": {
+        "n_contracts": 129,
+        "total_oi": 997600.0,
+        "avg_oi": 7733.333333333333,
+        "avg_strike_distance": 0.11295716233972466,
+        "spot_price": 0.18672441860465114
+      },
+      "19": {
+        "n_contracts": 414,
+        "total_oi": 3169200.0,
+        "avg_oi": 7655.072463768116,
+        "avg_strike_distance": 0.11291334406912297,
+        "spot_price": 0.1867427536231884
+      },
+      "20": {
+        "n_contracts": 138,
+        "total_oi": 194000.0,
+        "avg_oi": 1405.7971014492753,
+        "avg_strike_distance": 0.1194922747510135,
+        "spot_price": 0.18561036231884057
+      },
+      "25": {
+        "n_contracts": 602,
+        "total_oi": 8545000.0,
+        "avg_oi": 14194.352159468439,
+        "avg_strike_distance": 0.15050783706868096,
+        "spot_price": 0.18672441860465114
+      },
+      "26": {
+        "n_contracts": 1998,
+        "total_oi": 28463100.0,
+        "avg_oi": 14245.795795795795,
+        "avg_strike_distance": 0.15675524810390007,
+        "spot_price": 0.18673026026026027
+      },
+      "27": {
+        "n_contracts": 711,
+        "total_oi": 10088400.0,
+        "avg_oi": 14189.029535864978,
+        "avg_strike_distance": 0.1637523643033275,
+        "spot_price": 0.18559194092827005
+      },
+      "28": {
+        "n_contracts": 12,
+        "total_oi": 121500.0,
+        "avg_oi": 10125.0,
+        "avg_strike_distance": 0.1680605993910715,
+        "spot_price": 0.18174
+      }
+    },
+    "ETH": {
+      "1": {
+        "n_contracts": 1281,
+        "total_oi": 659912.8,
+        "avg_oi": 515.1544106167057,
+        "avg_strike_distance": 0.13333343810054343,
+        "spot_price": 3984.6344808743165
+      },
+      "2": {
+        "n_contracts": 3846,
+        "total_oi": 3037371.5999999996,
+        "avg_oi": 789.748205928237,
+        "avg_strike_distance": 0.16983510722060705,
+        "spot_price": 4111.001466458659
+      },
+      "3": {
+        "n_contracts": 4003,
+        "total_oi": 3473535.8,
+        "avg_oi": 867.7331501373969,
+        "avg_strike_distance": 0.18258965014270834,
+        "spot_price": 4179.943354983762
+      },
+      "4": {
+        "n_contracts": 41,
+        "total_oi": 28794.5,
+        "avg_oi": 702.3048780487804,
+        "avg_strike_distance": 0.21134276155936696,
+        "spot_price": 4065.84
+      },
+      "11": {
+        "n_contracts": 1584,
+        "total_oi": 319439.2,
+        "avg_oi": 201.66616161616162,
+        "avg_strike_distance": 0.13658573529499943,
+        "spot_price": 3874.4636363636364
+      },
+      "12": {
+        "n_contracts": 4932,
+        "total_oi": 984329.6,
+        "avg_oi": 199.5802108678021,
+        "avg_strike_distance": 0.13695194029288685,
+        "spot_price": 3867.0932846715323
+      },
+      "13": {
+        "n_contracts": 1761,
+        "total_oi": 338171.69999999995,
+        "avg_oi": 192.03390119250423,
+        "avg_strike_distance": 0.13770440403481488,
+        "spot_price": 3853.5947756956275
+      },
+      "14": {
+        "n_contracts": 2097,
+        "total_oi": 423338.9,
+        "avg_oi": 201.8783500238436,
+        "avg_strike_distance": 0.13840300291951343,
+        "spot_price": 3886.795493562232
+      },
+      "15": {
+        "n_contracts": 2158,
+        "total_oi": 385646.80000000005,
+        "avg_oi": 178.70565338276182,
+        "avg_strike_distance": 0.1366316788873693,
+        "spot_price": 3988.5960148285453
+      },
+      "16": {
+        "n_contracts": 2017,
+        "total_oi": 314457.7,
+        "avg_oi": 155.90366881507188,
+        "avg_strike_distance": 0.13254357415410223,
+        "spot_price": 4111.107645017352
+      },
+      "17": {
+        "n_contracts": 1917,
+        "total_oi": 268131.7,
+        "avg_oi": 139.87047470005217,
+        "avg_strike_distance": 0.13319211686513607,
+        "spot_price": 4180.917543035994
+      },
+      "18": {
+        "n_contracts": 947,
+        "total_oi": 54182.9,
+        "avg_oi": 57.21531151003168,
+        "avg_strike_distance": 0.14783147906908597,
+        "spot_price": 3879.111636747624
+      },
+      "19": {
+        "n_contracts": 2825,
+        "total_oi": 151941.90000000002,
+        "avg_oi": 53.78474336283187,
+        "avg_strike_distance": 0.14393643829766828,
+        "spot_price": 3867.3210017699116
+      },
+      "20": {
+        "n_contracts": 980,
+        "total_oi": 49272.799999999996,
+        "avg_oi": 50.27836734693877,
+        "avg_strike_distance": 0.13614452828925647,
+        "spot_price": 3853.57224489796
+      },
+      "21": {
+        "n_contracts": 314,
+        "total_oi": 9186.0,
+        "avg_oi": 29.254777070063696,
+        "avg_strike_distance": 0.122036998616299,
+        "spot_price": 3815.93525477707
+      },
+      "25": {
+        "n_contracts": 2068,
+        "total_oi": 1329722.0,
+        "avg_oi": 642.9990328820116,
+        "avg_strike_distance": 0.19843031121247853,
+        "spot_price": 3874.4636363636364
+      },
+      "26": {
+        "n_contracts": 6480,
+        "total_oi": 4056737.2,
+        "avg_oi": 626.0396913580247,
+        "avg_strike_distance": 0.1994064029581006,
+        "spot_price": 3867.1532453703708
+      },
+      "27": {
+        "n_contracts": 2303,
+        "total_oi": 1421456.6,
+        "avg_oi": 617.219539730786,
+        "avg_strike_distance": 0.20146696014739707,
+        "spot_price": 3853.5722448979586
+      },
+      "28": {
+        "n_contracts": 3396,
+        "total_oi": 1965479.3,
+        "avg_oi": 578.7630447585394,
+        "avg_strike_distance": 0.1973422388231563,
+        "spot_price": 3892.1940253239104
+      },
+      "29": {
+        "n_contracts": 4169,
+        "total_oi": 2180617.3,
+        "avg_oi": 523.0552410650035,
+        "avg_strike_distance": 0.19308677264442195,
+        "spot_price": 3988.886929719357
+      },
+      "30": {
+        "n_contracts": 3855,
+        "total_oi": 1793691.3,
+        "avg_oi": 465.2895719844358,
+        "avg_strike_distance": 0.20136558896881476,
+        "spot_price": 4111.379164721141
+      },
+      "31": {
+        "n_contracts": 4473,
+        "total_oi": 2433474.4,
+        "avg_oi": 544.0363067292644,
+        "avg_strike_distance": 0.27354529111599674,
+        "spot_price": 4180.657806841046
+      },
+      "32": {
+        "n_contracts": 56,
+        "total_oi": 29786.2,
+        "avg_oi": 531.8964285714286,
+        "avg_strike_distance": 0.29388971809726183,
+        "spot_price": 4065.84
+      },
+      "53": {
+        "n_contracts": 5280,
+        "total_oi": 1932529.7,
+        "avg_oi": 366.0094128787879,
+        "avg_strike_distance": 0.35531799905050393,
+        "spot_price": 3874.4636363636364
+      },
+      "54": {
+        "n_contracts": 16560,
+        "total_oi": 6069278.5,
+        "avg_oi": 366.50232487922705,
+        "avg_strike_distance": 0.3559888833579881,
+        "spot_price": 3867.1619565217393
+      },
+      "55": {
+        "n_contracts": 5880,
+        "total_oi": 2152597.5999999996,
+        "avg_oi": 366.08802721088426,
+        "avg_strike_distance": 0.35724428638631117,
+        "spot_price": 3853.5722448979595
+      },
+      "56": {
+        "n_contracts": 8640,
+        "total_oi": 3111813.9,
+        "avg_oi": 360.1636458333333,
+        "avg_strike_distance": 0.35381029450173734,
+        "spot_price": 3890.974027777778
+      },
+      "57": {
+        "n_contracts": 10419,
+        "total_oi": 3690029.4,
+        "avg_oi": 354.16348977828966,
+        "avg_strike_distance": 0.35138037627275925,
+        "spot_price": 3989.1148373164406
+      },
+      "58": {
+        "n_contracts": 10080,
+        "total_oi": 3601871.0999999996,
+        "avg_oi": 357.3284821428571,
+        "avg_strike_distance": 0.35116771879246805,
+        "spot_price": 4111.185366071429
+      },
+      "59": {
+        "n_contracts": 9963,
+        "total_oi": 3551930.7,
+        "avg_oi": 356.51216501053904,
+        "avg_strike_distance": 0.34634716499096846,
+        "spot_price": 4180.773086419753
+      },
+      "60": {
+        "n_contracts": 123,
+        "total_oi": 43778.59999999999,
+        "avg_oi": 355.9235772357723,
+        "avg_strike_distance": 0.35498859504267083,
+        "spot_price": 4065.8399999999992
+      },
+      "144": {
+        "n_contracts": 1760,
+        "total_oi": 91238.5,
+        "avg_oi": 51.84005681818182,
+        "avg_strike_distance": 0.3916948035035935,
+        "spot_price": 3874.4636363636364
+      },
+      "145": {
+        "n_contracts": 5520,
+        "total_oi": 287063.4,
+        "avg_oi": 52.00423913043479,
+        "avg_strike_distance": 0.3928119964393616,
+        "spot_price": 3867.1619565217393
+      },
+      "146": {
+        "n_contracts": 1960,
+        "total_oi": 101336.7,
+        "avg_oi": 51.70239795918367,
+        "avg_strike_distance": 0.39490256165178095,
+        "spot_price": 3853.572244897959
+      },
+      "147": {
+        "n_contracts": 2880,
+        "total_oi": 135063.2,
+        "avg_oi": 46.89694444444445,
+        "avg_strike_distance": 0.38918409211518123,
+        "spot_price": 3890.9740277777773
+      },
+      "148": {
+        "n_contracts": 3491,
+        "total_oi": 160814.4,
+        "avg_oi": 46.065425379547406,
+        "avg_strike_distance": 0.3871163437405913,
+        "spot_price": 3989.3923890002866
+      },
+      "149": {
+        "n_contracts": 3358,
+        "total_oi": 150675.2,
+        "avg_oi": 44.87051816557475,
+        "avg_strike_distance": 0.39041863635875834,
+        "spot_price": 4111.267415128053
+      },
+      "150": {
+        "n_contracts": 3342,
+        "total_oi": 148126.7,
+        "avg_oi": 44.32277079593059,
+        "avg_strike_distance": 0.38189126764564835,
+        "spot_price": 4180.999296828248
+      },
+      "151": {
+        "n_contracts": 41,
+        "total_oi": 1828.8,
+        "avg_oi": 44.604878048780485,
+        "avg_strike_distance": 0.3999461545881618,
+        "spot_price": 4065.84
+      },
+      "235": {
+        "n_contracts": 1188,
+        "total_oi": 12601.6,
+        "avg_oi": 10.607407407407408,
+        "avg_strike_distance": 0.8745109673918586,
+        "spot_price": 3874.463636363637
+      },
+      "236": {
+        "n_contracts": 3726,
+        "total_oi": 39523.2,
+        "avg_oi": 10.607407407407406,
+        "avg_strike_distance": 0.8772111097754918,
+        "spot_price": 3867.161956521739
+      },
+      "237": {
+        "n_contracts": 1323,
+        "total_oi": 14033.599999999999,
+        "avg_oi": 10.607407407407406,
+        "avg_strike_distance": 0.8822637945491567,
+        "spot_price": 3853.572244897959
+      },
+      "238": {
+        "n_contracts": 1944,
+        "total_oi": 20743.2,
+        "avg_oi": 10.670370370370371,
+        "avg_strike_distance": 0.8684428317853082,
+        "spot_price": 3890.974027777778
+      },
+      "239": {
+        "n_contracts": 2322,
+        "total_oi": 24633.199999999997,
+        "avg_oi": 10.608613264427216,
+        "avg_strike_distance": 0.8334962005586551,
+        "spot_price": 3988.8655813953483
+      },
+      "240": {
+        "n_contracts": 2214,
+        "total_oi": 23312.6,
+        "avg_oi": 10.529629629629628,
+        "avg_strike_distance": 0.7961984494860005,
+        "spot_price": 4111.103414634147
+      },
+      "241": {
+        "n_contracts": 2187,
+        "total_oi": 23020.299999999996,
+        "avg_oi": 10.525971650663006,
+        "avg_strike_distance": 0.7761411961322179,
+        "spot_price": 4180.773086419753
+      },
+      "242": {
+        "n_contracts": 27,
+        "total_oi": 283.8,
+        "avg_oi": 10.511111111111111,
+        "avg_strike_distance": 0.8095977251477715,
+        "spot_price": 4065.8399999999997
+      },
+      "326": {
+        "n_contracts": 308,
+        "total_oi": 572.0,
+        "avg_oi": 1.8571428571428572,
+        "avg_strike_distance": 0.8269414417479489,
+        "spot_price": 3874.463636363636
+      },
+      "327": {
+        "n_contracts": 966,
+        "total_oi": 1794.0,
+        "avg_oi": 1.8571428571428572,
+        "avg_strike_distance": 0.8298514691487969,
+        "spot_price": 3867.161956521739
+      },
+      "328": {
+        "n_contracts": 343,
+        "total_oi": 635.6999999999998,
+        "avg_oi": 1.8533527696792997,
+        "avg_strike_distance": 0.8352969046296586,
+        "spot_price": 3853.5722448979586
+      },
+      "329": {
+        "n_contracts": 443,
+        "total_oi": 898.3000000000001,
+        "avg_oi": 2.0277652370203163,
+        "avg_strike_distance": 0.9031030900006766,
+        "spot_price": 3888.318713318284
+      },
+      "330": {
+        "n_contracts": 516,
+        "total_oi": 1066.4,
+        "avg_oi": 2.066666666666667,
+        "avg_strike_distance": 0.8718772328384014,
+        "spot_price": 3988.865581395349
+      },
+      "331": {
+        "n_contracts": 492,
+        "total_oi": 1016.8,
+        "avg_oi": 2.0666666666666664,
+        "avg_strike_distance": 0.8252280182251628,
+        "spot_price": 4111.103414634146
+      },
+      "332": {
+        "n_contracts": 428,
+        "total_oi": 714.4,
+        "avg_oi": 1.669158878504673,
+        "avg_strike_distance": 0.8367796406786291,
+        "spot_price": 4181.101915887851
+      },
+      "333": {
+        "n_contracts": 5,
+        "total_oi": 7.3999999999999995,
+        "avg_oi": 1.48,
+        "avg_strike_distance": 0.8953859473073214,
+        "spot_price": 4065.84
+      }
+    },
+    "MNT": {
+      "11": {
+        "n_contracts": 420,
+        "total_oi": 145320.0,
+        "avg_oi": 346.0,
+        "avg_strike_distance": 0.074022627236587,
+        "spot_price": 1.430219047619048
+      },
+      "12": {
+        "n_contracts": 1343,
+        "total_oi": 478000.0,
+        "avg_oi": 355.9195830230826,
+        "avg_strike_distance": 0.0644465823445674,
+        "spot_price": 1.443532092330603
+      },
+      "13": {
+        "n_contracts": 413,
+        "total_oi": 160620.0,
+        "avg_oi": 388.910411622276,
+        "avg_strike_distance": 0.05408964772633926,
+        "spot_price": 1.457646004842615
+      },
+      "14": {
+        "n_contracts": 5,
+        "total_oi": 2110.0,
+        "avg_oi": 422.0,
+        "avg_strike_distance": 0.04545701112015191,
+        "spot_price": 1.4748
+      },
+      "18": {
+        "n_contracts": 210,
+        "total_oi": 681660.0,
+        "avg_oi": 3246.0,
+        "avg_strike_distance": 0.1648565321329399,
+        "spot_price": 1.4302190476190477
+      },
+      "19": {
+        "n_contracts": 668,
+        "total_oi": 2253270.0,
+        "avg_oi": 3373.1586826347307,
+        "avg_strike_distance": 0.14530798084051422,
+        "spot_price": 1.4431962574850299
+      },
+      "20": {
+        "n_contracts": 190,
+        "total_oi": 773860.0,
+        "avg_oi": 4072.9473684210525,
+        "avg_strike_distance": 0.09162709452588697,
+        "spot_price": 1.45803
+      },
+      "25": {
+        "n_contracts": 546,
+        "total_oi": 2292010.0,
+        "avg_oi": 4197.820512820513,
+        "avg_strike_distance": 0.15540077111065237,
+        "spot_price": 1.4302190476190477
+      },
+      "26": {
+        "n_contracts": 1562,
+        "total_oi": 6017540.0,
+        "avg_oi": 3852.458386683739,
+        "avg_strike_distance": 0.15484168307362306,
+        "spot_price": 1.443161651728553
+      },
+      "27": {
+        "n_contracts": 451,
+        "total_oi": 1672950.0,
+        "avg_oi": 3709.4235033259424,
+        "avg_strike_distance": 0.15568171567639583,
+        "spot_price": 1.4576944567627494
+      }
+    },
+    "SOL": {
+      "1": {
+        "n_contracts": 9224,
+        "total_oi": 5606727.0,
+        "avg_oi": 607.8411751951431,
+        "avg_strike_distance": 0.12315011178164212,
+        "spot_price": 196.86626517779706
+      },
+      "2": {
+        "n_contracts": 6571,
+        "total_oi": 5117103.0,
+        "avg_oi": 778.7403743722417,
+        "avg_strike_distance": 0.13657978687364983,
+        "spot_price": 199.96288997108505
+      },
+      "3": {
+        "n_contracts": 6354,
+        "total_oi": 5130023.0,
+        "avg_oi": 807.3690588605602,
+        "avg_strike_distance": 0.13764800241752764,
+        "spot_price": 201.40183821214984
+      },
+      "11": {
+        "n_contracts": 1804,
+        "total_oi": 61954.0,
+        "avg_oi": 34.34257206208426,
+        "avg_strike_distance": 0.1191857741679556,
+        "spot_price": 185.66954545454544
+      },
+      "12": {
+        "n_contracts": 5687,
+        "total_oi": 185070.0,
+        "avg_oi": 32.54264111130649,
+        "avg_strike_distance": 0.11935575493858722,
+        "spot_price": 186.27669069808334
+      },
+      "13": {
+        "n_contracts": 1949,
+        "total_oi": 57739.0,
+        "avg_oi": 29.62493586454592,
+        "avg_strike_distance": 0.11831166682551313,
+        "spot_price": 187.0633555669574
+      },
+      "14": {
+        "n_contracts": 2613,
+        "total_oi": 53635.0,
+        "avg_oi": 20.526215078453884,
+        "avg_strike_distance": 0.11109203264437727,
+        "spot_price": 192.86645618063528
+      },
+      "15": {
+        "n_contracts": 2895,
+        "total_oi": 42395.0,
+        "avg_oi": 14.644214162348877,
+        "avg_strike_distance": 0.1168684449316866,
+        "spot_price": 195.70238341968914
+      },
+      "16": {
+        "n_contracts": 2152,
+        "total_oi": 31455.0,
+        "avg_oi": 14.616635687732343,
+        "avg_strike_distance": 0.1399283174076833,
+        "spot_price": 199.93036710037177
+      },
+      "17": {
+        "n_contracts": 1920,
+        "total_oi": 28690.0,
+        "avg_oi": 14.942708333333334,
+        "avg_strike_distance": 0.12833877288534182,
+        "spot_price": 201.39270833333333
+      },
+      "18": {
+        "n_contracts": 704,
+        "total_oi": 9108.0,
+        "avg_oi": 12.9375,
+        "avg_strike_distance": 0.09716309278703861,
+        "spot_price": 185.66954545454544
+      },
+      "19": {
+        "n_contracts": 2120,
+        "total_oi": 27250.0,
+        "avg_oi": 12.85377358490566,
+        "avg_strike_distance": 0.09849094333660356,
+        "spot_price": 186.26056132075473
+      },
+      "20": {
+        "n_contracts": 728,
+        "total_oi": 9183.0,
+        "avg_oi": 12.614010989010989,
+        "avg_strike_distance": 0.09798038212638405,
+        "spot_price": 187.0513873626373
+      },
+      "21": {
+        "n_contracts": 147,
+        "total_oi": 539.0,
+        "avg_oi": 3.6666666666666665,
+        "avg_strike_distance": 0.06010442989501126,
+        "spot_price": 188.28448979591832
+      },
+      "25": {
+        "n_contracts": 2143,
+        "total_oi": 1383407.0,
+        "avg_oi": 645.5468968735418,
+        "avg_strike_distance": 0.22104247652886813,
+        "spot_price": 185.67252449836676
+      },
+      "26": {
+        "n_contracts": 6791,
+        "total_oi": 4380045.0,
+        "avg_oi": 644.9779119422766,
+        "avg_strike_distance": 0.22155196904021104,
+        "spot_price": 186.27930790752467
+      },
+      "27": {
+        "n_contracts": 2426,
+        "total_oi": 1544579.0,
+        "avg_oi": 636.6772464962902,
+        "avg_strike_distance": 0.22016505286631116,
+        "spot_price": 187.06248557295962
+      },
+      "28": {
+        "n_contracts": 3385,
+        "total_oi": 1567441.0,
+        "avg_oi": 463.0549483013294,
+        "avg_strike_distance": 0.2083692269780076,
+        "spot_price": 192.85995568685377
+      },
+      "29": {
+        "n_contracts": 4028,
+        "total_oi": 1790489.0,
+        "avg_oi": 444.5106752730884,
+        "avg_strike_distance": 0.19975274858322625,
+        "spot_price": 195.68076713008938
+      },
+      "30": {
+        "n_contracts": 3648,
+        "total_oi": 1721248.0,
+        "avg_oi": 471.8333333333333,
+        "avg_strike_distance": 0.1920260943473597,
+        "spot_price": 199.93414199561403
+      },
+      "31": {
+        "n_contracts": 4103,
+        "total_oi": 1923553.0,
+        "avg_oi": 468.8162320253473,
+        "avg_strike_distance": 0.2418645169350395,
+        "spot_price": 201.42165976115038
+      }
+    },
+    "XRP": {
+      "1": {
+        "n_contracts": 3998,
+        "total_oi": 16607110.0,
+        "avg_oi": 4153.854427213607,
+        "avg_strike_distance": 0.05952183567742975,
+        "spot_price": 2.631750275137569
+      },
+      "2": {
+        "n_contracts": 2304,
+        "total_oi": 8262030.0,
+        "avg_oi": 3585.9505208333335,
+        "avg_strike_distance": 0.0708888141502608,
+        "spot_price": 2.643028038194444
+      },
+      "3": {
+        "n_contracts": 2086,
+        "total_oi": 6243350.0,
+        "avg_oi": 2992.9769894534993,
+        "avg_strike_distance": 0.07504799408917158,
+        "spot_price": 2.6460119846596357
+      },
+      "11": {
+        "n_contracts": 1100,
+        "total_oi": 17334100.0,
+        "avg_oi": 15758.272727272728,
+        "avg_strike_distance": 0.15402508386253355,
+        "spot_price": 2.5034204545454544
+      },
+      "12": {
+        "n_contracts": 3463,
+        "total_oi": 54640640.0,
+        "avg_oi": 15778.411781692175,
+        "avg_strike_distance": 0.15359177766361548,
+        "spot_price": 2.5047275483684666
+      },
+      "13": {
+        "n_contracts": 1159,
+        "total_oi": 18954160.0,
+        "avg_oi": 16353.891285591028,
+        "avg_strike_distance": 0.15170101871844616,
+        "spot_price": 2.5141534943917168
+      },
+      "14": {
+        "n_contracts": 1653,
+        "total_oi": 28895010.0,
+        "avg_oi": 17480.344827586207,
+        "avg_strike_distance": 0.16155521126550462,
+        "spot_price": 2.5483100423472473
+      },
+      "15": {
+        "n_contracts": 1982,
+        "total_oi": 36893250.0,
+        "avg_oi": 18614.15237134208,
+        "avg_strike_distance": 0.15154606158235584,
+        "spot_price": 2.6235974268415743
+      },
+      "16": {
+        "n_contracts": 1893,
+        "total_oi": 34983660.0,
+        "avg_oi": 18480.53882725832,
+        "avg_strike_distance": 0.13872510185403722,
+        "spot_price": 2.6427207078711046
+      },
+      "17": {
+        "n_contracts": 1741,
+        "total_oi": 36015090.0,
+        "avg_oi": 20686.43882825962,
+        "avg_strike_distance": 0.1321115372889676,
+        "spot_price": 2.646009764503159
+      },
+      "18": {
+        "n_contracts": 396,
+        "total_oi": 448630.0,
+        "avg_oi": 1132.9040404040404,
+        "avg_strike_distance": 0.1152458580659088,
+        "spot_price": 2.503420454545455
+      },
+      "19": {
+        "n_contracts": 1118,
+        "total_oi": 1387970.0,
+        "avg_oi": 1241.4758497316636,
+        "avg_strike_distance": 0.12540309310772824,
+        "spot_price": 2.504656529516995
+      },
+      "20": {
+        "n_contracts": 336,
+        "total_oi": 383360.0,
+        "avg_oi": 1140.952380952381,
+        "avg_strike_distance": 0.107172305450275,
+        "spot_price": 2.513989583333333
+      },
+      "21": {
+        "n_contracts": 26,
+        "total_oi": 1760.0,
+        "avg_oi": 67.6923076923077,
+        "avg_strike_distance": 0.03164328482690789,
+        "spot_price": 2.4717846153846157
+      },
+      "25": {
+        "n_contracts": 924,
+        "total_oi": 15613200.0,
+        "avg_oi": 16897.402597402597,
+        "avg_strike_distance": 0.15617225869108523,
+        "spot_price": 2.5034204545454544
+      },
+      "26": {
+        "n_contracts": 2934,
+        "total_oi": 50045190.0,
+        "avg_oi": 17056.9836400818,
+        "avg_strike_distance": 0.15680508531663662,
+        "spot_price": 2.5047993524199046
+      },
+      "27": {
+        "n_contracts": 1063,
+        "total_oi": 19329190.0,
+        "avg_oi": 18183.621825023518,
+        "avg_strike_distance": 0.16423241655421073,
+        "spot_price": 2.514168297271872
+      },
+      "28": {
+        "n_contracts": 1614,
+        "total_oi": 38879700.0,
+        "avg_oi": 24089.033457249072,
+        "avg_strike_distance": 0.1727799765299062,
+        "spot_price": 2.5497749070631968
+      },
+      "29": {
+        "n_contracts": 1900,
+        "total_oi": 52807200.0,
+        "avg_oi": 27793.263157894737,
+        "avg_strike_distance": 0.174240193164474,
+        "spot_price": 2.6235641578947373
+      },
+      "30": {
+        "n_contracts": 1627,
+        "total_oi": 48176120.0,
+        "avg_oi": 29610.39950829748,
+        "avg_strike_distance": 0.17222254493041336,
+        "spot_price": 2.6431125384142597
+      },
+      "31": {
+        "n_contracts": 1722,
+        "total_oi": 40146050.0,
+        "avg_oi": 23313.61788617886,
+        "avg_strike_distance": 0.20044761669044797,
+        "spot_price": 2.645940243902439
+      }
+    }
+  },
+  "liquidity_analysis": {
+    "BTC": {
+      "total_contracts": 187966,
+      "total_oi": 3764291.1999993795,
+      "avg_oi": 20.02644733621708,
+      "total_volume": 510416.7300001075,
+      "avg_volume": 2.715473702691484,
+      "liquidity_class": "VERY_HIGH"
+    },
+    "DOGE": {
+      "total_contracts": 5061,
+      "total_oi": 52264800.0,
+      "avg_oi": 10326.970954356846,
+      "total_volume": 15913500.0,
+      "avg_volume": 3144.3390634262005,
+      "liquidity_class": "VERY_HIGH"
+    },
+    "ETH": {
+      "total_contracts": 165232,
+      "total_oi": 51103511.100013345,
+      "avg_oi": 309.2833779171913,
+      "total_volume": 14157070.09999798,
+      "avg_volume": 85.679953640929,
+      "liquidity_class": "VERY_HIGH"
+    },
+    "MNT": {
+      "total_contracts": 5813,
+      "total_oi": 14484370.0,
+      "avg_oi": 2491.7202821262686,
+      "total_volume": 5638160.0,
+      "avg_volume": 969.9225873043179,
+      "liquidity_class": "VERY_HIGH"
+    },
+    "SOL": {
+      "total_contracts": 71392,
+      "total_oi": 30671633.0,
+      "avg_oi": 429.62282888839087,
+      "total_volume": 3191369.0,
+      "avg_volume": 44.7020534513671,
+      "liquidity_class": "VERY_HIGH"
+    },
+    "XRP": {
+      "total_contracts": 35039,
+      "total_oi": 526046770.0,
+      "avg_oi": 15013.178743685607,
+      "total_volume": 90077260.0,
+      "avg_volume": 2570.771426125175,
+      "liquidity_class": "VERY_HIGH"
+    }
+  },
+  "ml_configs": {
+    "BTC": {
+      "asset": "BTC",
+      "ml_generated": true,
+      "min_confidence": 0.7,
+      "strong_threshold": 0.85,
+      "min_data_sources": 8,
+      "require_futures_confirm": true,
+      "require_options_confirm": true,
+      "futures_weight": 0.4,
+      "options_weight": 0.35,
+      "timing_weight": 0.25,
+      "strike_otm_pct": 0.004239657464079889,
+      "max_premium_pct": 0.006359486196119833,
+      "preferred_dte": [
+        7,
+        14,
+        21
+      ],
+      "stats": {
+        "daily_vol": "0.21%",
+        "annual_vol": "4.0%",
+        "liquidity": "VERY_HIGH",
+        "total_oi": 3764291.1999993795,
+        "n_datapoints": 554
+      }
+    },
+    "DOGE": {
+      "asset": "DOGE",
+      "ml_generated": true,
+      "min_confidence": 0.7,
+      "strong_threshold": 0.85,
+      "min_data_sources": 8,
+      "require_futures_confirm": true,
+      "require_options_confirm": true,
+      "futures_weight": 0.4,
+      "options_weight": 0.35,
+      "timing_weight": 0.25,
+      "strike_otm_pct": 0.004305373218537531,
+      "max_premium_pct": 0.006458059827806297,
+      "preferred_dte": [
+        7,
+        14,
+        21
+      ],
+      "stats": {
+        "daily_vol": "0.22%",
+        "annual_vol": "4.1%",
+        "liquidity": "VERY_HIGH",
+        "total_oi": 52264800.0,
+        "n_datapoints": 231
+      }
+    },
+    "ETH": {
+      "asset": "ETH",
+      "ml_generated": true,
+      "min_confidence": 0.7,
+      "strong_threshold": 0.85,
+      "min_data_sources": 8,
+      "require_futures_confirm": true,
+      "require_options_confirm": true,
+      "futures_weight": 0.4,
+      "options_weight": 0.35,
+      "timing_weight": 0.25,
+      "strike_otm_pct": 0.006178779643288007,
+      "max_premium_pct": 0.00926816946493201,
+      "preferred_dte": [
+        7,
+        14,
+        21
+      ],
+      "stats": {
+        "daily_vol": "0.31%",
+        "annual_vol": "5.9%",
+        "liquidity": "VERY_HIGH",
+        "total_oi": 51103511.100013345,
+        "n_datapoints": 553
+      }
+    },
+    "MNT": {
+      "asset": "MNT",
+      "ml_generated": true,
+      "min_confidence": 0.7,
+      "strong_threshold": 0.85,
+      "min_data_sources": 8,
+      "require_futures_confirm": true,
+      "require_options_confirm": true,
+      "futures_weight": 0.4,
+      "options_weight": 0.35,
+      "timing_weight": 0.25,
+      "strike_otm_pct": 0.006943853510982575,
+      "max_premium_pct": 0.010415780266473862,
+      "preferred_dte": [
+        7,
+        14,
+        21
+      ],
+      "stats": {
+        "daily_vol": "0.35%",
+        "annual_vol": "6.6%",
+        "liquidity": "VERY_HIGH",
+        "total_oi": 14484370.0,
+        "n_datapoints": 230
+      }
+    },
+    "SOL": {
+      "asset": "SOL",
+      "ml_generated": true,
+      "min_confidence": 0.7,
+      "strong_threshold": 0.85,
+      "min_data_sources": 8,
+      "require_futures_confirm": true,
+      "require_options_confirm": true,
+      "futures_weight": 0.4,
+      "options_weight": 0.35,
+      "timing_weight": 0.25,
+      "strike_otm_pct": 0.007364328474631977,
+      "max_premium_pct": 0.011046492711947966,
+      "preferred_dte": [
+        7,
+        14,
+        21
+      ],
+      "stats": {
+        "daily_vol": "0.37%",
+        "annual_vol": "7.0%",
+        "liquidity": "VERY_HIGH",
+        "total_oi": 30671633.0,
+        "n_datapoints": 552
+      }
+    },
+    "XRP": {
+      "asset": "XRP",
+      "ml_generated": true,
+      "min_confidence": 0.7,
+      "strong_threshold": 0.85,
+      "min_data_sources": 8,
+      "require_futures_confirm": true,
+      "require_options_confirm": true,
+      "futures_weight": 0.4,
+      "options_weight": 0.35,
+      "timing_weight": 0.25,
+      "strike_otm_pct": 0.006274248553825819,
+      "max_premium_pct": 0.009411372830738729,
+      "preferred_dte": [
+        7,
+        14,
+        21
+      ],
+      "stats": {
+        "daily_vol": "0.31%",
+        "annual_vol": "6.0%",
+        "liquidity": "VERY_HIGH",
+        "total_oi": 526046770.0,
+        "n_datapoints": 552
+      }
+    }
+  }
+}
