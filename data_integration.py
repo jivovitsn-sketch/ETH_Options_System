@@ -220,3 +220,31 @@ def get_option_vwap(symbol):
     except Exception as e:
         logger.error(f"Error getting option vwap for {symbol}: {e}")
         return None
+
+# ADVANCED INDICATORS
+def get_pcr_rsi(symbol):
+    """PCR RSI индикатор"""
+    try:
+        from advanced_indicators import get_pcr_rsi
+        return get_pcr_rsi(symbol)
+    except Exception as e:
+        logger.error(f"Error getting PCR RSI for {symbol}: {e}")
+        return None
+
+def get_gex_rsi(symbol):
+    """GEX RSI индикатор"""
+    try:
+        from advanced_indicators import get_gex_rsi
+        return get_gex_rsi(symbol)
+    except Exception as e:
+        logger.error(f"Error getting GEX RSI for {symbol}: {e}")
+        return None
+
+def get_oi_macd(symbol):
+    """OI MACD индикатор"""
+    try:
+        from advanced_indicators import get_oi_macd
+        return get_oi_macd(symbol)
+    except Exception as e:
+        logger.error(f"Error getting OI MACD for {symbol}: {e}")
+        return None

@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-DATA INTEGRATOR - Stage 1.4.2 (Updated with VWAP)
-Объединяет данные из всех источников
+DATA INTEGRATOR - Stage 1.4 (Full Integration)
+Все 11 источников данных
 """
 
 import logging
 from datetime import datetime
-from typing import Dict, Any, Optional
+from typing import Dict, Any
 from data_integration import (
     get_futures_data,
     get_recent_liquidations,
@@ -16,14 +16,17 @@ from data_integration import (
     get_pcr_data,
     get_vanna_data,
     get_iv_rank_data,
-    get_option_vwap  # НОВОЕ
+    get_option_vwap,
+    get_pcr_rsi,
+    get_gex_rsi,
+    get_oi_macd
 )
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class DataIntegrator:
-    """Объединяет данные из всех источников для актива"""
+    """Объединяет ВСЕ источники данных"""
     
     def __init__(self):
         self.data_sources = {
@@ -34,11 +37,14 @@ class DataIntegrator:
             'gex': get_gamma_exposure,
             'vanna': get_vanna_data,
             'iv_rank': get_iv_rank_data,
-            'option_vwap': get_option_vwap  # ДОБАВЛЕНО
+            'option_vwap': get_option_vwap,
+            'pcr_rsi': get_pcr_rsi,
+            'gex_rsi': get_gex_rsi,
+            'oi_macd': get_oi_macd
         }
     
     def get_all_data(self, asset: str) -> Dict[str, Any]:
-        """Собрать все доступные данные для актива"""
+        """Собрать ВСЕ данные"""
         try:
             data = {
                 'asset': asset,
@@ -47,7 +53,6 @@ class DataIntegrator:
                 'available_sources': []
             }
             
-            # Собираем данные из всех источников
             for source_name, source_func in self.data_sources.items():
                 try:
                     if source_name == 'liquidations':
@@ -60,7 +65,7 @@ class DataIntegrator:
                     if result is not None:
                         data['available_sources'].append(source_name)
                     
-                    # Извлекаем spot_price
+                    # Spot price
                     if data['spot_price'] is None and result:
                         if isinstance(result, dict):
                             if 'spot_price' in result:
@@ -69,12 +74,10 @@ class DataIntegrator:
                                 data['spot_price'] = result['price']
                 
                 except Exception as e:
-                    logger.warning(f"Failed to get {source_name} for {asset}: {e}")
+                    logger.warning(f"Failed {source_name} for {asset}: {e}")
                     data[source_name] = None
             
-            # Добавляем качество данных
             data['quality'] = self.get_data_quality_report(data)
-            
             return data
             
         except Exception as e:
@@ -82,9 +85,7 @@ class DataIntegrator:
             return self._get_fallback_data(asset)
     
     def _get_fallback_data(self, asset: str) -> Dict[str, Any]:
-        """Минимальный набор данных при критической ошибке"""
-        logger.warning(f"Using fallback data for {asset}")
-        
+        """Минимальные данные при ошибке"""
         try:
             futures = get_futures_data(asset)
             spot_price = futures.get('price') if futures else None
@@ -96,18 +97,15 @@ class DataIntegrator:
             'timestamp': datetime.now(),
             'spot_price': spot_price,
             'available_sources': [],
-            'quality': {'status': 'FALLBACK'},
-            'error': 'Critical error in data integration'
+            'quality': {'status': 'FALLBACK'}
         }
     
     def get_data_quality_report(self, data: Dict[str, Any]) -> Dict[str, Any]:
-        """Оценка качества собранных данных"""
+        """Оценка качества"""
         total_sources = len(self.data_sources)
         available = len(data.get('available_sources', []))
-        
         completeness = available / total_sources if total_sources > 0 else 0
         
-        # Определение статуса
         if completeness >= 0.8:
             status = 'EXCELLENT'
         elif completeness >= 0.6:
@@ -128,11 +126,10 @@ class DataIntegrator:
 
 
 if __name__ == '__main__':
-    # Тестирование
     integrator = DataIntegrator()
     
     print("=" * 60)
-    print("🧪 DATA INTEGRATOR TEST (with VWAP)")
+    print("🧪 DATA INTEGRATOR - FULL (11 SOURCES)")
     print("=" * 60)
     
     for asset in ['BTC', 'ETH', 'SOL', 'XRP', 'DOGE', 'MNT']:
@@ -144,11 +141,14 @@ if __name__ == '__main__':
         print(f"  Sources: {quality.get('available_sources')}/{quality.get('total_sources')}")
         print(f"  Price: ${data.get('spot_price', 0):,.2f}")
         
-        # Проверяем VWAP
-        vwap = data.get('option_vwap')
-        if vwap:
-            print(f"  ✅ VWAP: ${vwap.get('total_vwap', 0):,.2f}")
+        # Проверяем новые индикаторы
+        if data.get('pcr_rsi'):
+            print(f"  ✅ PCR RSI: {data['pcr_rsi']:.1f}")
+        if data.get('gex_rsi'):
+            print(f"  ✅ GEX RSI: {data['gex_rsi']:.1f}")
+        if data.get('oi_macd'):
+            print(f"  ✅ OI MACD: {data['oi_macd']['histogram']:.2f}")
     
     print("\n" + "=" * 60)
-    print("✅ TEST COMPLETE")
+    print("✅ TEST COMPLETE - ALL 11 SOURCES")
     print("=" * 60)
