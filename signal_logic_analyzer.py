@@ -186,6 +186,6 @@ if __name__ == '__main__':
     analyzer = SignalLogicAnalyzer()
     
     # Анализируем несколько активов
-    for asset in ['BTC', 'ETH', 'XRP']:
+    for asset in ['BTC', 'ETH', 'XRP', 'SOL', 'DOGE', 'MNT']:
         analyzer.analyze_detailed(asset)
         print("\n\n")

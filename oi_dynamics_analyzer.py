@@ -383,7 +383,7 @@ if __name__ == '__main__':
     
     analyzer = OIDynamicsAnalyzer()
     
-    for asset in ['BTC', 'ETH', 'XRP']:
+    for asset in ['BTC', 'ETH', 'XRP', 'SOL', 'DOGE', 'MNT']:
         print(f"\n📊 {asset}:")
         print("-" * 40)
         
