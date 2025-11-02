@@ -1,0 +1,194 @@
+{
+  "asset": "XRP",
+  "signal": {
+    "signal_type": "BULLISH",
+    "confidence": 0.608,
+    "strength": "MODERATE",
+    "components": {
+      "futures": {
+        "signal": "BULLISH",
+        "confidence": 0.7,
+        "reasoning": [
+          "Liq ratio 0.01 (shorts squeezed)"
+        ],
+        "data_used": [
+          "futures",
+          "liquidations"
+        ]
+      },
+      "options": {
+        "signal": "BULLISH",
+        "confidence": 0.54,
+        "reasoning": [
+          "Low PCR 0.27",
+          "Vanna 128651057"
+        ],
+        "data_used": [
+          "max_pain",
+          "gex",
+          "pcr",
+          "vanna"
+        ]
+      },
+      "timing": {
+        "signal": "BULLISH",
+        "confidence": 0.6,
+        "reasoning": [
+          "PCR RSI 100 (fear)",
+          "GEX RSI 100 (high)",
+          "OI MACD -1181"
+        ],
+        "data_used": [
+          "pcr_rsi",
+          "gex_rsi",
+          "oi_macd"
+        ]
+      }
+    },
+    "reasoning": [
+      "Liq ratio 0.01 (shorts squeezed)",
+      "Low PCR 0.27",
+      "Vanna 128651057",
+      "PCR RSI 100 (fear)",
+      "GEX RSI 100 (high)",
+      "OI MACD -1181"
+    ],
+    "config_version": "63a48001",
+    "data_quality": {
+      "status": "EXCELLENT",
+      "available_sources": 10,
+      "total_sources": 11,
+      "completeness": 0.9090909090909091,
+      "missing_sources": [
+        "iv_rank"
+      ]
+    }
+  },
+  "data_snapshot": {
+    "asset": "XRP",
+    "timestamp": "2025-11-02 07:35:11.879765",
+    "spot_price": 2.5098,
+    "available_sources": [
+      "futures",
+      "liquidations",
+      "pcr",
+      "max_pain",
+      "gex",
+      "vanna",
+      "option_vwap",
+      "pcr_rsi",
+      "gex_rsi",
+      "oi_macd"
+    ],
+    "futures": {
+      "price": 2.5098,
+      "volume_24h": 112416129.4,
+      "open_interest": 183342735.8,
+      "funding_rate": 0.0001
+    },
+    "liquidations": {
+      "long": 2477.3515199999997,
+      "short": 330441.05695999996,
+      "total_count": 10,
+      "ratio": 0.007497105664747599
+    },
+    "pcr": {
+      "pcr_oi": 0.271,
+      "pcr_rsi": 39.0,
+      "interpretation": "BULLISH"
+    },
+    "max_pain": {
+      "max_pain_strike": null,
+      "spot_price": 2.5114,
+      "distance_pct": null,
+      "put_call_ratio": null,
+      "total_oi": null
+    },
+    "gex": {
+      "spot_price": 2.5116,
+      "total_gex": 380730699.18978834,
+      "zero_gamma_level": 2.524835430866206,
+      "gex_by_strike": {
+        "1.4": -10.34190739671186,
+        "1.6": -676.2024303129538,
+        "1.8": -960984.0095306231,
+        "2.0": -45409952.53950568,
+        "2.1": -1229765.9222180122,
+        "2.2": -6192304.7346515125,
+        "2.3": -3932470.8226291058,
+        "2.35": -713357.0715920588,
+        "2.4": -17169874.100388013,
+        "2.45": -8146974.570609107,
+        "2.475": -26643.301607675116,
+        "2.5": -8133472.856100391,
+        "2.525": 53895.52490041171,
+        "2.55": 2506607.095384227,
+        "2.6": 8570350.089484403,
+        "2.625": -155628.72705328252,
+        "2.65": 870613.6644619528,
+        "2.675": 679650.2444724389,
+        "2.7": 102072610.16222937,
+        "2.725": 452927.059643456,
+        "2.75": 395429.1039222312,
+        "2.8": 84352188.8472515,
+        "2.85": 2421.4327042874183,
+        "2.9": 674417.3362844496,
+        "2.95": 86.48843632590778,
+        "3.0": 192319463.64793524,
+        "3.1": 380228.4141203746,
+        "3.2": 8877710.952771503,
+        "3.4": 8012317.73602532,
+        "3.6": 22868325.96676077,
+        "3.8": 39475725.44424198,
+        "4.0": 237845.17898126453
+      }
+    },
+    "vanna": {
+      "total_vanna": 128651057.2,
+      "interpretation": "BULLISH_STRONG"
+    },
+    "iv_rank": null,
+    "option_vwap": {
+      "asset": "XRP",
+      "timestamp": "2025-11-02T07:35:11.998607",
+      "call_vwap": 3.18,
+      "put_vwap": 2.13,
+      "total_vwap": 2.97,
+      "call_volume": 421829890.0,
+      "put_volume": 104216880.0,
+      "total_volume": 526046770.0,
+      "vwap_ratio": 1.4947
+    },
+    "pcr_rsi": 100.0,
+    "gex_rsi": 100.0,
+    "oi_macd": {
+      "macd": -1181.1449616889004,
+      "signal": 0.0,
+      "histogram": -1181.1449616889004
+    },
+    "quality": {
+      "status": "EXCELLENT",
+      "available_sources": 10,
+      "total_sources": 11,
+      "completeness": 0.9090909090909091,
+      "missing_sources": [
+        "iv_rank"
+      ]
+    }
+  },
+  "strategies": [
+    {
+      "asset": "XRP",
+      "strategy_type": "BULL_CALL_SPREAD",
+      "long_call_strike": 2.46,
+      "short_call_strike": 3.14,
+      "premium_paid": 0.2,
+      "max_profit": 0.41,
+      "max_loss": 0.2,
+      "break_even": 2.66,
+      "probability_of_profit": 0.55,
+      "expiration_days": 45,
+      "risk_reward_ratio": 2.0
+    }
+  ]
+}

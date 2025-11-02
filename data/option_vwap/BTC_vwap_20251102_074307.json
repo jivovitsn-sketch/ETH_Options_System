@@ -1,0 +1,11 @@
+{
+  "asset": "BTC",
+  "timestamp": "2025-11-02T07:43:07.425686",
+  "call_vwap": 131956.91,
+  "put_vwap": 100707.88,
+  "total_vwap": 119333.43,
+  "call_volume": 2251119.12,
+  "put_volume": 1525696.0,
+  "total_volume": 3776815.12,
+  "vwap_ratio": 1.3103
+}
