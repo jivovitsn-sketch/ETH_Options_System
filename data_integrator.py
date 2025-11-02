@@ -38,6 +38,7 @@ class DataIntegrator:
             'vanna': get_vanna_data,
             'iv_rank': get_iv_rank_data,
             'option_vwap': get_option_vwap,
+            'expiration_walls': get_expiration_walls_data,
             'pcr_rsi': get_pcr_rsi,
             'gex_rsi': get_gex_rsi,
             'oi_macd': get_oi_macd
@@ -152,3 +153,12 @@ if __name__ == '__main__':
     print("\n" + "=" * 60)
     print("✅ TEST COMPLETE - ALL 11 SOURCES")
     print("=" * 60)
+
+def get_expiration_walls_data(symbol: str) -> Optional[Dict[str, Any]]:
+    """Expiration Walls"""
+    try:
+        from expiration_walls_analyzer import get_expiration_walls_data as get_walls
+        return get_walls(symbol)
+    except Exception as e:
+        logger.error(f"Error getting expiration walls: {e}")
+        return None
