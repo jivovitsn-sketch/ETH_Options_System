@@ -7,7 +7,7 @@ DATA INTEGRATOR - Stage 1.4 (Full Integration)
 
 import logging
 from datetime import datetime
-from typing import Dict, Any
+from typing import Dict, Optional, Any
 from data_integration import (
     get_futures_data,
     get_recent_liquidations,
