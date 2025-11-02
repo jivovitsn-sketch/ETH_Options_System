@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 OI DYNAMICS ANALYZER - Анализ изменения Open Interest во времени
-С учётом экспираций до последней пятницы следующего месяца
+СКОЛЬЗЯЩЕЕ ОКНО: Всегда анализируем экспирации в следующие 45 дней
 """
 
 import sqlite3
@@ -11,36 +11,9 @@ from datetime import datetime, timedelta
 from typing import Dict, List, Any, Optional
 import json
 import os
-from calendar import monthrange
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-
-
-def get_last_friday_next_month() -> datetime:
-    """Получить последнюю пятницу следующего месяца"""
-    now = datetime.now()
-    
-    # Переходим к следующему месяцу
-    if now.month == 12:
-        next_month = 1
-        year = now.year + 1
-    else:
-        next_month = now.month + 1
-        year = now.year
-    
-    # Находим последний день следующего месяца
-    last_day = monthrange(year, next_month)[1]
-    last_date = datetime(year, next_month, last_day)
-    
-    # Идём назад до пятницы (weekday: 0=Mon, 4=Fri)
-    while last_date.weekday() != 4:  # 4 = Friday
-        last_date -= timedelta(days=1)
-    
-    # Устанавливаем время экспирации 8:00 UTC
-    last_date = last_date.replace(hour=8, minute=0, second=0, microsecond=0)
-    
-    return last_date
 
 
 class OIDynamicsAnalyzer:
@@ -49,9 +22,12 @@ class OIDynamicsAnalyzer:
     def __init__(self, db_path: str = './data/unlimited_oi.db'):
         self.db_path = db_path
         self.analysis_period_hours = 24  # Анализ за последние 24 часа
-        self.max_expiration = get_last_friday_next_month()
+        self.days_forward = 45  # Скользящее окно: следующие 45 дней
         
-        logger.info(f"Max expiration date: {self.max_expiration.strftime('%Y-%m-%d %H:%M UTC')}")
+        # Вычисляем динамическую дату
+        self.max_expiration = datetime.now() + timedelta(days=self.days_forward)
+        
+        logger.info(f"📅 Dynamic window: {datetime.now().strftime('%Y-%m-%d')} → {self.max_expiration.strftime('%Y-%m-%d')} (next {self.days_forward} days)")
 
     def get_oi_dynamics(self, asset: str) -> Optional[Dict[str, Any]]:
         """Получить динамику OI для актива по всем релевантным экспирациям"""
@@ -59,27 +35,29 @@ class OIDynamicsAnalyzer:
             conn = sqlite3.connect(self.db_path)
             cursor = conn.cursor()
             
-            # Получаем список экспираций до последней пятницы следующего месяца
+            # Получаем список экспираций в следующие 45 дней
             cutoff = int((datetime.now() - timedelta(hours=48)).timestamp())
             max_exp_str = self.max_expiration.strftime('%Y-%m-%d')
+            now_str = datetime.now().strftime('%Y-%m-%d')
             
             cursor.execute('''
                 SELECT DISTINCT expiry_date, MIN(dte) as min_dte
                 FROM all_positions_tracking
                 WHERE asset = ? 
                   AND timestamp > ?
+                  AND expiry_date >= ?
                   AND expiry_date <= ?
                   AND dte > 0
                 GROUP BY expiry_date
                 ORDER BY expiry_date ASC
-                LIMIT 10
-            ''', (asset, cutoff, max_exp_str))
+                LIMIT 15
+            ''', (asset, cutoff, now_str, max_exp_str))
             
             expirations = [(row[0], row[1]) for row in cursor.fetchall()]
             conn.close()
             
             if not expirations:
-                logger.warning(f"No expirations found for {asset} up to {max_exp_str}")
+                logger.warning(f"No expirations for {asset} in rolling window")
                 return None
             
             # Анализируем каждую экспирацию
@@ -92,7 +70,9 @@ class OIDynamicsAnalyzer:
             return {
                 'asset': asset,
                 'timestamp': datetime.now().isoformat(),
-                'max_expiration': max_exp_str,
+                'analysis_window_days': self.days_forward,
+                'window_start': now_str,
+                'window_end': max_exp_str,
                 'expirations_count': len(analyses),
                 'expirations_analysis': analyses,
                 'summary': self._generate_summary(analyses)
@@ -100,8 +80,6 @@ class OIDynamicsAnalyzer:
             
         except Exception as e:
             logger.error(f"Error analyzing OI dynamics for {asset}: {e}")
-            import traceback
-            traceback.print_exc()
             return None
 
     def _analyze_expiration_dynamics(self, asset: str, expiry: str, dte: int) -> Optional[Dict[str, Any]]:
@@ -110,7 +88,6 @@ class OIDynamicsAnalyzer:
             conn = sqlite3.connect(self.db_path)
             cursor = conn.cursor()
             
-            # Берём данные за последние 24 часа по часам
             cutoff = int((datetime.now() - timedelta(hours=24)).timestamp())
             
             cursor.execute('''
@@ -181,12 +158,12 @@ class OIDynamicsAnalyzer:
         calls_change = ((current['calls_oi'] - initial['calls_oi']) / initial['calls_oi'] * 100) if initial['calls_oi'] > 0 else 0
         puts_change = ((current['puts_oi'] - initial['puts_oi']) / initial['puts_oi'] * 100) if initial['puts_oi'] > 0 else 0
         
-        # Тренд (линейная регрессия)
+        # Тренд
         trend = self._calculate_trend([d['total_oi'] for d in time_series])
         calls_trend = self._calculate_trend([d['calls_oi'] for d in time_series])
         puts_trend = self._calculate_trend([d['puts_oi'] for d in time_series])
         
-        # Скорость (средняя за час)
+        # Скорость
         changes = []
         for i in range(1, len(time_series)):
             prev = time_series[i-1]['total_oi']
@@ -196,7 +173,6 @@ class OIDynamicsAnalyzer:
         
         velocity = sum(changes) / len(changes) if changes else 0
         
-        # Генерируем сигналы
         signals = self._generate_signals(
             trend, total_change, calls_trend, puts_trend, 
             calls_change, puts_change, velocity, dte
@@ -228,7 +204,6 @@ class OIDynamicsAnalyzer:
         n = len(values)
         x = list(range(n))
         
-        # Линейная регрессия
         x_mean = sum(x) / n
         y_mean = sum(values) / n
         
@@ -239,8 +214,6 @@ class OIDynamicsAnalyzer:
             return 'FLAT'
         
         slope = numerator / denominator
-        
-        # Нормализуем slope относительно среднего значения
         normalized_slope = slope / y_mean if y_mean != 0 else 0
         
         if normalized_slope > 0.01:
@@ -258,7 +231,7 @@ class OIDynamicsAnalyzer:
                          calls_trend: str, puts_trend: str,
                          calls_change: float, puts_change: float,
                          velocity: float, dte: int) -> Dict[str, Any]:
-        """Генерация сигналов на основе динамики"""
+        """Генерация сигналов"""
         
         signals = {
             'primary_signal': 'NEUTRAL',
@@ -267,13 +240,11 @@ class OIDynamicsAnalyzer:
             'implications': []
         }
         
-        # Сигналы ослабления/укрепления стенки
         if trend == 'STRONG_DOWN' and change_pct < -20:
             signals['primary_signal'] = 'WALL_WEAKENING'
             signals['confidence'] = 0.7
-            signals['reasoning'].append(f"Strong OI drop: {change_pct:.1f}% over 24h")
-            signals['implications'].append("Wall magnetic effect weakening")
-            signals['implications'].append("Increased breakout probability")
+            signals['reasoning'].append(f"Strong OI drop: {change_pct:.1f}%")
+            signals['implications'].append("Breakout probability increased")
             
         elif trend == 'DOWN' and change_pct < -10:
             signals['primary_signal'] = 'WALL_WEAKENING'
@@ -284,15 +255,13 @@ class OIDynamicsAnalyzer:
             signals['primary_signal'] = 'WALL_STRENGTHENING'
             signals['confidence'] = 0.7
             signals['reasoning'].append(f"Strong OI growth: +{change_pct:.1f}%")
-            signals['implications'].append("Wall magnetic effect strengthening")
-            signals['implications'].append("Increased bounce probability")
+            signals['implications'].append("Bounce probability increased")
             
         elif trend == 'UP' and change_pct > 10:
             signals['primary_signal'] = 'WALL_STRENGTHENING'
             signals['confidence'] = 0.55
             signals['reasoning'].append(f"OI growing: +{change_pct:.1f}%")
         
-        # Сигналы дисбаланса
         if calls_trend in ['STRONG_UP', 'UP'] and puts_trend in ['STRONG_DOWN', 'DOWN']:
             if calls_change > 15 and puts_change < -10:
                 signals['primary_signal'] = 'BULLISH_SENTIMENT'
@@ -305,12 +274,10 @@ class OIDynamicsAnalyzer:
                 signals['confidence'] = 0.65
                 signals['reasoning'].append(f"Puts +{puts_change:.1f}%, Calls {calls_change:.1f}%")
         
-        # Корректировка на DTE
         if dte < 7:
             signals['reasoning'].append(f"Near expiration (DTE: {dte})")
             signals['confidence'] = min(0.8, signals['confidence'] + 0.05)
         
-        # Высокая скорость
         if abs(velocity) > 5:
             signals['reasoning'].append(f"High velocity: {velocity:.1f}%/hour")
             signals['confidence'] = min(0.85, signals['confidence'] + 0.1)
@@ -318,9 +285,14 @@ class OIDynamicsAnalyzer:
         return signals
 
     def _generate_summary(self, analyses: Dict) -> Dict[str, Any]:
-        """Сводка по всем экспирациям"""
+        """Сводка"""
         if not analyses:
-            return {'overall_signal': 'NO_DATA', 'confidence': 0.0}
+            return {
+                'overall_signal': 'NO_DATA',
+                'confidence': 0.0,
+                'expirations_analyzed': 0,
+                'active_signals': 0
+            }
         
         signals = []
         confidences = []
@@ -334,11 +306,15 @@ class OIDynamicsAnalyzer:
                 confidences.append(confidence)
         
         if not signals:
-            return {'overall_signal': 'NEUTRAL', 'confidence': 0.5}
+            return {
+                'overall_signal': 'NEUTRAL',
+                'confidence': 0.5,
+                'expirations_analyzed': len(analyses),
+                'active_signals': 0
+            }
         
         avg_confidence = sum(confidences) / len(confidences)
         
-        # Преобладающий сигнал
         from collections import Counter
         signal_counts = Counter(signals)
         overall_signal = signal_counts.most_common(1)[0][0]
@@ -374,12 +350,13 @@ if __name__ == '__main__':
     print("📈 OI DYNAMICS ANALYZER TEST")
     print("=" * 60)
     
-    # Показываем диапазон анализа
-    max_exp = get_last_friday_next_month()
-    print(f"\n📅 Analysis period:")
-    print(f"   Today: {datetime.now().strftime('%Y-%m-%d')}")
-    print(f"   Max expiration: {max_exp.strftime('%Y-%m-%d %H:%M UTC')}")
-    print(f"   (Last Friday of next month at 8:00 UTC)")
+    now = datetime.now()
+    max_exp = now + timedelta(days=45)
+    print(f"\n📅 СКОЛЬЗЯЩЕЕ ОКНО (ROLLING WINDOW):")
+    print(f"   Today: {now.strftime('%Y-%m-%d')}")
+    print(f"   Window: Next 45 days")
+    print(f"   Until: {max_exp.strftime('%Y-%m-%d')}")
+    print(f"   ⚡ Updates daily automatically!")
     
     analyzer = OIDynamicsAnalyzer()
     
@@ -391,16 +368,16 @@ if __name__ == '__main__':
         
         if analysis and analysis.get('summary', {}).get('overall_signal') != 'NO_DATA':
             summary = analysis['summary']
-            print(f"  Overall: {summary['overall_signal']} ({summary['confidence']:.0%})")
+            print(f"  Signal: {summary['overall_signal']:20s} ({summary['confidence']:.0%})")
             print(f"  Expirations: {summary['expirations_analyzed']}")
             print(f"  Active signals: {summary['active_signals']}")
+            print(f"  Window: {analysis['window_start']} → {analysis['window_end']}")
             
-            # Детали по экспирациям
-            for exp, exp_analysis in list(analysis['expirations_analysis'].items())[:3]:
+            for exp, exp_analysis in list(analysis['expirations_analysis'].items())[:2]:
                 signals = exp_analysis['signals']
                 oi = exp_analysis['oi_analysis']
                 dte = exp_analysis['dte']
-                print(f"    {exp} (DTE:{dte}): {signals['primary_signal']} | OI: {oi['change_pct']:+.1f}%")
+                print(f"    {exp} (DTE:{dte:2d}): {signals['primary_signal']:20s} | OI: {oi['change_pct']:+6.1f}%")
         else:
             print(f"  ⚠️ No dynamics data")
     
