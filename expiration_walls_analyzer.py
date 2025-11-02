@@ -9,10 +9,33 @@ import logging
 from datetime import datetime, timedelta
 from typing import Dict, List, Any, Optional
 import json
+from calendar import monthrange
 import os
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+
+
+def get_last_friday_next_month() -> datetime:
+    """Получить последнюю пятницу следующего месяца (экспирация 8:00 UTC)"""
+    now = datetime.now()
+    
+    if now.month == 12:
+        next_month = 1
+        year = now.year + 1
+    else:
+        next_month = now.month + 1
+        year = now.year
+    
+    last_day = monthrange(year, next_month)[1]
+    last_date = datetime(year, next_month, last_day)
+    
+    while last_date.weekday() != 4:  # Friday
+        last_date -= timedelta(days=1)
+    
+    last_date = last_date.replace(hour=8, minute=0, second=0, microsecond=0)
+    return last_date
 
 class ExpirationWallsAnalyzer:
     """Анализ стенок опционов на экспирации"""
@@ -20,6 +43,7 @@ class ExpirationWallsAnalyzer:
     def __init__(self, db_path: str = './data/unlimited_oi.db'):
         self.db_path = db_path
         self.wall_threshold = 500  # Минимальный OI для стенки
+        self.max_expiration = get_last_friday_next_month()
 
     def get_expiration_walls(self, asset: str) -> Optional[Dict[str, Any]]:
         """Получить стенки опционов для ближайшей экспирации"""
@@ -42,11 +66,12 @@ class ExpirationWallsAnalyzer:
                   AND timestamp > ?
                   AND open_interest > 0
                   AND dte > 0
+                  AND expiry_date <= ?
                   AND dte < 60
                 GROUP BY strike, option_type, expiry_date
                 HAVING total_oi > ?
                 ORDER BY dte ASC, total_oi DESC
-            ''', (asset, cutoff, self.wall_threshold))
+            ''', (asset, cutoff, self.max_expiration.strftime('%Y-%m-%d'), self.wall_threshold))
             
             rows = cursor.fetchall()
             conn.close()
