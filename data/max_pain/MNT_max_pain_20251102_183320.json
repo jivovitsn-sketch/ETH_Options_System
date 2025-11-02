@@ -1,0 +1,41 @@
+{
+  "symbol": "MNT",
+  "timestamp": "2025-11-02T18:33:20.811481",
+  "spot_price": 1.4161,
+  "overall_max_pain": 1.4623340608807724,
+  "expirations": {
+    "2025-11-14": {
+      "max_pain": 1.45,
+      "spot_price": 1.4161,
+      "distance_pct": 2.3938987359649775,
+      "direction": "\u2191",
+      "dte": 11,
+      "total_oi": 1022770.0,
+      "call_oi": 636820.0,
+      "put_oi": 385950.0,
+      "put_call_ratio": 0.6060582268144845
+    },
+    "2025-11-21": {
+      "max_pain": 1.5,
+      "spot_price": 1.4161,
+      "distance_pct": 5.924722830308601,
+      "direction": "\u2191",
+      "dte": 18,
+      "total_oi": 4802200.0,
+      "call_oi": 3873100.0,
+      "put_oi": 929100.0,
+      "put_call_ratio": 0.23988536314580053
+    },
+    "2025-11-28": {
+      "max_pain": 1.45,
+      "spot_price": 1.4161,
+      "distance_pct": 2.3938987359649775,
+      "direction": "\u2191",
+      "dte": 25,
+      "total_oi": 13642260.0,
+      "call_oi": 10797690.0,
+      "put_oi": 2844570.0,
+      "put_call_ratio": 0.26344245852585135
+    }
+  }
+}

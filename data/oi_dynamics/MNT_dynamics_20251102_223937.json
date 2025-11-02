@@ -1,0 +1,82 @@
+{
+  "asset": "MNT",
+  "timestamp": "2025-11-02T22:39:37.504549",
+  "analysis_window_days": 45,
+  "window_start": "2025-11-02",
+  "window_end": "2025-12-17",
+  "expirations_count": 3,
+  "expirations_analysis": {
+    "2025-11-14": {
+      "expiry": "2025-11-14",
+      "dte": 11,
+      "oi_analysis": {
+        "current_oi": 3630.0,
+        "initial_oi": 3460.0,
+        "change_pct": 4.913294797687861,
+        "calls_change_pct": 0.4608294930875576,
+        "puts_change_pct": 12.4031007751938,
+        "trend": "UP",
+        "calls_trend": "FLAT",
+        "puts_trend": "UP",
+        "velocity": 0.2012446502089443,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    },
+    "2025-11-21": {
+      "expiry": "2025-11-21",
+      "dte": 18,
+      "oi_analysis": {
+        "current_oi": 16230.0,
+        "initial_oi": 16230.0,
+        "change_pct": 0.0,
+        "calls_change_pct": 0.0,
+        "puts_change_pct": 0.0,
+        "trend": "FLAT",
+        "calls_trend": "FLAT",
+        "puts_trend": "FLAT",
+        "velocity": 0.0,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    },
+    "2025-11-28": {
+      "expiry": "2025-11-28",
+      "dte": 25,
+      "oi_analysis": {
+        "current_oi": 54670.0,
+        "initial_oi": 54480.0,
+        "change_pct": 0.34875183553597655,
+        "calls_change_pct": 0.24044883783061713,
+        "puts_change_pct": 0.5865102639296188,
+        "trend": "FLAT",
+        "calls_trend": "FLAT",
+        "puts_trend": "FLAT",
+        "velocity": 0.01451398042257767,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    }
+  },
+  "summary": {
+    "overall_signal": "NEUTRAL",
+    "confidence": 0.5,
+    "expirations_analyzed": 3,
+    "active_signals": 0
+  }
+}

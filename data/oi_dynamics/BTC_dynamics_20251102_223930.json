@@ -1,0 +1,82 @@
+{
+  "asset": "BTC",
+  "timestamp": "2025-11-02T22:39:30.648397",
+  "analysis_window_days": 45,
+  "window_start": "2025-11-02",
+  "window_end": "2025-12-17",
+  "expirations_count": 3,
+  "expirations_analysis": {
+    "2025-11-14": {
+      "expiry": "2025-11-14",
+      "dte": 11,
+      "oi_analysis": {
+        "current_oi": 1153.6749999999997,
+        "initial_oi": 1141.7999999999995,
+        "change_pct": 1.0400245226835025,
+        "calls_change_pct": 1.1320394223573647,
+        "puts_change_pct": 0.9275300254997515,
+        "trend": "FLAT",
+        "calls_trend": "FLAT",
+        "puts_trend": "FLAT",
+        "velocity": 0.04320878330133793,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    },
+    "2025-11-21": {
+      "expiry": "2025-11-21",
+      "dte": 18,
+      "oi_analysis": {
+        "current_oi": 168.8125000000001,
+        "initial_oi": 154.48000000000008,
+        "change_pct": 9.27790005178666,
+        "calls_change_pct": 2.9017394905777545,
+        "puts_change_pct": 19.913644214162304,
+        "trend": "UP",
+        "calls_trend": "FLAT",
+        "puts_trend": "UP",
+        "velocity": 0.3712612146766657,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    },
+    "2025-11-28": {
+      "expiry": "2025-11-28",
+      "dte": 25,
+      "oi_analysis": {
+        "current_oi": 2109.0549999999985,
+        "initial_oi": 2099.219999999999,
+        "change_pct": 0.46850735034915764,
+        "calls_change_pct": 0.34658821938186263,
+        "puts_change_pct": 0.6259140418658599,
+        "trend": "FLAT",
+        "calls_trend": "FLAT",
+        "puts_trend": "FLAT",
+        "velocity": 0.01948177446496813,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    }
+  },
+  "summary": {
+    "overall_signal": "NEUTRAL",
+    "confidence": 0.5,
+    "expirations_analyzed": 3,
+    "active_signals": 0
+  }
+}
