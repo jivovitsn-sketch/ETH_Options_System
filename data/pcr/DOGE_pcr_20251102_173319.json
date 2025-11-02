@@ -1,0 +1,12 @@
+{
+  "asset": "DOGE",
+  "timestamp": "2025-11-02T17:33:19.255542",
+  "pcr_oi": 0.107,
+  "pcr_volume": 0.037,
+  "pcr_rsi": 44.2,
+  "put_oi": 3033700.0,
+  "call_oi": 28407200.0,
+  "put_volume": 121700.0,
+  "call_volume": 3259600.0,
+  "interpretation": "NEUTRAL"
+}
