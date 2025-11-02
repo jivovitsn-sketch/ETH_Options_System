@@ -1,0 +1,41 @@
+{
+  "symbol": "DOGE",
+  "timestamp": "2025-11-02T10:33:02.444781",
+  "spot_price": 0.1875,
+  "overall_max_pain": 0.16202852620502436,
+  "expirations": {
+    "2025-11-14": {
+      "max_pain": 0.185,
+      "spot_price": 0.1875,
+      "distance_pct": 1.3333333333333344,
+      "direction": "\u2193",
+      "dte": 11,
+      "total_oi": 746800.0,
+      "call_oi": 702600.0,
+      "put_oi": 44200.0,
+      "put_call_ratio": 0.06290919442072303
+    },
+    "2025-11-21": {
+      "max_pain": 0.18,
+      "spot_price": 0.1875,
+      "distance_pct": 4.0000000000000036,
+      "direction": "\u2193",
+      "dte": 18,
+      "total_oi": 4801600.0,
+      "call_oi": 4556600.0,
+      "put_oi": 245000.0,
+      "put_call_ratio": 0.053768160470526266
+    },
+    "2025-11-28": {
+      "max_pain": 0.16,
+      "spot_price": 0.1875,
+      "distance_pct": 14.666666666666664,
+      "direction": "\u2193",
+      "dte": 25,
+      "total_oi": 50996100.0,
+      "call_oi": 46041600.0,
+      "put_oi": 4954500.0,
+      "put_call_ratio": 0.10760920558798999
+    }
+  }
+}
