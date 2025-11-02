@@ -270,10 +270,13 @@ class SmartSignalSenderV2:
             put_wall = walls_data.get('put_wall')
             
             if call_wall:
-                strategies.append(f"Bear Call Spread near ${call_wall:,.0f}")
+                strategies.append(f"Bear Call Spread near ${call_wall:.2f}" if call_wall < 10 else f"Bear Call Spread near ${call_wall:,.0f}")
             if put_wall:
-                strategies.append(f"Bull Put Spread near ${put_wall:,.0f}")
+                strategies.append(f"Bull Put Spread near ${put_wall:.2f}" if put_wall < 10 else f"Bull Put Spread near ${put_wall:,.0f}")
             if call_wall and put_wall:
+                if put_wall < 10 or call_wall < 10:
+                strategies.append(f"Iron Condor ${put_wall:.2f}-${call_wall:.2f}")
+            else:
                 strategies.append(f"Iron Condor ${put_wall:,.0f}-${call_wall:,.0f}")
         
         elif signal_type == 'BREAKOUT_POSSIBLE':
@@ -281,9 +284,9 @@ class SmartSignalSenderV2:
             put_wall = walls_data.get('put_wall')
             
             if call_wall:
-                strategies.append(f"Long Call above ${call_wall:,.0f}")
+                strategies.append(f"Long Call above ${call_wall:.2f}" if call_wall < 10 else f"Long Call above ${call_wall:,.0f}")
             if put_wall:
-                strategies.append(f"Long Put below ${put_wall:,.0f}")
+                strategies.append(f"Long Put below ${put_wall:.2f}" if put_wall < 10 else f"Long Put below ${put_wall:,.0f}")
         
         elif signal_type == 'BULLISH':
             strategies.append("Bull Call Spread")
@@ -357,8 +360,8 @@ class SmartSignalSenderV2:
     def send_to_telegram(self, message: str) -> bool:
         """Отправка в Telegram"""
         try:
-            from telegram_sender import send_telegram_message
-            return send_telegram_message(message)
+            from telegram_sender import send_message
+            return send_message(message)
         except Exception as e:
             logger.error(f"Telegram send error: {e}")
             return False
