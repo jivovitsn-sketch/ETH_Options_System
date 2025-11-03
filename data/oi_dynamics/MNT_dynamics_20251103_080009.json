@@ -1,0 +1,88 @@
+{
+  "asset": "MNT",
+  "timestamp": "2025-11-03T08:00:09.631657",
+  "analysis_window_days": 45,
+  "window_start": "2025-11-03",
+  "window_end": "2025-12-18",
+  "expirations_count": 3,
+  "expirations_analysis": {
+    "2025-11-14": {
+      "expiry": "2025-11-14",
+      "dte": 10,
+      "oi_analysis": {
+        "current_oi": 4660.0,
+        "initial_oi": 3460.0,
+        "change_pct": 34.68208092485549,
+        "calls_change_pct": 46.54377880184332,
+        "puts_change_pct": 14.728682170542637,
+        "trend": "STRONG_UP",
+        "calls_trend": "STRONG_UP",
+        "puts_trend": "UP",
+        "velocity": 1.441670295246514,
+        "data_points": 24
+      },
+      "signals": {
+        "primary_signal": "WALL_STRENGTHENING",
+        "confidence": 0.7,
+        "reasoning": [
+          "Strong OI growth: +34.7%"
+        ],
+        "implications": [
+          "Bounce probability increased"
+        ]
+      }
+    },
+    "2025-11-21": {
+      "expiry": "2025-11-21",
+      "dte": 17,
+      "oi_analysis": {
+        "current_oi": 16130.0,
+        "initial_oi": 16230.0,
+        "change_pct": -0.6161429451632778,
+        "calls_change_pct": -0.7633587786259541,
+        "puts_change_pct": 0.0,
+        "trend": "FLAT",
+        "calls_trend": "FLAT",
+        "puts_trend": "FLAT",
+        "velocity": -0.026819915652266938,
+        "data_points": 24
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    },
+    "2025-11-28": {
+      "expiry": "2025-11-28",
+      "dte": 24,
+      "oi_analysis": {
+        "current_oi": 36586.666666666664,
+        "initial_oi": 54590.0,
+        "change_pct": -32.97917811565,
+        "calls_change_pct": -50.76101468624833,
+        "puts_change_pct": 5.873201089070408,
+        "trend": "DOWN",
+        "calls_trend": "DOWN",
+        "puts_trend": "UP",
+        "velocity": -1.5321834804208185,
+        "data_points": 24
+      },
+      "signals": {
+        "primary_signal": "WALL_WEAKENING",
+        "confidence": 0.55,
+        "reasoning": [
+          "OI dropping: -33.0%"
+        ],
+        "implications": []
+      }
+    }
+  },
+  "summary": {
+    "overall_signal": "WALL_STRENGTHENING",
+    "confidence": 0.625,
+    "expirations_analyzed": 3,
+    "active_signals": 2
+  }
+}

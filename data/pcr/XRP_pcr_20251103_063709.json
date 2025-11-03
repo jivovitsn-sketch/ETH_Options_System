@@ -1,0 +1,12 @@
+{
+  "asset": "XRP",
+  "timestamp": "2025-11-03T06:37:09.572387",
+  "pcr_oi": 0.258,
+  "pcr_volume": 0.028,
+  "pcr_rsi": 40.7,
+  "put_oi": 22639260.0,
+  "call_oi": 87856350.0,
+  "put_volume": 43920.0,
+  "call_volume": 1593890.0,
+  "interpretation": "NEUTRAL"
+}

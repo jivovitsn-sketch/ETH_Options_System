@@ -1,0 +1,67 @@
+{
+  "asset": "XRP",
+  "expiration": "2025-11-14",
+  "dte": 11,
+  "timestamp": "2025-11-03T08:00:06.574463",
+  "magnetic_levels": {
+    "call_wall": 3.0,
+    "put_wall": 2.0,
+    "call_wall_oi": 27959850.0,
+    "put_wall_oi": 13900000.0
+  },
+  "pressure_analysis": {
+    "direction": "BEARISH",
+    "confidence": 0.7011355298179986,
+    "reasoning": [
+      "Strong call wall OI: 27959850",
+      "Total call OI dominates: 37158270"
+    ]
+  },
+  "call_walls": [
+    {
+      "strike": 3.0,
+      "oi": 27959850.0
+    },
+    {
+      "strike": 2.8,
+      "oi": 6428170.0
+    },
+    {
+      "strike": 3.8,
+      "oi": 587720.0
+    },
+    {
+      "strike": 3.4,
+      "oi": 576850.0
+    },
+    {
+      "strike": 3.2,
+      "oi": 473990.0
+    }
+  ],
+  "put_walls": [
+    {
+      "strike": 2.0,
+      "oi": 13900000.0
+    },
+    {
+      "strike": 2.4,
+      "oi": 1223200.0
+    },
+    {
+      "strike": 2.5,
+      "oi": 696390.0
+    },
+    {
+      "strike": 2.2,
+      "oi": 695000.0
+    },
+    {
+      "strike": 1.8,
+      "oi": 556000.0
+    }
+  ],
+  "total_call_oi": 37158270.0,
+  "total_put_oi": 18011620.0,
+  "wall_threshold": 500
+}
