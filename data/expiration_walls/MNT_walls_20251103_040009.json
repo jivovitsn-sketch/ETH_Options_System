@@ -1,0 +1,67 @@
+{
+  "asset": "MNT",
+  "expiration": "2025-11-14",
+  "dte": 11,
+  "timestamp": "2025-11-03T04:00:09.838549",
+  "magnetic_levels": {
+    "call_wall": 1.58,
+    "put_wall": 1.4,
+    "call_wall_oi": 142000.0,
+    "put_wall_oi": 144480.0
+  },
+  "pressure_analysis": {
+    "direction": "RANGE_BOUND",
+    "confidence": 0.6,
+    "reasoning": [
+      "Balanced walls",
+      "Total call OI dominates: 309150"
+    ]
+  },
+  "call_walls": [
+    {
+      "strike": 1.58,
+      "oi": 142000.0
+    },
+    {
+      "strike": 1.6,
+      "oi": 142000.0
+    },
+    {
+      "strike": 1.5,
+      "oi": 15210.0
+    },
+    {
+      "strike": 1.45,
+      "oi": 8520.0
+    },
+    {
+      "strike": 1.68,
+      "oi": 1420.0
+    }
+  ],
+  "put_walls": [
+    {
+      "strike": 1.4,
+      "oi": 144480.0
+    },
+    {
+      "strike": 1.3,
+      "oi": 28080.0
+    },
+    {
+      "strike": 1.45,
+      "oi": 19840.0
+    },
+    {
+      "strike": 1.25,
+      "oi": 3940.0
+    },
+    {
+      "strike": 1.5,
+      "oi": 1420.0
+    }
+  ],
+  "total_call_oi": 309150.0,
+  "total_put_oi": 199730.0,
+  "wall_threshold": 500
+}

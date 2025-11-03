@@ -1,0 +1,63 @@
+{
+  "symbol": "ETH",
+  "timestamp": "2025-11-03T04:03:28.652028",
+  "spot_price": 3858.81,
+  "overall_max_pain": 4085.0946655841935,
+  "expirations": {
+    "2025-10-31": {
+      "max_pain": 4250.0,
+      "spot_price": 3858.81,
+      "distance_pct": 10.1375812750563,
+      "direction": "\u2191",
+      "dte": 1,
+      "total_oi": 7199614.699999999,
+      "call_oi": 5356576.3,
+      "put_oi": 1843038.4,
+      "put_call_ratio": 0.34407022261588993
+    },
+    "2025-11-14": {
+      "max_pain": 3900.0,
+      "spot_price": 3858.81,
+      "distance_pct": 1.0674275229928412,
+      "direction": "\u2191",
+      "dte": 10,
+      "total_oi": 3945867.4000000004,
+      "call_oi": 2230383.0999999996,
+      "put_oi": 1715484.3,
+      "put_call_ratio": 0.7691433368554489
+    },
+    "2025-11-21": {
+      "max_pain": 3800.0,
+      "spot_price": 3858.81,
+      "distance_pct": 1.5240449775967189,
+      "direction": "\u2193",
+      "dte": 17,
+      "total_oi": 417743.1,
+      "call_oi": 201779.7,
+      "put_oi": 215963.4,
+      "put_call_ratio": 1.0702929977594375
+    },
+    "2025-11-28": {
+      "max_pain": 4200.0,
+      "spot_price": 3858.81,
+      "distance_pct": 8.841845024761522,
+      "direction": "\u2191",
+      "dte": 24,
+      "total_oi": 18944931.5,
+      "call_oi": 7936158.700000001,
+      "put_oi": 11008772.8,
+      "put_call_ratio": 1.3871664133934216
+    },
+    "2025-12-26": {
+      "max_pain": 4000.0,
+      "spot_price": 3858.81,
+      "distance_pct": 3.658900023582401,
+      "direction": "\u2191",
+      "dte": 52,
+      "total_oi": 29551479.0,
+      "call_oi": 17359649.0,
+      "put_oi": 12191830.0,
+      "put_call_ratio": 0.7023085547409398
+    }
+  }
+}

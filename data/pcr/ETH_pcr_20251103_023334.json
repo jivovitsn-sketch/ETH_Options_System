@@ -1,0 +1,12 @@
+{
+  "asset": "ETH",
+  "timestamp": "2025-11-03T02:33:34.990182",
+  "pcr_oi": 0.96,
+  "pcr_volume": 13.669,
+  "pcr_rsi": 51.2,
+  "put_oi": 5923716.1,
+  "call_oi": 6169230.0,
+  "put_volume": 2786720.9,
+  "call_volume": 203865.4,
+  "interpretation": "NEUTRAL"
+}

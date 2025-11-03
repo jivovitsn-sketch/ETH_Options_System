@@ -1,0 +1,67 @@
+{
+  "asset": "BTC",
+  "expiration": "2025-11-14",
+  "dte": 11,
+  "timestamp": "2025-11-03T04:00:02.547839",
+  "magnetic_levels": {
+    "call_wall": 118000.0,
+    "put_wall": 96000.0,
+    "call_wall_oi": 21036.42000000003,
+    "put_wall_oi": 8318.660000000009
+  },
+  "pressure_analysis": {
+    "direction": "BEARISH",
+    "confidence": 0.7257451178602934,
+    "reasoning": [
+      "Strong call wall OI: 21036",
+      "Total call OI dominates: 77377"
+    ]
+  },
+  "call_walls": [
+    {
+      "strike": 118000.0,
+      "oi": 21036.42000000003
+    },
+    {
+      "strike": 120000.0,
+      "oi": 18148.020000000022
+    },
+    {
+      "strike": 124000.0,
+      "oi": 8091.1400000000085
+    },
+    {
+      "strike": 116000.0,
+      "oi": 5711.120000000006
+    },
+    {
+      "strike": 126000.0,
+      "oi": 5333.750000000002
+    }
+  ],
+  "put_walls": [
+    {
+      "strike": 96000.0,
+      "oi": 8318.660000000009
+    },
+    {
+      "strike": 104000.0,
+      "oi": 8209.950000000013
+    },
+    {
+      "strike": 106000.0,
+      "oi": 7468.009999999994
+    },
+    {
+      "strike": 100000.0,
+      "oi": 5582.680000000005
+    },
+    {
+      "strike": 92000.0,
+      "oi": 5402.78999999998
+    }
+  ],
+  "total_call_oi": 77376.80000000006,
+  "total_put_oi": 56103.04000000003,
+  "wall_threshold": 500
+}

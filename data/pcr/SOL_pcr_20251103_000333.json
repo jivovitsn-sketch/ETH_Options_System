@@ -1,0 +1,12 @@
+{
+  "asset": "SOL",
+  "timestamp": "2025-11-03T00:03:33.072957",
+  "pcr_oi": 0.636,
+  "pcr_volume": 0.296,
+  "pcr_rsi": 53.2,
+  "put_oi": 1829773.0,
+  "call_oi": 2875984.0,
+  "put_volume": 38047.0,
+  "call_volume": 128517.0,
+  "interpretation": "NEUTRAL"
+}

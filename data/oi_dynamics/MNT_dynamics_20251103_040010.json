@@ -1,0 +1,82 @@
+{
+  "asset": "MNT",
+  "timestamp": "2025-11-03T04:00:10.108689",
+  "analysis_window_days": 45,
+  "window_start": "2025-11-03",
+  "window_end": "2025-12-18",
+  "expirations_count": 3,
+  "expirations_analysis": {
+    "2025-11-14": {
+      "expiry": "2025-11-14",
+      "dte": 10,
+      "oi_analysis": {
+        "current_oi": 3766.6666666666665,
+        "initial_oi": 3460.0,
+        "change_pct": 8.863198458574177,
+        "calls_change_pct": 0.4608294930875576,
+        "puts_change_pct": 22.99741602067184,
+        "trend": "UP",
+        "calls_trend": "FLAT",
+        "puts_trend": "UP",
+        "velocity": 0.37686394896368525,
+        "data_points": 24
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    },
+    "2025-11-21": {
+      "expiry": "2025-11-21",
+      "dte": 17,
+      "oi_analysis": {
+        "current_oi": 16230.0,
+        "initial_oi": 16230.0,
+        "change_pct": 0.0,
+        "calls_change_pct": 0.0,
+        "puts_change_pct": 0.0,
+        "trend": "FLAT",
+        "calls_trend": "FLAT",
+        "puts_trend": "FLAT",
+        "velocity": 0.0,
+        "data_points": 24
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    },
+    "2025-11-28": {
+      "expiry": "2025-11-28",
+      "dte": 24,
+      "oi_analysis": {
+        "current_oi": 55170.0,
+        "initial_oi": 54590.0,
+        "change_pct": 1.0624656530500092,
+        "calls_change_pct": 0.1869158878504673,
+        "puts_change_pct": 2.9754959159859977,
+        "trend": "FLAT",
+        "calls_trend": "FLAT",
+        "puts_trend": "FLAT",
+        "velocity": 0.046133107744906886,
+        "data_points": 24
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    }
+  },
+  "summary": {
+    "overall_signal": "NEUTRAL",
+    "confidence": 0.5,
+    "expirations_analyzed": 3,
+    "active_signals": 0
+  }
+}

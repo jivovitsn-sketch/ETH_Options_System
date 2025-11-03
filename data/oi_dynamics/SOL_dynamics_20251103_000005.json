@@ -1,0 +1,88 @@
+{
+  "asset": "SOL",
+  "timestamp": "2025-11-03T00:00:05.857047",
+  "analysis_window_days": 45,
+  "window_start": "2025-11-03",
+  "window_end": "2025-12-18",
+  "expirations_count": 3,
+  "expirations_analysis": {
+    "2025-11-14": {
+      "expiry": "2025-11-14",
+      "dte": 11,
+      "oi_analysis": {
+        "current_oi": 1865.1666666666667,
+        "initial_oi": 1394.0,
+        "change_pct": 33.79961740793879,
+        "calls_change_pct": 34.21717171717172,
+        "puts_change_pct": 32.97872340425532,
+        "trend": "STRONG_UP",
+        "calls_trend": "STRONG_UP",
+        "puts_trend": "STRONG_UP",
+        "velocity": 1.2912636040093037,
+        "data_points": 24
+      },
+      "signals": {
+        "primary_signal": "WALL_STRENGTHENING",
+        "confidence": 0.7,
+        "reasoning": [
+          "Strong OI growth: +33.8%"
+        ],
+        "implications": [
+          "Bounce probability increased"
+        ]
+      }
+    },
+    "2025-11-21": {
+      "expiry": "2025-11-21",
+      "dte": 18,
+      "oi_analysis": {
+        "current_oi": 239.0,
+        "initial_oi": 207.0,
+        "change_pct": 15.458937198067632,
+        "calls_change_pct": 2.0618556701030926,
+        "puts_change_pct": 215.3846153846154,
+        "trend": "UP",
+        "calls_trend": "FLAT",
+        "puts_trend": "STRONG_UP",
+        "velocity": 0.6472267729496011,
+        "data_points": 24
+      },
+      "signals": {
+        "primary_signal": "WALL_STRENGTHENING",
+        "confidence": 0.55,
+        "reasoning": [
+          "OI growing: +15.5%"
+        ],
+        "implications": []
+      }
+    },
+    "2025-11-28": {
+      "expiry": "2025-11-28",
+      "dte": 25,
+      "oi_analysis": {
+        "current_oi": 30230.0,
+        "initial_oi": 32057.666666666668,
+        "change_pct": -5.7011843240826465,
+        "calls_change_pct": -9.286281936389312,
+        "puts_change_pct": 0.024303305249513935,
+        "trend": "DOWN",
+        "calls_trend": "DOWN",
+        "puts_trend": "FLAT",
+        "velocity": -0.04748727322174617,
+        "data_points": 24
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    }
+  },
+  "summary": {
+    "overall_signal": "WALL_STRENGTHENING",
+    "confidence": 0.625,
+    "expirations_analyzed": 3,
+    "active_signals": 2
+  }
+}
