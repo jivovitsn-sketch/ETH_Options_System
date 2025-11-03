@@ -1,0 +1,28 @@
+{
+  "timestamp": "2025-11-03T12:25:33.714320",
+  "system_status": {
+    "unlimited_oi_monitor.py": true,
+    "futures_data_monitor.py": true,
+    "liquidations_monitor.py": true,
+    "funding_rate_monitor.py": true
+  },
+  "data_metrics": {
+    "total_records_24h": 117137,
+    "BTC_records_24h": 46281,
+    "ETH_records_24h": 40922,
+    "SOL_records_24h": 14414,
+    "XRP_records_24h": 7702,
+    "DOGE_records_24h": 3205,
+    "MNT_records_24h": 4613,
+    "data_freshness_minutes": 3
+  },
+  "signal_stats": {
+    "total_lines": 1000,
+    "signals_sent": 0,
+    "errors": 13,
+    "recent_signals": []
+  },
+  "issues": [
+    "\u26a0\ufe0f \u0417\u0430 \u043f\u043e\u0441\u043b\u0435\u0434\u043d\u0435\u0435 \u0432\u0440\u0435\u043c\u044f \u043d\u0435 \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043e \u043d\u0438 \u043e\u0434\u043d\u043e\u0433\u043e \u0441\u0438\u0433\u043d\u0430\u043b\u0430"
+  ]
+}
