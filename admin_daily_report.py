@@ -10,7 +10,7 @@ import logging
 from datetime import datetime, timedelta
 import os
 import json
-from telegram_sender import send_admin_message
+from telegram_sender import send_admin_alert
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -191,7 +191,7 @@ class AdminDailyReport:
                 message += "✅ Проблем не обнаружено\\n"
                 
             # Отправляем
-            send_admin_message(message)
+            send_admin_alert("Daily System Report", message)
             logger.info("✅ Daily admin report sent")
             
             # Сохраняем отчет в файл

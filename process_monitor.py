@@ -9,7 +9,7 @@ import os
 import time
 import logging
 from datetime import datetime
-from telegram_sender import send_admin_message
+from telegram_sender import send_admin_alert
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -56,7 +56,7 @@ class ProcessMonitor:
         """Отправка алерта"""
         try:
             full_message = f"{message}\\n⏰ {datetime.now().strftime('%H:%M:%S')}"
-            send_admin_message(full_message)
+            send_admin_alert("Process Alert", full_message)
             logger.info(f"Alert sent: {message}")
         except Exception as e:
             logger.error(f"Failed to send alert: {e}")

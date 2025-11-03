@@ -1,0 +1,63 @@
+{
+  "symbol": "XRP",
+  "timestamp": "2025-11-03T12:33:52.446811",
+  "spot_price": 2.4091,
+  "overall_max_pain": 2.638726493653823,
+  "expirations": {
+    "2025-10-29": {
+      "max_pain": 2.65,
+      "spot_price": 2.4091,
+      "distance_pct": 9.99958490722676,
+      "direction": "\u2191",
+      "dte": 1,
+      "total_oi": 3338430.0,
+      "call_oi": 592400.0,
+      "put_oi": 2746030.0,
+      "put_call_ratio": 4.635432140445645
+    },
+    "2025-10-30": {
+      "max_pain": 2.65,
+      "spot_price": 2.4091,
+      "distance_pct": 9.99958490722676,
+      "direction": "\u2191",
+      "dte": 1,
+      "total_oi": 524570.0,
+      "call_oi": 369760.0,
+      "put_oi": 154810.0,
+      "put_call_ratio": 0.4186769796624838
+    },
+    "2025-10-31": {
+      "max_pain": 2.55,
+      "spot_price": 2.4091,
+      "distance_pct": 5.848657174878577,
+      "direction": "\u2191",
+      "dte": 1,
+      "total_oi": 27249490.0,
+      "call_oi": 9699060.0,
+      "put_oi": 17550430.0,
+      "put_call_ratio": 1.8094980338300826
+    },
+    "2025-11-14": {
+      "max_pain": 2.65,
+      "spot_price": 2.4091,
+      "distance_pct": 9.99958490722676,
+      "direction": "\u2191",
+      "dte": 10,
+      "total_oi": 293741130.0,
+      "call_oi": 201076210.0,
+      "put_oi": 92664920.0,
+      "put_call_ratio": 0.4608447712436991
+    },
+    "2025-11-21": {
+      "max_pain": 2.4,
+      "spot_price": 2.4091,
+      "distance_pct": 0.37773442364368887,
+      "direction": "\u2193",
+      "dte": 17,
+      "total_oi": 3926210.0,
+      "call_oi": 1520610.0,
+      "put_oi": 2405600.0,
+      "put_call_ratio": 1.5819966986932876
+    }
+  }
+}
