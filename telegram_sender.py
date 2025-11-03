@@ -8,6 +8,10 @@ import os
 import requests
 import logging
 from typing import Optional
+from dotenv import load_dotenv
+
+# Загружаем .env файл
+load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -17,7 +21,7 @@ class TelegramSender:
         # Загружаем настройки из .env
         self.bot_token = os.getenv('TELEGRAM_BOT_TOKEN')
         self.free_chat_id = os.getenv('TELEGRAM_FREE_CHAT_ID')
-        self.vip_chat_id = os.getenv('TELEGRAM_VIP_CHAT_ID') 
+        self.vip_chat_id = os.getenv('TELEGRAM_VIP_CHAT_ID')
         self.admin_chat_id = os.getenv('TELEGRAM_ADMIN_CHAT_ID')
         
         # Proxy settings
@@ -27,8 +31,8 @@ class TelegramSender:
         
         self.session = self._create_session()
         
-        # Логируем настройки (без паролей)
-        logger.info(f"📱 Telegram sender initialized. Channels: FREE={bool(self.free_chat_id)}, VIP={bool(self.vip_chat_id)}, ADMIN={bool(self.admin_chat_id)}")
+        # Логируем настройки (без чувствительных данных)
+        logger.info(f"📱 Telegram sender initialized. Bot: {bool(self.bot_token)}, FREE: {bool(self.free_chat_id)}, VIP: {bool(self.vip_chat_id)}, ADMIN: {bool(self.admin_chat_id)}")
         
     def _create_session(self):
         """Создание сессии с прокси"""
@@ -88,6 +92,7 @@ class TelegramSender:
         }
         
         try:
+            logger.info(f"📤 Sending message to {channel_name} channel...")
             response = self.session.post(url, json=payload, timeout=10)
             
             if response.status_code == 200:
@@ -160,6 +165,22 @@ def send_admin_alert(title: str, message: str) -> bool:
 def send_free_message(message: str) -> bool:
     """Функция для отправки в free канал"""
     return _sender.send_free_message(message)
+
+# Оригинальные функции для обратной совместимости
+def send_to_telegram(message: str, chat_id: str = None):
+    """Оригинальная функция для обратной совместимости"""
+    if chat_id == os.getenv('TELEGRAM_ADMIN_CHAT_ID'):
+        return send_admin_alert("Сообщение", message)
+    else:
+        return send_free_message(message)
+
+def send_admin_message(message: str):
+    """Оригинальная функция для обратной совместимости"""
+    return send_admin_alert("Уведомление", message)
+
+def send_vip_message(message: str):
+    """Оригинальная функция для обратной совместимости"""
+    return send_signal("VIP", "ALERT", 1.0, ["Alert"], message, is_vip=True)
 
 if __name__ == '__main__':
     # Тест отправки во все каналы

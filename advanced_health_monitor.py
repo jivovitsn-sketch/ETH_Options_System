@@ -13,7 +13,7 @@ from telegram_sender import send_admin_alert
 import logging
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
-from telegram_sender import send_to_telegram
+from telegram_sender import send_admin_alert
 
 load_dotenv()
 
