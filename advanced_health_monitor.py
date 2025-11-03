@@ -9,7 +9,7 @@ import os
 import psutil
 import subprocess
 import sqlite3
-from telegram_sender import send_admin_alert
+from telegram_sender import send_admin_message
 import logging
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
