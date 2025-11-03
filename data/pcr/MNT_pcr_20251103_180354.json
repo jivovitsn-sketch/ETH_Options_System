@@ -1,0 +1,12 @@
+{
+  "asset": "MNT",
+  "timestamp": "2025-11-03T18:03:54.991338",
+  "pcr_oi": 0.475,
+  "pcr_volume": 0.538,
+  "pcr_rsi": 51.3,
+  "put_oi": 2541650.0,
+  "call_oi": 5354120.0,
+  "put_volume": 282270.0,
+  "call_volume": 524920.0,
+  "interpretation": "NEUTRAL"
+}
