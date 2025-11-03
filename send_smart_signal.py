@@ -9,6 +9,7 @@ import json
 import hashlib
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
+from telegram_sender import send_message
 from data_integrator import DataIntegrator
 from signal_analyzer import SignalAnalyzer
 from backtest_params import get_default_config

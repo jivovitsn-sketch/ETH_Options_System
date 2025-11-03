@@ -1,0 +1,67 @@
+{
+  "asset": "SOL",
+  "expiration": "2025-11-14",
+  "dte": 10,
+  "timestamp": "2025-11-03T12:00:05.801368",
+  "magnetic_levels": {
+    "call_wall": 220.0,
+    "put_wall": 160.0,
+    "call_wall_oi": 44153.0,
+    "put_wall_oi": 21467.0
+  },
+  "pressure_analysis": {
+    "direction": "BEARISH",
+    "confidence": 0.6965237904482129,
+    "reasoning": [
+      "Strong call wall OI: 44153",
+      "Total call OI dominates: 151443"
+    ]
+  },
+  "call_walls": [
+    {
+      "strike": 220.0,
+      "oi": 44153.0
+    },
+    {
+      "strike": 198.0,
+      "oi": 32283.0
+    },
+    {
+      "strike": 260.0,
+      "oi": 28135.0
+    },
+    {
+      "strike": 204.0,
+      "oi": 17776.0
+    },
+    {
+      "strike": 196.0,
+      "oi": 7544.0
+    }
+  ],
+  "put_walls": [
+    {
+      "strike": 160.0,
+      "oi": 21467.0
+    },
+    {
+      "strike": 140.0,
+      "oi": 18428.0
+    },
+    {
+      "strike": 176.0,
+      "oi": 11984.0
+    },
+    {
+      "strike": 184.0,
+      "oi": 11696.0
+    },
+    {
+      "strike": 170.0,
+      "oi": 5523.0
+    }
+  ],
+  "total_call_oi": 151443.0,
+  "total_put_oi": 87799.0,
+  "wall_threshold": 500
+}
