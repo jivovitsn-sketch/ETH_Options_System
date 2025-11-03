@@ -1,0 +1,289 @@
+{
+  "asset": "ETH",
+  "signal": {
+    "signal_type": "BULLISH",
+    "confidence": 0.5740000000000001,
+    "strength": "WEAK",
+    "components": {
+      "futures": {
+        "signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "data_used": [
+          "futures",
+          "liquidations"
+        ]
+      },
+      "options": {
+        "signal": "BULLISH",
+        "confidence": 0.62,
+        "reasoning": [
+          "Vanna 11493690"
+        ],
+        "data_used": [
+          "max_pain",
+          "gex",
+          "pcr",
+          "vanna"
+        ]
+      },
+      "timing": {
+        "signal": "BULLISH",
+        "confidence": 0.6,
+        "reasoning": [
+          "OI MACD +557"
+        ],
+        "data_used": [
+          "pcr_rsi",
+          "gex_rsi",
+          "oi_macd"
+        ]
+      }
+    },
+    "reasoning": [
+      "Vanna 11493690",
+      "OI MACD +557"
+    ],
+    "config_version": "63a48001",
+    "data_quality": {
+      "status": "EXCELLENT",
+      "available_sources": 11,
+      "total_sources": 13,
+      "completeness": 0.8461538461538461,
+      "missing_sources": [
+        "liquidations",
+        "option_vwap"
+      ]
+    }
+  },
+  "data_snapshot": {
+    "asset": "ETH",
+    "timestamp": "2025-11-03 14:49:46.087206",
+    "spot_price": 3711.2,
+    "available_sources": [
+      "futures",
+      "pcr",
+      "max_pain",
+      "gex",
+      "vanna",
+      "iv_rank",
+      "expiration_walls",
+      "oi_dynamics",
+      "pcr_rsi",
+      "gex_rsi",
+      "oi_macd"
+    ],
+    "futures": {
+      "price": 3711.2,
+      "spot_price": 3711.2,
+      "funding_rate": 0.0001,
+      "open_interest": 0
+    },
+    "liquidations": null,
+    "pcr": {
+      "ratio": 0.9620322695578933,
+      "put_oi": 5635636.599999682,
+      "call_oi": 5858053.599999891,
+      "put_volume": 2204937.9000000306,
+      "call_volume": 315509.3000000008,
+      "volume_ratio": 6.988503666928439
+    },
+    "max_pain": {
+      "price": 4000.0,
+      "distance_pct": 0.026912817669061923,
+      "total_pain": 927387694.9999994,
+      "spot_price": 3895.17
+    },
+    "gex": {
+      "total_gamma": 92303.44596895885,
+      "call_gamma": 32451.56056477686,
+      "put_gamma": 59851.885404181936,
+      "gamma_ratio": 0.5421977995451656,
+      "spot_price": 3711.2
+    },
+    "vanna": {
+      "total_vanna": 11493690.199998999
+    },
+    "iv_rank": {
+      "rank": 100,
+      "percentile": 100,
+      "current_iv": 29.426552453571126,
+      "min_iv": 0,
+      "max_iv": 100
+    },
+    "option_vwap": null,
+    "expiration_walls": {
+      "asset": "ETH",
+      "expiration": "2025-11-14",
+      "dte": 11,
+      "timestamp": "2025-11-03T14:49:46.514129",
+      "magnetic_levels": {
+        "call_wall": 5000.0,
+        "put_wall": 3400.0,
+        "call_wall_oi": 108051.10000000028,
+        "put_wall_oi": 73939.30000000008
+      },
+      "pressure_analysis": {
+        "direction": "RANGE_BOUND",
+        "confidence": 0.6,
+        "reasoning": [
+          "Balanced walls",
+          "Total call OI dominates: 517064"
+        ]
+      },
+      "call_walls": [
+        {
+          "strike": 5000.0,
+          "oi": 108051.10000000028
+        },
+        {
+          "strike": 4600.0,
+          "oi": 70276.1000000001
+        },
+        {
+          "strike": 4300.0,
+          "oi": 57279.400000000176
+        },
+        {
+          "strike": 5500.0,
+          "oi": 55945.0
+        },
+        {
+          "strike": 4500.0,
+          "oi": 55051.399999999965
+        }
+      ],
+      "put_walls": [
+        {
+          "strike": 3400.0,
+          "oi": 73939.30000000008
+        },
+        {
+          "strike": 3800.0,
+          "oi": 58203.30000000001
+        },
+        {
+          "strike": 3000.0,
+          "oi": 55325.30000000006
+        },
+        {
+          "strike": 3700.0,
+          "oi": 44045.100000000006
+        },
+        {
+          "strike": 3300.0,
+          "oi": 43442.79999999996
+        }
+      ],
+      "total_call_oi": 517064.1000000004,
+      "total_put_oi": 400883.7,
+      "wall_threshold": 500
+    },
+    "oi_dynamics": {
+      "asset": "ETH",
+      "timestamp": "2025-11-03T14:49:46.795460",
+      "analysis_window_days": 45,
+      "window_start": "2025-11-03",
+      "window_end": "2025-12-18",
+      "expirations_count": 3,
+      "expirations_analysis": {
+        "2025-11-14": {
+          "expiry": "2025-11-14",
+          "dte": 10,
+          "oi_analysis": {
+            "current_oi": 8434.466666666669,
+            "initial_oi": 7350.299999999998,
+            "change_pct": 14.749964854042297,
+            "calls_change_pct": 16.573789943128357,
+            "puts_change_pct": 12.48270670572918,
+            "trend": "UP",
+            "calls_trend": "UP",
+            "puts_trend": "UP",
+            "velocity": 0.5776077064390158,
+            "data_points": 25
+          },
+          "signals": {
+            "primary_signal": "WALL_STRENGTHENING",
+            "confidence": 0.55,
+            "reasoning": [
+              "OI growing: +14.7%"
+            ],
+            "implications": []
+          }
+        },
+        "2025-11-21": {
+          "expiry": "2025-11-21",
+          "dte": 17,
+          "oi_analysis": {
+            "current_oi": 2027.6833333333332,
+            "initial_oi": 1309.2999999999997,
+            "change_pct": 54.86774103210369,
+            "calls_change_pct": 51.41493676926749,
+            "puts_change_pct": 58.81630648330061,
+            "trend": "STRONG_UP",
+            "calls_trend": "STRONG_UP",
+            "puts_trend": "STRONG_UP",
+            "velocity": 1.879958707456315,
+            "data_points": 25
+          },
+          "signals": {
+            "primary_signal": "WALL_STRENGTHENING",
+            "confidence": 0.7,
+            "reasoning": [
+              "Strong OI growth: +54.9%"
+            ],
+            "implications": [
+              "Bounce probability increased"
+            ]
+          }
+        },
+        "2025-11-28": {
+          "expiry": "2025-11-28",
+          "dte": 24,
+          "oi_analysis": {
+            "current_oi": 30419.366666666658,
+            "initial_oi": 30280.599999999988,
+            "change_pct": 0.45826921086989725,
+            "calls_change_pct": -1.8986843141889271,
+            "puts_change_pct": 2.0639582766540854,
+            "trend": "FLAT",
+            "calls_trend": "FLAT",
+            "puts_trend": "FLAT",
+            "velocity": 0.019725204570730178,
+            "data_points": 25
+          },
+          "signals": {
+            "primary_signal": "NEUTRAL",
+            "confidence": 0.5,
+            "reasoning": [],
+            "implications": []
+          }
+        }
+      },
+      "summary": {
+        "overall_signal": "WALL_STRENGTHENING",
+        "confidence": 0.625,
+        "expirations_analyzed": 3,
+        "active_signals": 2
+      }
+    },
+    "pcr_rsi": 50.345781827828425,
+    "gex_rsi": 69.48626416265688,
+    "oi_macd": {
+      "macd": 557.1147918122733,
+      "signal": 0.0,
+      "histogram": 557.1147918122733
+    },
+    "quality": {
+      "status": "EXCELLENT",
+      "available_sources": 11,
+      "total_sources": 13,
+      "completeness": 0.8461538461538461,
+      "missing_sources": [
+        "liquidations",
+        "option_vwap"
+      ]
+    }
+  },
+  "strategies": []
+}

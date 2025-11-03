@@ -1,0 +1,86 @@
+{
+  "asset": "XRP",
+  "timestamp": "2025-11-03T14:49:48.081254",
+  "analysis_window_days": 45,
+  "window_start": "2025-11-03",
+  "window_end": "2025-12-18",
+  "expirations_count": 3,
+  "expirations_analysis": {
+    "2025-11-14": {
+      "expiry": "2025-11-14",
+      "dte": 10,
+      "oi_analysis": {
+        "current_oi": 394390.0,
+        "initial_oi": 436100.0,
+        "change_pct": -9.564320110066499,
+        "calls_change_pct": -13.829440167036408,
+        "puts_change_pct": 0.5247723414107115,
+        "trend": "DOWN",
+        "calls_trend": "DOWN",
+        "puts_trend": "FLAT",
+        "velocity": -0.40735776107198035,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    },
+    "2025-11-21": {
+      "expiry": "2025-11-21",
+      "dte": 17,
+      "oi_analysis": {
+        "current_oi": 10020.0,
+        "initial_oi": 10180.0,
+        "change_pct": -1.5717092337917484,
+        "calls_change_pct": -3.9215686274509802,
+        "puts_change_pct": 0.0,
+        "trend": "FLAT",
+        "calls_trend": "DOWN",
+        "puts_trend": "FLAT",
+        "velocity": -0.06391151250808397,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    },
+    "2025-11-28": {
+      "expiry": "2025-11-28",
+      "dte": 24,
+      "oi_analysis": {
+        "current_oi": 365236.6666666667,
+        "initial_oi": 669540.0,
+        "change_pct": -45.44961217154066,
+        "calls_change_pct": -47.43216677300053,
+        "puts_change_pct": 1.89520624303233,
+        "trend": "STRONG_DOWN",
+        "calls_trend": "STRONG_DOWN",
+        "puts_trend": "FLAT",
+        "velocity": -2.1150878555227535,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "WALL_WEAKENING",
+        "confidence": 0.7,
+        "reasoning": [
+          "Strong OI drop: -45.4%"
+        ],
+        "implications": [
+          "Breakout probability increased"
+        ]
+      }
+    }
+  },
+  "summary": {
+    "overall_signal": "WALL_WEAKENING",
+    "confidence": 0.7,
+    "expirations_analyzed": 3,
+    "active_signals": 1
+  }
+}

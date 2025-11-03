@@ -1,0 +1,84 @@
+{
+  "asset": "BTC",
+  "timestamp": "2025-11-03T14:49:45.338854",
+  "analysis_window_days": 45,
+  "window_start": "2025-11-03",
+  "window_end": "2025-12-18",
+  "expirations_count": 3,
+  "expirations_analysis": {
+    "2025-11-14": {
+      "expiry": "2025-11-14",
+      "dte": 10,
+      "oi_analysis": {
+        "current_oi": 1244.6959999999997,
+        "initial_oi": 1153.8099999999997,
+        "change_pct": 7.877033480382384,
+        "calls_change_pct": 11.818796909665963,
+        "puts_change_pct": 3.0435285945820802,
+        "trend": "UP",
+        "calls_trend": "UP",
+        "puts_trend": "FLAT",
+        "velocity": 0.31800493871786634,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    },
+    "2025-11-21": {
+      "expiry": "2025-11-21",
+      "dte": 17,
+      "oi_analysis": {
+        "current_oi": 206.6760000000001,
+        "initial_oi": 163.1200000000001,
+        "change_pct": 26.701814615007347,
+        "calls_change_pct": 21.83445640148847,
+        "puts_change_pct": 34.300518134715006,
+        "trend": "UP",
+        "calls_trend": "UP",
+        "puts_trend": "STRONG_UP",
+        "velocity": 1.3234494961445276,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "WALL_STRENGTHENING",
+        "confidence": 0.55,
+        "reasoning": [
+          "OI growing: +26.7%"
+        ],
+        "implications": []
+      }
+    },
+    "2025-11-28": {
+      "expiry": "2025-11-28",
+      "dte": 24,
+      "oi_analysis": {
+        "current_oi": 2136.369999999999,
+        "initial_oi": 2107.2799999999993,
+        "change_pct": 1.3804525264796184,
+        "calls_change_pct": 1.5012649687974482,
+        "puts_change_pct": 1.2249858922602535,
+        "trend": "FLAT",
+        "calls_trend": "FLAT",
+        "puts_trend": "FLAT",
+        "velocity": 0.05721849831739003,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    }
+  },
+  "summary": {
+    "overall_signal": "WALL_STRENGTHENING",
+    "confidence": 0.55,
+    "expirations_analyzed": 3,
+    "active_signals": 1
+  }
+}

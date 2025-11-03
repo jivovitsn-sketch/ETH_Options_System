@@ -1,0 +1,291 @@
+{
+  "asset": "DOGE",
+  "signal": {
+    "signal_type": "BULLISH",
+    "confidence": 0.614,
+    "strength": "MODERATE",
+    "components": {
+      "futures": {
+        "signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "data_used": [
+          "futures",
+          "liquidations"
+        ]
+      },
+      "options": {
+        "signal": "BULLISH",
+        "confidence": 0.62,
+        "reasoning": [
+          "Vanna 32155100"
+        ],
+        "data_used": [
+          "max_pain",
+          "gex",
+          "pcr",
+          "vanna"
+        ]
+      },
+      "timing": {
+        "signal": "BULLISH",
+        "confidence": 0.7999999999999999,
+        "reasoning": [
+          "PCR RSI 82 (fear)",
+          "GEX RSI 91 (high)",
+          "OI MACD +8754"
+        ],
+        "data_used": [
+          "pcr_rsi",
+          "gex_rsi",
+          "oi_macd"
+        ]
+      }
+    },
+    "reasoning": [
+      "Vanna 32155100",
+      "PCR RSI 82 (fear)",
+      "GEX RSI 91 (high)",
+      "OI MACD +8754"
+    ],
+    "config_version": "63a48001",
+    "data_quality": {
+      "status": "EXCELLENT",
+      "available_sources": 11,
+      "total_sources": 13,
+      "completeness": 0.8461538461538461,
+      "missing_sources": [
+        "liquidations",
+        "option_vwap"
+      ]
+    }
+  },
+  "data_snapshot": {
+    "asset": "DOGE",
+    "timestamp": "2025-11-03 15:06:14.857006",
+    "spot_price": 0.17457,
+    "available_sources": [
+      "futures",
+      "pcr",
+      "max_pain",
+      "gex",
+      "vanna",
+      "iv_rank",
+      "expiration_walls",
+      "oi_dynamics",
+      "pcr_rsi",
+      "gex_rsi",
+      "oi_macd"
+    ],
+    "futures": {
+      "price": 0.17457,
+      "spot_price": 0.17457,
+      "funding_rate": 0.0001,
+      "open_interest": 0
+    },
+    "liquidations": null,
+    "pcr": {
+      "ratio": 0.10086274778321751,
+      "put_oi": 2946100.0,
+      "call_oi": 29209000.0,
+      "put_volume": 134700.0,
+      "call_volume": 3122700.0,
+      "volume_ratio": 0.0431357479104621
+    },
+    "max_pain": {
+      "price": 0.16,
+      "distance_pct": -0.14291836297407332,
+      "total_pain": 58785.99999999997,
+      "spot_price": 0.18668
+    },
+    "gex": {
+      "total_gamma": 6520351.426934782,
+      "call_gamma": 5677305.18588533,
+      "put_gamma": 843046.2410494356,
+      "gamma_ratio": 6.734274953670563,
+      "spot_price": 0.17457
+    },
+    "vanna": {
+      "total_vanna": 32155100.0
+    },
+    "iv_rank": {
+      "rank": 32.034323241355025,
+      "percentile": 32.034323241355025,
+      "current_iv": 11.406864648271005,
+      "min_iv": 0,
+      "max_iv": 100
+    },
+    "option_vwap": null,
+    "expiration_walls": {
+      "asset": "DOGE",
+      "expiration": "2025-11-14",
+      "dte": 10,
+      "timestamp": "2025-11-03T15:06:15.160137",
+      "magnetic_levels": {
+        "call_wall": 0.2,
+        "put_wall": 0.185,
+        "call_wall_oi": 1367500.0,
+        "put_wall_oi": 26000.0
+      },
+      "pressure_analysis": {
+        "direction": "BEARISH",
+        "confidence": 0.8,
+        "reasoning": [
+          "Strong call wall OI: 1367500",
+          "Total call OI dominates: 1811000"
+        ]
+      },
+      "call_walls": [
+        {
+          "strike": 0.2,
+          "oi": 1367500.0
+        },
+        {
+          "strike": 0.19,
+          "oi": 286000.0
+        },
+        {
+          "strike": 0.24,
+          "oi": 78000.0
+        },
+        {
+          "strike": 0.18,
+          "oi": 36000.0
+        },
+        {
+          "strike": 0.17,
+          "oi": 30500.0
+        }
+      ],
+      "put_walls": [
+        {
+          "strike": 0.185,
+          "oi": 26000.0
+        }
+      ],
+      "total_call_oi": 1811000.0,
+      "total_put_oi": 26000.0,
+      "wall_threshold": 500
+    },
+    "oi_dynamics": {
+      "asset": "DOGE",
+      "timestamp": "2025-11-03T15:06:15.443445",
+      "analysis_window_days": 45,
+      "window_start": "2025-11-03",
+      "window_end": "2025-12-18",
+      "expirations_count": 3,
+      "expirations_analysis": {
+        "2025-11-14": {
+          "expiry": "2025-11-14",
+          "dte": 10,
+          "oi_analysis": {
+            "current_oi": 20800.0,
+            "initial_oi": 11600.0,
+            "change_pct": 79.3103448275862,
+            "calls_change_pct": 80.7017543859649,
+            "puts_change_pct": 0.0,
+            "trend": "STRONG_UP",
+            "calls_trend": "STRONG_UP",
+            "puts_trend": "FLAT",
+            "velocity": 2.7821170296823987,
+            "data_points": 25
+          },
+          "signals": {
+            "primary_signal": "WALL_STRENGTHENING",
+            "confidence": 0.7,
+            "reasoning": [
+              "Strong OI growth: +79.3%"
+            ],
+            "implications": [
+              "Bounce probability increased"
+            ]
+          }
+        },
+        "2025-11-21": {
+          "expiry": "2025-11-21",
+          "dte": 17,
+          "oi_analysis": {
+            "current_oi": 24300.0,
+            "initial_oi": 23200.0,
+            "change_pct": 4.741379310344827,
+            "calls_change_pct": 4.954954954954955,
+            "puts_change_pct": 0.0,
+            "trend": "UP",
+            "calls_trend": "UP",
+            "puts_trend": "FLAT",
+            "velocity": 0.19507507855122677,
+            "data_points": 25
+          },
+          "signals": {
+            "primary_signal": "NEUTRAL",
+            "confidence": 0.5,
+            "reasoning": [],
+            "implications": []
+          }
+        },
+        "2025-11-28": {
+          "expiry": "2025-11-28",
+          "dte": 24,
+          "oi_analysis": {
+            "current_oi": 233200.0,
+            "initial_oi": 200600.0,
+            "change_pct": 16.25124626121635,
+            "calls_change_pct": 14.57174638487208,
+            "puts_change_pct": 30.76923076923077,
+            "trend": "UP",
+            "calls_trend": "UP",
+            "puts_trend": "UP",
+            "velocity": 0.6366265857030198,
+            "data_points": 25
+          },
+          "signals": {
+            "primary_signal": "WALL_STRENGTHENING",
+            "confidence": 0.55,
+            "reasoning": [
+              "OI growing: +16.3%"
+            ],
+            "implications": []
+          }
+        }
+      },
+      "summary": {
+        "overall_signal": "WALL_STRENGTHENING",
+        "confidence": 0.625,
+        "expirations_analyzed": 3,
+        "active_signals": 2
+      }
+    },
+    "pcr_rsi": 82.24497156693957,
+    "gex_rsi": 90.84967320261438,
+    "oi_macd": {
+      "macd": 8753.860416039533,
+      "signal": 0.0,
+      "histogram": 8753.860416039533
+    },
+    "quality": {
+      "status": "EXCELLENT",
+      "available_sources": 11,
+      "total_sources": 13,
+      "completeness": 0.8461538461538461,
+      "missing_sources": [
+        "liquidations",
+        "option_vwap"
+      ]
+    }
+  },
+  "strategies": [
+    {
+      "asset": "DOGE",
+      "strategy_type": "BULL_CALL_SPREAD",
+      "long_call_strike": 0.17,
+      "short_call_strike": 0.22,
+      "premium_paid": 0.01,
+      "max_profit": 0.03,
+      "max_loss": 0.01,
+      "break_even": 0.19,
+      "probability_of_profit": 0.55,
+      "expiration_days": 45,
+      "risk_reward_ratio": 2.0
+    }
+  ]
+}

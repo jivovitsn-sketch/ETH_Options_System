@@ -1,0 +1,91 @@
+{
+  "asset": "SOL",
+  "timestamp": "2025-11-03T14:49:49.526954",
+  "analysis_window_days": 45,
+  "window_start": "2025-11-03",
+  "window_end": "2025-12-18",
+  "expirations_count": 3,
+  "expirations_analysis": {
+    "2025-11-14": {
+      "expiry": "2025-11-14",
+      "dte": 10,
+      "oi_analysis": {
+        "current_oi": 2764.75,
+        "initial_oi": 1786.0,
+        "change_pct": 54.80123180291153,
+        "calls_change_pct": 39.6630615640599,
+        "puts_change_pct": 85.95890410958904,
+        "trend": "STRONG_UP",
+        "calls_trend": "STRONG_UP",
+        "puts_trend": "STRONG_UP",
+        "velocity": 1.8705925391978242,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "WALL_STRENGTHENING",
+        "confidence": 0.7,
+        "reasoning": [
+          "Strong OI growth: +54.8%"
+        ],
+        "implications": [
+          "Bounce probability increased"
+        ]
+      }
+    },
+    "2025-11-21": {
+      "expiry": "2025-11-21",
+      "dte": 17,
+      "oi_analysis": {
+        "current_oi": 1288.0,
+        "initial_oi": 203.0,
+        "change_pct": 534.4827586206897,
+        "calls_change_pct": 545.2631578947369,
+        "puts_change_pct": 376.9230769230769,
+        "trend": "STRONG_UP",
+        "calls_trend": "STRONG_UP",
+        "puts_trend": "STRONG_UP",
+        "velocity": 11.6868458185888,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "WALL_STRENGTHENING",
+        "confidence": 0.7999999999999999,
+        "reasoning": [
+          "Strong OI growth: +534.5%",
+          "High velocity: 11.7%/hour"
+        ],
+        "implications": [
+          "Bounce probability increased"
+        ]
+      }
+    },
+    "2025-11-28": {
+      "expiry": "2025-11-28",
+      "dte": 24,
+      "oi_analysis": {
+        "current_oi": 31100.25,
+        "initial_oi": 32303.0,
+        "change_pct": -3.723338389623255,
+        "calls_change_pct": -6.604057099924869,
+        "puts_change_pct": 0.9381585346085264,
+        "trend": "FLAT",
+        "calls_trend": "FLAT",
+        "puts_trend": "FLAT",
+        "velocity": -0.13100262290021525,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    }
+  },
+  "summary": {
+    "overall_signal": "WALL_STRENGTHENING",
+    "confidence": 0.75,
+    "expirations_analyzed": 3,
+    "active_signals": 2
+  }
+}

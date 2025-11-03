@@ -149,7 +149,7 @@ class AdvancedHealthMonitor:
                         
                         msg = f"🔄 AUTO-RESTARTED: {name}\n"
                         msg += f"Restart #{self.restart_counts[script_name]}/{config['max_restarts']}"
-                        send_to_telegram(msg, self.admin_chat)
+                        TelegramSender().send_to_admin(msg)
                     else:
                         issues.append(f"❌ Failed to restart {name}")
                 else:
@@ -158,7 +158,7 @@ class AdvancedHealthMonitor:
                     msg = f"🚨 CRITICAL: {name} DOWN!\n"
                     msg += f"Max restarts ({config['max_restarts']}) reached.\n"
                     msg += f"Manual intervention required!"
-                    send_to_telegram(msg, self.admin_chat)
+                    TelegramSender().send_to_admin(msg)
             else:
                 # Процесс работает - сбрасываем счётчик
                 if self.restart_counts[script_name] > 0:
@@ -247,7 +247,7 @@ class AdvancedHealthMonitor:
             msg += "\n".join(all_issues)
             msg += f"\n\n⏰ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
             
-            send_to_telegram(msg, self.admin_chat)
+            TelegramSender().send_to_admin(msg)
             
         else:
             logger.info("✅ All systems healthy!")
@@ -258,7 +258,7 @@ class AdvancedHealthMonitor:
                 msg = "✅ *HEALTH: OK*\n\n"
                 msg += "All systems operational\n"
                 msg += f"⏰ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-                send_to_telegram(msg, self.admin_chat)
+                TelegramSender().send_to_admin(msg)
         
         logger.info("=" * 60)
 

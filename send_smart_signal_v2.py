@@ -275,8 +275,8 @@ class SmartSignalSenderV2:
                 strategies.append(f"Bull Put Spread near ${put_wall:.2f}" if put_wall < 10 else f"Bull Put Spread near ${put_wall:,.0f}")
             if call_wall and put_wall:
                 if put_wall < 10 or call_wall < 10:
-                strategies.append(f"Iron Condor ${put_wall:.2f}-${call_wall:.2f}")
-            else:
+        strategies.append(f"Iron Condor ${put_wall:.2f}-${call_wall:.2f}")
+        else:
                 strategies.append(f"Iron Condor ${put_wall:,.0f}-${call_wall:,.0f}")
         
         elif signal_type == 'BREAKOUT_POSSIBLE':

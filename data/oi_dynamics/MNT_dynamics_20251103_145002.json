@@ -1,0 +1,90 @@
+{
+  "asset": "MNT",
+  "timestamp": "2025-11-03T14:50:02.811906",
+  "analysis_window_days": 45,
+  "window_start": "2025-11-03",
+  "window_end": "2025-12-18",
+  "expirations_count": 3,
+  "expirations_analysis": {
+    "2025-11-14": {
+      "expiry": "2025-11-14",
+      "dte": 10,
+      "oi_analysis": {
+        "current_oi": 4740.0,
+        "initial_oi": 3580.0,
+        "change_pct": 32.402234636871505,
+        "calls_change_pct": 47.24770642201835,
+        "puts_change_pct": 9.285714285714286,
+        "trend": "STRONG_UP",
+        "calls_trend": "STRONG_UP",
+        "puts_trend": "UP",
+        "velocity": 1.3097822978012843,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "WALL_STRENGTHENING",
+        "confidence": 0.7,
+        "reasoning": [
+          "Strong OI growth: +32.4%"
+        ],
+        "implications": [
+          "Bounce probability increased"
+        ]
+      }
+    },
+    "2025-11-21": {
+      "expiry": "2025-11-21",
+      "dte": 17,
+      "oi_analysis": {
+        "current_oi": 19143.333333333332,
+        "initial_oi": 16230.0,
+        "change_pct": 17.95029780242349,
+        "calls_change_pct": 9.491094147582702,
+        "puts_change_pct": 53.35463258785943,
+        "trend": "FLAT",
+        "calls_trend": "FLAT",
+        "puts_trend": "UP",
+        "velocity": 0.75871676978874,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    },
+    "2025-11-28": {
+      "expiry": "2025-11-28",
+      "dte": 24,
+      "oi_analysis": {
+        "current_oi": 41340.0,
+        "initial_oi": 54610.0,
+        "change_pct": -24.299578831715802,
+        "calls_change_pct": -37.53336892685532,
+        "puts_change_pct": 4.606413994169096,
+        "trend": "STRONG_DOWN",
+        "calls_trend": "STRONG_DOWN",
+        "puts_trend": "UP",
+        "velocity": -0.9317790547089527,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "WALL_WEAKENING",
+        "confidence": 0.7,
+        "reasoning": [
+          "Strong OI drop: -24.3%"
+        ],
+        "implications": [
+          "Breakout probability increased"
+        ]
+      }
+    }
+  },
+  "summary": {
+    "overall_signal": "WALL_STRENGTHENING",
+    "confidence": 0.7,
+    "expirations_analyzed": 3,
+    "active_signals": 2
+  }
+}

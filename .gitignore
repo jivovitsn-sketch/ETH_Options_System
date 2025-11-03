@@ -24,3 +24,4 @@ __pycache__/
 # Temp
 temp_*
 test_*
+.env

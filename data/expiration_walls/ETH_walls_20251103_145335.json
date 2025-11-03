@@ -1,0 +1,67 @@
+{
+  "asset": "ETH",
+  "expiration": "2025-11-14",
+  "dte": 11,
+  "timestamp": "2025-11-03T14:53:35.858159",
+  "magnetic_levels": {
+    "call_wall": 5000.0,
+    "put_wall": 3400.0,
+    "call_wall_oi": 107205.70000000029,
+    "put_wall_oi": 73381.30000000008
+  },
+  "pressure_analysis": {
+    "direction": "RANGE_BOUND",
+    "confidence": 0.6,
+    "reasoning": [
+      "Balanced walls",
+      "Total call OI dominates: 513282"
+    ]
+  },
+  "call_walls": [
+    {
+      "strike": 5000.0,
+      "oi": 107205.70000000029
+    },
+    {
+      "strike": 4600.0,
+      "oi": 69743.40000000008
+    },
+    {
+      "strike": 4300.0,
+      "oi": 56883.70000000017
+    },
+    {
+      "strike": 5500.0,
+      "oi": 55527.5
+    },
+    {
+      "strike": 4500.0,
+      "oi": 54630.399999999965
+    }
+  ],
+  "put_walls": [
+    {
+      "strike": 3400.0,
+      "oi": 73381.30000000008
+    },
+    {
+      "strike": 3800.0,
+      "oi": 57790.10000000001
+    },
+    {
+      "strike": 3000.0,
+      "oi": 54995.800000000054
+    },
+    {
+      "strike": 3700.0,
+      "oi": 43729.600000000006
+    },
+    {
+      "strike": 3300.0,
+      "oi": 43118.59999999996
+    }
+  ],
+  "total_call_oi": 513281.7000000004,
+  "total_put_oi": 398031.0999999999,
+  "wall_threshold": 500
+}

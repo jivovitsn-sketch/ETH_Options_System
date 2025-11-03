@@ -1,0 +1,63 @@
+{
+  "symbol": "BTC",
+  "timestamp": "2025-11-03T16:33:15.273355",
+  "spot_price": 107836.5,
+  "overall_max_pain": 112504.98151018015,
+  "expirations": {
+    "2025-10-29": {
+      "max_pain": 119000.0,
+      "spot_price": 107836.5,
+      "distance_pct": 10.352246224608551,
+      "direction": "\u2191",
+      "dte": 1,
+      "total_oi": 194.08,
+      "call_oi": 193.88,
+      "put_oi": 0.19999999999999998,
+      "put_call_ratio": 0.0010315659170621002
+    },
+    "2025-10-31": {
+      "max_pain": 113000.0,
+      "spot_price": 107836.5,
+      "distance_pct": 4.788267423367784,
+      "direction": "\u2191",
+      "dte": 1,
+      "total_oi": 693169.3699999999,
+      "call_oi": 410105.80999999994,
+      "put_oi": 283063.56,
+      "put_call_ratio": 0.6902207993590728
+    },
+    "2025-11-14": {
+      "max_pain": 111000.0,
+      "spot_price": 107836.5,
+      "distance_pct": 2.9336078229541944,
+      "direction": "\u2191",
+      "dte": 10,
+      "total_oi": 607222.62,
+      "call_oi": 320285.29,
+      "put_oi": 286937.32999999996,
+      "put_call_ratio": 0.8958804508318192
+    },
+    "2025-11-21": {
+      "max_pain": 110000.0,
+      "spot_price": 107836.5,
+      "distance_pct": 2.0062780227474,
+      "direction": "\u2191",
+      "dte": 17,
+      "total_oi": 62562.92,
+      "call_oi": 36926.25,
+      "put_oi": 25636.670000000002,
+      "put_call_ratio": 0.6942668156122
+    },
+    "2025-11-28": {
+      "max_pain": 113000.0,
+      "spot_price": 107836.5,
+      "distance_pct": 4.788267423367784,
+      "direction": "\u2191",
+      "dte": 24,
+      "total_oi": 1466986.75,
+      "call_oi": 840478.92,
+      "put_oi": 626507.83,
+      "put_call_ratio": 0.7454176602073493
+    }
+  }
+}

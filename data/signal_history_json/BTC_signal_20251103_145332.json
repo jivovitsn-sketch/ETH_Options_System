@@ -1,0 +1,285 @@
+{
+  "asset": "BTC",
+  "signal": {
+    "signal_type": "NO_SIGNAL",
+    "confidence": 0.5700000000000001,
+    "strength": "WEAK",
+    "components": {
+      "futures": {
+        "signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "data_used": [
+          "futures",
+          "liquidations"
+        ]
+      },
+      "options": {
+        "signal": "BULLISH",
+        "confidence": 0.62,
+        "reasoning": [
+          "Vanna 843739"
+        ],
+        "data_used": [
+          "max_pain",
+          "gex",
+          "pcr",
+          "vanna"
+        ]
+      },
+      "timing": {
+        "signal": "NEUTRAL",
+        "confidence": 0.58,
+        "reasoning": [
+          "GEX RSI 75 (high)"
+        ],
+        "data_used": [
+          "pcr_rsi",
+          "gex_rsi",
+          "oi_macd"
+        ]
+      }
+    },
+    "reasoning": [
+      "Vanna 843739",
+      "GEX RSI 75 (high)"
+    ],
+    "config_version": "63a48001",
+    "data_quality": {
+      "status": "EXCELLENT",
+      "available_sources": 11,
+      "total_sources": 13,
+      "completeness": 0.8461538461538461,
+      "missing_sources": [
+        "liquidations",
+        "option_vwap"
+      ]
+    }
+  },
+  "data_snapshot": {
+    "asset": "BTC",
+    "timestamp": "2025-11-03 14:53:30.011410",
+    "spot_price": 107737.7,
+    "available_sources": [
+      "futures",
+      "pcr",
+      "max_pain",
+      "gex",
+      "vanna",
+      "iv_rank",
+      "expiration_walls",
+      "oi_dynamics",
+      "pcr_rsi",
+      "gex_rsi",
+      "oi_macd"
+    ],
+    "futures": {
+      "price": 107737.7,
+      "spot_price": 107737.7,
+      "funding_rate": 0.0001,
+      "open_interest": 0
+    },
+    "liquidations": null,
+    "pcr": {
+      "ratio": 0.6833043482112064,
+      "put_oi": 342499.4100000057,
+      "call_oi": 501239.91000001744,
+      "put_volume": 14717.200000000554,
+      "call_volume": 16675.6800000006,
+      "volume_ratio": 0.8825547144104483
+    },
+    "max_pain": {
+      "price": 112000.0,
+      "distance_pct": 0.007350963774040412,
+      "total_pain": 673925049.9999988,
+      "spot_price": 111182.7
+    },
+    "gex": {
+      "total_gamma": 7529.246352735411,
+      "call_gamma": 3379.362866983423,
+      "put_gamma": 4149.883485751972,
+      "gamma_ratio": 0.8143271681207386,
+      "spot_price": 107737.7
+    },
+    "vanna": {
+      "total_vanna": 843739.3200000622
+    },
+    "iv_rank": {
+      "rank": 63.833159477822115,
+      "percentile": 63.833159477822115,
+      "current_iv": 17.766631895564423,
+      "min_iv": 0,
+      "max_iv": 100
+    },
+    "option_vwap": null,
+    "expiration_walls": {
+      "asset": "BTC",
+      "expiration": "2025-11-14",
+      "dte": 11,
+      "timestamp": "2025-11-03T14:53:31.060080",
+      "magnetic_levels": {
+        "call_wall": 118000.0,
+        "put_wall": 96000.0,
+        "call_wall_oi": 19554.859999999975,
+        "put_wall_oi": 7808.3199999999915
+      },
+      "pressure_analysis": {
+        "direction": "BEARISH",
+        "confidence": 0.7220044230908957,
+        "reasoning": [
+          "Strong call wall OI: 19555",
+          "Total call OI dominates: 74606"
+        ]
+      },
+      "call_walls": [
+        {
+          "strike": 118000.0,
+          "oi": 19554.859999999975
+        },
+        {
+          "strike": 120000.0,
+          "oi": 17139.16999999999
+        },
+        {
+          "strike": 124000.0,
+          "oi": 7490.770000000014
+        },
+        {
+          "strike": 114000.0,
+          "oi": 6767.92
+        },
+        {
+          "strike": 116000.0,
+          "oi": 5342.9299999999985
+        }
+      ],
+      "put_walls": [
+        {
+          "strike": 96000.0,
+          "oi": 7808.3199999999915
+        },
+        {
+          "strike": 104000.0,
+          "oi": 7792.190000000003
+        },
+        {
+          "strike": 106000.0,
+          "oi": 7004.0100000000075
+        },
+        {
+          "strike": 100000.0,
+          "oi": 5307.180000000014
+        },
+        {
+          "strike": 92000.0,
+          "oi": 5068.669999999986
+        }
+      ],
+      "total_call_oi": 74605.85999999999,
+      "total_put_oi": 52647.730000000025,
+      "wall_threshold": 500
+    },
+    "oi_dynamics": {
+      "asset": "BTC",
+      "timestamp": "2025-11-03T14:53:31.457771",
+      "analysis_window_days": 45,
+      "window_start": "2025-11-03",
+      "window_end": "2025-12-18",
+      "expirations_count": 3,
+      "expirations_analysis": {
+        "2025-11-14": {
+          "expiry": "2025-11-14",
+          "dte": 10,
+          "oi_analysis": {
+            "current_oi": 1244.6959999999997,
+            "initial_oi": 1153.6466666666665,
+            "change_pct": 7.892306714360823,
+            "calls_change_pct": 11.982666246454485,
+            "puts_change_pct": 2.8913264061035013,
+            "trend": "UP",
+            "calls_trend": "UP",
+            "puts_trend": "FLAT",
+            "velocity": 0.33244671862343367,
+            "data_points": 24
+          },
+          "signals": {
+            "primary_signal": "NEUTRAL",
+            "confidence": 0.5,
+            "reasoning": [],
+            "implications": []
+          }
+        },
+        "2025-11-21": {
+          "expiry": "2025-11-21",
+          "dte": 17,
+          "oi_analysis": {
+            "current_oi": 206.6760000000001,
+            "initial_oi": 163.25500000000002,
+            "change_pct": 26.597041438240833,
+            "calls_change_pct": 21.840583354287148,
+            "puts_change_pct": 34.00595331348894,
+            "trend": "UP",
+            "calls_trend": "UP",
+            "puts_trend": "STRONG_UP",
+            "velocity": 1.3773924673929823,
+            "data_points": 24
+          },
+          "signals": {
+            "primary_signal": "WALL_STRENGTHENING",
+            "confidence": 0.55,
+            "reasoning": [
+              "OI growing: +26.6%"
+            ],
+            "implications": []
+          }
+        },
+        "2025-11-28": {
+          "expiry": "2025-11-28",
+          "dte": 24,
+          "oi_analysis": {
+            "current_oi": 2136.369999999999,
+            "initial_oi": 2107.481666666666,
+            "change_pct": 1.3707513469867847,
+            "calls_change_pct": 1.490566435482863,
+            "puts_change_pct": 1.2165647256272618,
+            "trend": "FLAT",
+            "calls_trend": "FLAT",
+            "puts_trend": "FLAT",
+            "velocity": 0.059290172217797955,
+            "data_points": 24
+          },
+          "signals": {
+            "primary_signal": "NEUTRAL",
+            "confidence": 0.5,
+            "reasoning": [],
+            "implications": []
+          }
+        }
+      },
+      "summary": {
+        "overall_signal": "WALL_STRENGTHENING",
+        "confidence": 0.55,
+        "expirations_analyzed": 3,
+        "active_signals": 1
+      }
+    },
+    "pcr_rsi": 35.74857954753354,
+    "gex_rsi": 75.27710843373588,
+    "oi_macd": {
+      "macd": 96.92649891474775,
+      "signal": 0.0,
+      "histogram": 96.92649891474775
+    },
+    "quality": {
+      "status": "EXCELLENT",
+      "available_sources": 11,
+      "total_sources": 13,
+      "completeness": 0.8461538461538461,
+      "missing_sources": [
+        "liquidations",
+        "option_vwap"
+      ]
+    }
+  },
+  "strategies": []
+}

@@ -1,0 +1,88 @@
+{
+  "asset": "DOGE",
+  "timestamp": "2025-11-03T15:12:57.246024",
+  "analysis_window_days": 45,
+  "window_start": "2025-11-03",
+  "window_end": "2025-12-18",
+  "expirations_count": 3,
+  "expirations_analysis": {
+    "2025-11-14": {
+      "expiry": "2025-11-14",
+      "dte": 10,
+      "oi_analysis": {
+        "current_oi": 20800.0,
+        "initial_oi": 11600.0,
+        "change_pct": 79.3103448275862,
+        "calls_change_pct": 80.7017543859649,
+        "puts_change_pct": 0.0,
+        "trend": "STRONG_UP",
+        "calls_trend": "STRONG_UP",
+        "puts_trend": "FLAT",
+        "velocity": 2.7821170296823987,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "WALL_STRENGTHENING",
+        "confidence": 0.7,
+        "reasoning": [
+          "Strong OI growth: +79.3%"
+        ],
+        "implications": [
+          "Bounce probability increased"
+        ]
+      }
+    },
+    "2025-11-21": {
+      "expiry": "2025-11-21",
+      "dte": 17,
+      "oi_analysis": {
+        "current_oi": 24300.0,
+        "initial_oi": 23200.0,
+        "change_pct": 4.741379310344827,
+        "calls_change_pct": 4.954954954954955,
+        "puts_change_pct": 0.0,
+        "trend": "UP",
+        "calls_trend": "UP",
+        "puts_trend": "FLAT",
+        "velocity": 0.19507507855122677,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "NEUTRAL",
+        "confidence": 0.5,
+        "reasoning": [],
+        "implications": []
+      }
+    },
+    "2025-11-28": {
+      "expiry": "2025-11-28",
+      "dte": 24,
+      "oi_analysis": {
+        "current_oi": 233200.0,
+        "initial_oi": 200600.0,
+        "change_pct": 16.25124626121635,
+        "calls_change_pct": 14.57174638487208,
+        "puts_change_pct": 30.76923076923077,
+        "trend": "UP",
+        "calls_trend": "UP",
+        "puts_trend": "UP",
+        "velocity": 0.6366265857030198,
+        "data_points": 25
+      },
+      "signals": {
+        "primary_signal": "WALL_STRENGTHENING",
+        "confidence": 0.55,
+        "reasoning": [
+          "OI growing: +16.3%"
+        ],
+        "implications": []
+      }
+    }
+  },
+  "summary": {
+    "overall_signal": "WALL_STRENGTHENING",
+    "confidence": 0.625,
+    "expirations_analyzed": 3,
+    "active_signals": 2
+  }
+}

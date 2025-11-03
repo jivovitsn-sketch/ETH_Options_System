@@ -1,0 +1,51 @@
+{
+  "asset": "DOGE",
+  "expiration": "2025-11-14",
+  "dte": 10,
+  "timestamp": "2025-11-03T14:53:46.215015",
+  "magnetic_levels": {
+    "call_wall": 0.2,
+    "put_wall": 0.185,
+    "call_wall_oi": 1357100.0,
+    "put_wall_oi": 26200.0
+  },
+  "pressure_analysis": {
+    "direction": "BEARISH",
+    "confidence": 0.8,
+    "reasoning": [
+      "Strong call wall OI: 1357100",
+      "Total call OI dominates: 1796400"
+    ]
+  },
+  "call_walls": [
+    {
+      "strike": 0.2,
+      "oi": 1357100.0
+    },
+    {
+      "strike": 0.19,
+      "oi": 288200.0
+    },
+    {
+      "strike": 0.24,
+      "oi": 78600.0
+    },
+    {
+      "strike": 0.18,
+      "oi": 35000.0
+    },
+    {
+      "strike": 0.17,
+      "oi": 24400.0
+    }
+  ],
+  "put_walls": [
+    {
+      "strike": 0.185,
+      "oi": 26200.0
+    }
+  ],
+  "total_call_oi": 1796400.0,
+  "total_put_oi": 26200.0,
+  "wall_threshold": 500
+}
