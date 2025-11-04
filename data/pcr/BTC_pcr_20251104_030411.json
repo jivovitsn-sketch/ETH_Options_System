@@ -1,0 +1,12 @@
+{
+  "asset": "BTC",
+  "timestamp": "2025-11-04T03:04:11.536868",
+  "pcr_oi": 0.677,
+  "pcr_volume": 0.813,
+  "pcr_rsi": 46.2,
+  "put_oi": 160694.5,
+  "call_oi": 237239.88,
+  "put_volume": 10131.69,
+  "call_volume": 12466.75,
+  "interpretation": "NEUTRAL"
+}
