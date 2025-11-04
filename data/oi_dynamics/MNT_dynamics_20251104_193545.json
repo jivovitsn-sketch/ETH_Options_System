@@ -1,0 +1,15 @@
+{
+  "asset": "MNT",
+  "timestamp": "2025-11-04T19:35:45.745358",
+  "analysis_window_days": 45,
+  "window_start": "2025-11-04",
+  "window_end": "2025-12-19",
+  "expirations_count": 0,
+  "expirations_analysis": {},
+  "summary": {
+    "overall_signal": "NO_DATA",
+    "confidence": 0.0,
+    "expirations_analyzed": 0,
+    "active_signals": 0
+  }
+}

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from discord_sender import discord_sender
 # -*- coding: utf-8 -*-
 """
 SMART SIGNAL SENDER v2 - С интеграцией OI Dynamics и Walls Analysis
